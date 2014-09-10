@@ -1,0 +1,141 @@
+.img-nav-right{
+    margin-top: 20px;
+
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+
+.img-nav-left{
+    margin-top: 20px;
+    margin-right:-15px;
+
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+.carousel{
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+body{
+    background-image: url("/static/img/fitness.jpg");
+}
+
+.navbar {
+
+
+    background: rgba(13, 11, 11, 0.9);
+}
+.navbar-fixed-top {
+
+}
+
+.navbar-logo{
+    margin-left:50px;
+}
+
+
+
+.container-padding-fix{
+
+}
+
+#bs-example-navbar-collapse-1{
+    margin-top: 10px;
+
+
+}
+.menu-list > li{
+    font-size: 1.5em;
+    border-left: 1px solid #171414;
+}
+.menu-list > li:hover{
+
+    background: #171414;
+
+}
+
+.container-fluid{
+
+    margin-top: 40px;
+}
+
+
+
+
+.jm-item {
+    padding: 0px;
+    display: inline-block;
+    text-align: left;
+}
+.jm-item-wrapper {
+	position: relative;
+
+}
+/*** CSS styles of the image and its container: *****/
+
+
+
+/*** CSS styles of the title container: ***/
+
+
+
+.jm-item-title {
+    position: absolute;
+
+    bottom: 17px;
+    background: rgba(13,11,11,0.9);
+    line-height: 1.5em;
+    font-weight: normal;
+    padding: 7px 9px 6px;
+
+    font-family: 'Oswald', sans-serif;
+    color: #D7C3AB;
+    font-size: 1.4em;
+
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+
+
+.jm-item-title-left{
+    left: -10px;
+}
+
+.jm-item-title-right{
+    right: -10px;
+}
+/*** CSS styles of the span element: ***/
+
+.jm-item-overlay {
+	background: #000;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transition: opacity 0.5s ease-in 0s;
+	-moz-transition: opacity 0.5s ease-in 0s;
+	-o-transition: opacity 0.5s ease-in 0s;
+	transition: opacity 0.5s ease-in 0s;
+}
+.jm-item-wrapper:hover .jm-item-overlay {
+	opacity: 0.5;
+}
+
+
+.box{
+    height:200px;
+    border-left: 5px solid #735842;
+    border-radius: 1px;
+    background-color: rgba(13,11,11,0.3);
+
+}
