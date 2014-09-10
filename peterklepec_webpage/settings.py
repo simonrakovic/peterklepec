@@ -126,7 +126,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'webpage',
     'gunicorn',
-    'corsheaders',
 )
 
 # A sample logging configuration. The only tangible logging
