@@ -27,13 +27,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-    <!--jClipSlide CSS -->
-    <link href="/static/css/jClipSlide/style.css" rel="stylesheet">
+    <!-- FlexSlide CSS -->
+    <link href="/static/css/flexslider.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="/static/css/style.css" rel="stylesheet">
+
+
 
 
 
@@ -151,49 +151,24 @@
                     </div>
                     <!-- Banner -->
                     <div class="col-lg-6 ">
-                         <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-                           <!-- Carousel items -->
-                            <div class="carousel-inner">
-                                <div class="active item">
-                                    <h2>Slide 1</h2>
-                                    <div class="carousel-caption">
-                                      <h3>First slide label</h3>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <h2>Slide 2</h2>
-                                    <div class="carousel-caption">
-                                      <h3>Second slide label</h3>
-                                      <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <h2>Slide 3</h2>
-                                    <div class="carousel-caption">
-                                      <h3>Third slide label</h3>
-                                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Carousel nav -->
-
-                            <div class="carousel-control right img-nav">
-                                <div class="row">
-
-                                </div>
-
-                                <div class="row"></div>
-                                <div class="row"></div>
-                            </div>
+                        <div class="row flexslider-fix-height">
+                             <div class="flexslider">
+                              <ul class="slides">
+                                <li data-thumb="/static/img/party.jpg">
+                                  <img src="/static/img/party.jpg" />
+                                </li>
+                                <li data-thumb="/static/img/fitness.jpg">
+                                  <img src="/static/img/fitness.jpg" />
+                                </li>
+                                <li data-thumb="/static/img/zumba.jpeg">
+                                  <img src="/static/img/zumba.jpeg" />
+                                </li>
+                                <li data-thumb=/static/img/massage.jpeg">
+                                  <img src="/static/img/massage.jpeg" />
+                                </li>
+                              </ul>
                         </div>
-
+                        </div>
                     </div>
                     <!-- Right navigation images -->
                     <div class="col-lg-3 visible-lg">
@@ -269,24 +244,17 @@
     <script src="/static/javascript/bootstrap.min.js"></script>
 
 
-     <!-- jClipSlide script -->
-    <script src="/static/javascript/jClipSlide/jquery.capSlide.js"></script>
+    <!-- flexSlider --->
+    <script src="/static/javascript/jquery.flexslider-min.js"></script>
 
-    <script>
-        $("#capslide_img_cont6").capslide({
-                    caption_color	: 'black',
-                    caption_bgcolor	: 'white',
-                    overlay_bgcolor : '#0000',
-                    border			: '0px solid #ccc',
-                    showcaption	    : true
-                });
-    </script>
     <!-- Script to Activate the Carousel -->
     <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-
+       $(document).ready(function(){
+             $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+              });
+        });
     </script>
 
 </body>

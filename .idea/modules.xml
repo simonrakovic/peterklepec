@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../GitHub/webpage/.idea/eArchiver.iml" filepath="$PROJECT_DIR$/../../GitHub/webpage/.idea/eArchiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../GitHub/eNarocanje/.idea/eNarocanje.iml" filepath="$PROJECT_DIR$/../../GitHub/eNarocanje/.idea/eNarocanje.iml" />
       <module fileurl="file://$PROJECT_DIR$/../eNarocanje/.idea/eNarocanje.iml" filepath="$PROJECT_DIR$/../eNarocanje/.idea/eNarocanje.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/peterklepec_webpage.iml" filepath="$PROJECT_DIR$/.idea/peterklepec_webpage.iml" />
     </modules>
