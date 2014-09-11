@@ -106,19 +106,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="10" selection-start="4593" selection-end="4593" vertical-scroll-proportion="-20.48" vertical-offset="1792" max-vertical-offset="3186">
+            <state line="127" column="14" selection-start="4581" selection-end="4581" vertical-scroll-proportion="0.66487217" vertical-offset="1792" max-vertical-offset="3186">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="1" selection-start="70" selection-end="70" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="768">
+            <state line="4" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
               <folding />
             </state>
           </provider>
@@ -145,13 +145,13 @@
         <option value="$PROJECT_DIR$/static/css/fiftheffect.css" />
         <option value="$PROJECT_DIR$/templates/temp.html" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/wsgi.py" />
-        <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
         <option value="$PROJECT_DIR$/webpage/admin.py" />
         <option value="$PROJECT_DIR$/webpage/models.py" />
         <option value="$PROJECT_DIR$/static/css/flexslider.css" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
       </list>
     </option>
   </component>
@@ -1008,16 +1008,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="10" selection-start="4593" selection-end="4593" vertical-scroll-proportion="-20.48" vertical-offset="1792" max-vertical-offset="3186">
+        <state line="4" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="70" selection-end="70" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="768">
+        <state line="127" column="14" selection-start="4581" selection-end="4581" vertical-scroll-proportion="0.66487217" vertical-offset="1792" max-vertical-offset="3186">
           <folding />
         </state>
       </provider>
