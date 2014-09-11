@@ -6,5 +6,5 @@ class novice(models.Model):
 
     title = models.TextField()
     content = models.TextField()
-    image = models.ImageField(upload_to='static/img')
+
 
