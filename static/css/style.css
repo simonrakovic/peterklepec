@@ -23,7 +23,7 @@
 }
 
 body{
-    background-image: url("/static/img/fitness.jpg");
+    background: url("/static/img/fitness.jpg") no-repeat right;
 }
 
 .navbar {
@@ -131,26 +131,8 @@ body{
 	opacity: 0.5;
 }
 
-.flexslider {
-    background: transparent;
-    max-height: 400px;
 
-    border: 0px solid transparent;
 
-    margin-top: 20px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.flexslider .slides img {
-
-    max-height: 300px;
-}
-
-.flex-control-nav{
-    max-height: 90px;
-}
 
 .box{
     height:200px;
@@ -158,4 +140,50 @@ body{
     border-radius: 1px;
     background-color: rgba(13,11,11,0.3);
 
+}
+
+
+
+/******** custom scroll CSS *******/
+
+#scrollbox {
+    overflow: auto;
+
+}
+
+.track {
+    width: 10px;
+    background: rgba(0, 0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    -webkit-transition: background 250ms linear;
+    transition: background 250ms linear;
+}
+
+.track:hover,
+.track.dragging {
+    background: #d9d9d9;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.handle {
+    width: 7px;
+    right: 0;
+    background: #999;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    -webkit-transition: width 250ms;
+    transition: width 250ms;
+}
+
+.track:hover .handle,
+.track.dragging .handle {
+    width: 10px;
+}
+
+
+
+@font-face {
+    font-family: 'leaguegothic'; /*a name to be used later*/
+    src: url('/static/fonts/leaguegothic-regular-webfont.ttf'); /*URL to font*/
 }

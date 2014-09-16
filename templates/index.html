@@ -40,24 +40,24 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <style type="text/css">
-    h2{
-        margin: 0;
-        color: #666;
-        padding-top: 90px;
-        font-size: 52px;
-        font-family: "trebuchet ms", sans-serif;
-    }
-    .item{
-        background: #333;
-        text-align: center;
-        height: 400px !important;
-    }
-    .carousel{
-        margin-top: 20px;
-    }
-    .bs-example{
-        margin: 20px;
-    }
+        h2{
+            margin: 0;
+            color: #666;
+            padding-top: 90px;
+            font-size: 52px;
+            font-family: "trebuchet ms", sans-serif;
+        }
+        .item{
+            background: #333;
+            text-align: center;
+            height: 400px !important;
+        }
+        .carousel{
+            margin-top: 20px;
+        }
+        .bs-example{
+            margin: 20px;
+        }
     </style>
 </head>
 
@@ -109,12 +109,12 @@
     <!-- Page Content -->
     <div class="container-fluid" style="z-index: 1">
 
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
                 <div class="row">
                     <!-- Left navigation images -->
 
-                    <div class="col-lg-3 visible-lg">
+                    <div class="col-lg-2 visible-lg">
                         <div class="row pull-right img-nav-left jm-item first ">
                             <div class="jm-item-wrapper">
                                 <div class="jm-item-image">
@@ -148,22 +148,33 @@
                                 <div class="jm-item-title jm-item-title-left">Crossfit</div>
                             </div>
                         </div>
+                        <div class="row pull-right img-nav-left jm-item first">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <a href="#">
+                                        <img src="/static/img/crossfit.jpeg" height="120" width="250" class="img-rounded" alt="Sample Image">
+                                        <span class="jm-item-overlay "> </span>
+                                    </a>
+                                </div>
+                                <div class="jm-item-title jm-item-title-left">Crossfit</div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Banner -->
-                    <div class="col-lg-6 ">
+                    <div class="col-lg-8 ">
                         <div class="row flexslider-fix-height">
                              <div class="flexslider">
                               <ul class="slides">
-                                <li data-thumb="/static/img/party.jpg">
+                                <li >
                                   <img src="/static/img/party.jpg" />
                                 </li>
-                                <li data-thumb="/static/img/fitness.jpg">
+                                <li >
                                   <img src="/static/img/fitness.jpg" />
                                 </li>
-                                <li data-thumb="/static/img/zumba.jpeg">
+                                <li >
                                   <img src="/static/img/zumba.jpeg" />
                                 </li>
-                                <li data-thumb=/static/img/massage.jpeg">
+                                <li >
                                   <img src="/static/img/massage.jpeg" />
                                 </li>
                               </ul>
@@ -171,7 +182,7 @@
                         </div>
                     </div>
                     <!-- Right navigation images -->
-                    <div class="col-lg-3 visible-lg">
+                    <div class="col-lg-2 visible-lg">
                         <div class="row img-nav-right jm-item first ">
                             <div class="jm-item-wrapper">
                                 <div class="jm-item-image">
@@ -205,6 +216,17 @@
                                 <div class="jm-item-title jm-item-title-right">Zabave</div>
                             </div>
                         </div>
+                        <div class="row img-nav-right jm-item first">
+                            <div class="jm-item-wrapper">
+                                <div class="jm-item-image">
+                                    <a href="#">
+                                        <img src="/static/img/party.jpg" height="120" width="250" class="img-rounded " alt="Sample Image">
+                                        <span class="jm-item-overlay "> </span>
+                                    </a>
+                                </div>
+                                <div class="jm-item-title jm-item-title-right">Zabave</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -212,7 +234,9 @@
 
                     <div class="col-lg-4">
                         <div class="container-fluid box">
-                           <h5>Delvni čas</h5>
+                           <h5>{{ title  }}</h5>
+                                {{ content  }}
+
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -229,7 +253,7 @@
             </div>
             <!----- End of main container --->
 
-        <div class="col-lg-2"></div>
+        <div class="col-lg-1"></div>
 
 
 
@@ -251,8 +275,8 @@
     <script>
        $(document).ready(function(){
              $('.flexslider').flexslider({
-                animation: "slide",
-                controlNav: "thumbnails"
+                animation: "slide"
+
               });
         });
     </script>

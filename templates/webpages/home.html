@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+
+
+{% block extra_head_content %}
+    <!-- FlexSlide CSS -->
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+
+    <link href="/static/css/webpage/home.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+    <div class="row flexslider-fix-height">
+        <div class="flexslider">
+            <ul class="slides">
+                <li >
+                    <img src="/static/img/party.jpg" />
+                </li>
+                <li >
+                    <img src="/static/img/fitness.jpg" />
+                </li>
+                <li >
+                    <img src="/static/img/zumba.jpeg" />
+                </li>
+                <li >
+                    <img src="/static/img/massage.jpeg" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extra_script_content %}
+    <!-- flexSlider --->
+    <script src="/static/javascript/jquery.flexslider-min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+       $(document).ready(function(){
+             $('.flexslider').flexslider({
+                animation: "slide"
+
+              });
+        });
+    </script>
+{% endblock %}

@@ -8,6 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-    url(r'^home/', 'webpage.views.home', name='home'),
+    url(r'^fitnes/', 'webpage.views.fitnes', name='home'),
+    url(r'^$', 'webpage.views.home', name='home'),
 
                        )

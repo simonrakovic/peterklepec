@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{% block head_title %}Fitnes studio Peter Klepec{% endblock head_title %}</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+        <link href="/static/css/custom/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+         <link href="/static/css/modern-business.css" rel="stylesheet">
+
+
+        {% block extra_head_content %}{% endblock %}
+
+        <!-- Custom CSS -->
+        <link href="/static/css/style.css" rel="stylesheet">
+
+	<body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
+            <a class="navbar-logo" href="/">
+                        <img class="navbar-logo pull-left  visible-lg" src="/static/img/logo123.png" alt="logo"/>
+            </a>
+            <div class=" container-padding-fix">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul  class="nav navbar-nav menu-list">
+                        <li>
+                            <a href="about.html">Vsa ponudba</a>
+
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="services.html">Cenik</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Urniki</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">O nas</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Header Carousel -->
+
+        <!-- Page Content -->
+        <div class="container-fluid">
+
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+
+                        <!-- Left navigation images -->
+
+                        <div class="col-lg-2 visible-lg">
+                            <div class="row pull-right img-nav-left jm-item first ">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="/fitnes/">
+                                            <img src="/static/img/fitness_icon.jpg" height="120" width="250" class="img-rounded" />
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-left">Fitnes</div>
+                                </div>
+                            </div>
+                            <div class="row pull-right img-nav-left jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/pace.jpg" height="120" width="250" class="img-rounded" alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-left">Pace</div>
+                                </div>
+                            </div>
+                            <div class="row pull-right img-nav-left jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/crossfit.jpeg" height="120" width="250" class="img-rounded" alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-left">Crossfit</div>
+                                </div>
+                            </div>
+                            <div class="row pull-right img-nav-left jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/crossfit.jpeg" height="120" width="250" class="img-rounded" alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-left">Crossfit</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Banner -->
+                        <div class="col-lg-8 ">
+                            {% block main_content %}{% endblock %}
+                        </div>
+                        <!-- Right navigation images -->
+                        <div class="col-lg-2 visible-lg">
+                            <div class="row img-nav-right jm-item first ">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/massage.jpeg" height="120" width="250" class="img-rounded " alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-right">Masaža</div>
+                                </div>
+                            </div>
+                            <div class="row img-nav-right jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/zumba.jpeg" height="120" width="250" class="img-rounded " alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-right">Zumba</div>
+                                </div>
+                            </div>
+                            <div class="row img-nav-right jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/party.jpg" height="120" width="250" class="img-rounded " alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-right">Zabave</div>
+                                </div>
+                            </div>
+                            <div class="row img-nav-right jm-item first">
+                                <div class="jm-item-wrapper">
+                                    <div class="jm-item-image">
+                                        <a href="#">
+                                            <img src="/static/img/party.jpg" height="120" width="250" class="img-rounded " alt="Sample Image">
+                                            <span class="jm-item-overlay "> </span>
+                                        </a>
+                                    </div>
+                                    <div class="jm-item-title jm-item-title-right">Zabave</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="container-fluid box">
+                               <h5>{{ title  }}</h5>
+                                    {{ content  }}
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid box">
+                                <h5>Delvni čas</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid box">
+                                <h5>Info</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----- End of main container --->
+
+            <div class="col-lg-1"></div>
+        </div>
+
+        <!-- jQuery Version 1.11.0 -->
+        <script src="/static/javascript/jquery-1.11.0.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/static/javascript/bootstrap.min.js"></script>
+
+        {% block extra_script_content %}{% endblock %}
+	</body>
+</html>

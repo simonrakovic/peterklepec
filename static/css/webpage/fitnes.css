@@ -1,0 +1,166 @@
+
+.fitnes-conteiner{
+    margin-top:20px;
+
+    background: rgba(13,11,11,0.9);
+    height:260px;
+
+}
+
+.margin-fix{
+    margin-left:10px;
+}
+
+.owerflow-fix{
+    padding-right: 10px;
+    overflow:auto;
+    height: 165px;
+
+}
+
+.page-header{
+    margin-top:10px;
+}
+
+
+.flexslider-fix-height{
+    margin-top:auto;
+
+    margin-right: 10px;
+}
+
+
+
+.flexslider {
+
+    background: none;
+
+    border: none;
+
+    max-height: 210px;
+
+    margin-top: 10px;
+}
+
+.flexslider .slides img {
+
+}
+
+
+/** PRICING TABLES **/
+.pricebox-container{
+    position: relative;
+
+    height:  260px;
+}
+
+.pricebox-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+
+    display: none;
+
+}
+
+.pricebox-front{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left:0;
+
+   z-index: 10;
+}
+
+.pricebox-table{
+    height: 100%;
+    width:100%;
+    text-align: center;
+}
+
+.pricetable-title{
+    height: 50px;
+    background: rgba(13,11,11,0.9);
+
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+
+.pricebox-priceborder{
+    border-bottom: 1px solid #412D1E;
+}
+
+.pricetable-subtitle{
+    height: 30px;
+
+    font-size: 1em;
+    font-weight: bold;
+    color: #D7C3AB;
+    background: rgba(13,11,11,0.2);
+}
+
+.pricetable-price{
+    height: 50px;
+    font-size: 2.5em;
+    color: #D7C3AB;
+    background: rgba(13,11,11,0.2);
+}
+
+.pricetable-button{
+    height: 50px;
+    border-top: transparent;
+    background: rgba(13,11,11,0.9);
+
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.pricebox-back-table{
+    width: 100%;
+    height:100%;
+    text-align: center;
+
+}
+
+.pricetable-back-title{
+    height: 20px;
+    background:rgba(115,88,66,0.5);
+    color: #A38A70;
+    font-weight: bold;
+    text-transform: uppercase ;
+}
+
+.pricetable-back-subtitle{
+    background:rgba(13,11,11,0.5);
+}
+
+.pricetable-back-price{
+    font-weight: bold;
+    color: #D7C3AB;
+    font-size: 1.2em;
+    background: rgba(13,11,11,0.2);
+}
+.pricetable-back-button{
+     color: #A38A70;
+    font-weight: bold;
+    font-size: 1.4em;
+    background:rgba(115,88,66,0.5);
+}
+
+.pricebox-row{
+    margin-top: 19px;
+}
+
+.pricebox{
+    height: 260px;
+}
+
+
+
+
+
