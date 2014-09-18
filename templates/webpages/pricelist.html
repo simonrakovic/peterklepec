@@ -1,0 +1,109 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+
+    <link href="/static/css/webpage/pricelist.css" rel="stylesheet">
+
+
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="pricelist-container">
+        <div class="pricelist-nav ">
+            <ul class="nav nav-justified pricelist-navbar pricelist-navigation">
+              <li class="pricelist-tab"><a  href="#tab_a" data-toggle="tab">Fitnes</a></li>
+              <li class="pricelist-tab"><a  href="#tab_b" data-toggle="tab">Pace</a></li>
+              <li class="pricelist-tab"><a  href="#tab_c" data-toggle="tab">Crossfit</a></li>
+
+              <li class="pricelist-tab"><a  href="#tab_e" data-toggle="tab">Zumba</a></li>
+              <li class="pricelist-tab"><a  href="#tab_f" data-toggle="tab">Zabava</a></li>
+              <li class="pricelist-tab"><a  href="#tab_g" data-toggle="tab">Masaže</a></li>
+              <li class="pricelist-tab"><a  href="#tab_h" data-toggle="tab">Razno</a></li>
+
+            </ul>
+        </div>
+        <div class="pricelist-content">
+
+            <div class="tab-content ">
+
+
+                    <div class="tab-pane active" id="tab_a">
+
+                            <div class="tab-pane-title">
+                               <h3>CENIK
+                                  <small>Fitnes</small>
+                               </h3>
+                                <div class="pricelist-secondnav pricelist-navigation">
+                                    <ul class="nav nav-justified " role="tablist">
+                                      <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                                      <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                                      <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+                                      <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                                </ul>
+                                </div>
+
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                      <div class="tab-pane active" id="home">a</div>
+                                      <div class="tab-pane" id="profile">b</div>
+                                      <div class="tab-pane" id="messages">c</div>
+                                      <div class="tab-pane" id="settings">d</div>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="tab-pane" id="tab_b">
+                        <h4>Pane B</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+                    <div class="tab-pane" id="tab_c">
+                        <h4>Pane C</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+
+
+                    <div class="tab-pane" id="tab_e">
+                        <h4>Pane D</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+
+                    <div class="tab-pane" id="tab_f">
+                        <h4>Pane D</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+
+                    <div class="tab-pane" id="tab_g">
+                        <h4>Pane D</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+
+                    <div class="tab-pane" id="tab_h">
+                        <h4>Pane D</h4>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                            ac turpis egestas.</p>
+                    </div>
+
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+    <script>
+        $("ul.pricelist-navigation a").click(function (e) {
+          e.preventDefault();
+            $(this).tab('show');
+        });
+
+
+    </script>
+{% endblock %}

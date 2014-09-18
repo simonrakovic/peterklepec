@@ -14,7 +14,7 @@
 {% block main_content %}
     <div class="fitnes-conteiner">
         <div class="row">
-            <div class="col-lg-8 margin-fix">
+            <div class="col-lg-6 margin-fix">
                 <div class="page-header">
                    <h3>FITNES
                       <small>vadba</small>
@@ -31,7 +31,7 @@
                     Vsem, ki si to želijo, izdelamo vadbeni program, glede na njihove želje in potrebe (hujšanje, pridobivanje mišične mase, kondicija) in to brezplačno.
                 </p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
 
 
             </div>
@@ -352,9 +352,7 @@
         $(document).ready(function(){
 
             $('.pricebox-container').click( function(){
-                $($(this).children().first()).animate({
-                        height:'toggle'
-                      });
+                $($(this).children().first()).fadeToggle( "fast");
                 $($(this).children().last()).fadeToggle( "fast");
             })
         });

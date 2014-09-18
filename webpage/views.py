@@ -15,3 +15,6 @@ def home(request):
 
 def fitnes(request):
     return render_to_response('webpages/fitnes.html', locals(),context_instance=RequestContext(request))
+
+def pricelist(request):
+    return render_to_response('webpages/pricelist.html', locals(),context_instance=RequestContext(request))

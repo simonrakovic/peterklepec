@@ -23,7 +23,7 @@
 }
 
 body{
-    background: url("/static/img/fitness.jpg") no-repeat right;
+    background: url("/static/img/fitness.jpg") no-repeat center top;
 }
 
 .navbar {

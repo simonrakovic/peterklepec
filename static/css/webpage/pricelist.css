@@ -1,0 +1,83 @@
+.pricelist-container{
+    margin-top:20px;
+
+
+    height:540px;
+}
+
+.pricelist-nav{
+    height: 60px;
+    background: rgba(13,11,11,0.9);
+}
+
+.pricelist-navbar li a{
+    height: 60px;
+    line-height: 40px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pricelist-navbar li a:hover{
+    background-color: #171313;
+    color:#ffffff;
+}
+
+
+
+.active a{
+    background-color: #171313;
+    color:#ffffff;
+}
+
+ul.active{
+    background:none;
+}
+
+
+.pricelist-content{
+    margin-top:20px;
+    background: rgba(13,11,11,0.9);
+    height: 460px
+}
+
+.tab-pane-title{
+    width:50%;
+    margin-left: 10px;
+
+    padding-top:5px;
+}
+
+.nav-tabs li a{
+    background: none ;
+}
+
+.nav-tabs li a:hover{
+    background: #171313 ;
+}
+
+.pricelist-nav ul li a:focus{
+    background: #171313 ;
+}
+
+
+
+
+.pricelist-secondnav{
+
+}
+
+.pricelist-secondnav ul li a{
+    background: none ;
+    color:#A38A70;
+}
+
+.pricelist-secondnav ul li a:hover{
+    background: #171313 ;
+}
+
+.pricelist-secondnav ul li a:focus{
+    background: #171313 ;
+}
+
+
