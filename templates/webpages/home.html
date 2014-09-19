@@ -14,6 +14,7 @@
             <ul class="slides">
                 <li >
                     <img src="/static/img/party.jpg" />
+                    <div class="flex-caption">Test</div>
                 </li>
                 <li >
                     <img src="/static/img/fitness.jpg" />
@@ -38,9 +39,12 @@
     <script>
        $(document).ready(function(){
              $('.flexslider').flexslider({
-                animation: "slide"
-
+                animation: "slide",
+                controlNav: false
               });
+
         });
+
+
     </script>
 {% endblock %}

@@ -14,3 +14,15 @@
     min-width: 700px;
     height: 540px;
 }
+
+.flexslider-fix-height{
+   height: 540px;
+}
+
+
+.flex-caption {
+    position:absolute;
+    left:50;right:50;bottom:0;
+    background:rgba(0, 0, 0,0.6);
+    z-index:1;padding:10px;
+ }

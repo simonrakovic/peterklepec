@@ -10,7 +10,7 @@
     background: rgba(13,11,11,0.9);
 }
 
-.pricelist-navbar li a{
+.pricelist-navbar > li > a{
     height: 60px;
     line-height: 40px;
 
@@ -18,20 +18,9 @@
     text-transform: uppercase;
 }
 
-.pricelist-navbar li a:hover{
-    background-color: #171313;
+.pricelist-navbar > li > a:hover{
+    background-color: rgba(5,4,4,0.8);
     color:#ffffff;
-}
-
-
-
-.active a{
-    background-color: #171313;
-    color:#ffffff;
-}
-
-ul.active{
-    background:none;
 }
 
 
@@ -42,42 +31,95 @@ ul.active{
 }
 
 .tab-pane-title{
-    width:50%;
+
     margin-left: 10px;
+    margin-right: 10px;
 
     padding-top:5px;
+
+
 }
 
-.nav-tabs li a{
+.nav-tabs > li > a{
     background: none ;
 }
 
-.nav-tabs li a:hover{
+.nav-tabs > li > a:hover{
     background: #171313 ;
 }
 
-.pricelist-nav ul li a:focus{
-    background: #171313 ;
+.pricelist-nav > ul > li > a:focus{
+    background: rgba(5,4,4,0.8);
+    outline: none;
 }
-
 
 
 
 .pricelist-secondnav{
-
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.pricelist-secondnav ul li a{
-    background: none ;
-    color:#A38A70;
-}
-
-.pricelist-secondnav ul li a:hover{
-    background: #171313 ;
-}
-
-.pricelist-secondnav ul li a:focus{
-    background: #171313 ;
+.pricelist-secondnav > ul > li{
+    border-bottom: 1px solid #ffffff;
 }
 
 
+.pricelist-secondnav > ul > li > a{
+
+
+}
+
+.pricelist-secondnav > ul > li > a:hover{
+    background: rgba(5,4,4,0.8); ;
+}
+
+.pricelist-secondnav > ul > li > a:focus{
+    background: rgba(5,4,4,0.8) ;
+    outline: none;
+}
+
+.pricelist-secondnav > ul > li > a:active{
+    background: rgba(5,4,4,0.8) ;
+    outline: none;
+}
+
+
+
+
+.active > a{
+    background: rgba(5,4,4,0.8);
+    color:#ffffff;
+    outline: none;
+}
+
+.pricelist-tab-info{
+    margin-top: 20px;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    text-decoration:underline ;
+
+}
+
+.table{
+    margin-top: 30px;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.table-colored-rows > thead > tr > th{
+
+    text-align: center;
+}
+
+.table-colored-rows > tbody > tr > td{
+    border:none;
+    text-align: center;
+}
+
+.table-colored-rows > tbody > tr:nth-child(2n+1){
+    background: rgba(215,195,171,0.2);
+}

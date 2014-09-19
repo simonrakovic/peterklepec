@@ -2,9 +2,38 @@
 .fitnes-conteiner{
     margin-top:20px;
 
-    background: rgba(13,11,11,0.9);
-    height:260px;
 
+
+
+}
+
+.fitnes-conteiner-info{
+    background: rgba(13,11,11,0.9);
+    height: 260px;
+
+
+}
+
+.fitnes-conteiner-title{
+    width:90%;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-size: 1.7em;
+
+    border-bottom: 1px solid #D7C3AB;
+}
+
+.fitnes-conteiner-title > small{
+    color: #D7C3AB;
+}
+
+.fitnes-conteiner-text{
+ margin-top: 30px;
+ margin-left: 10px;
+}
+
+.track{
+    margin-top:30px;
 }
 
 .margin-fix{
@@ -14,8 +43,7 @@
 .owerflow-fix{
     padding-right: 10px;
     overflow:auto;
-    height: 165px;
-
+    height: 170px;
 }
 
 .page-header{
@@ -25,25 +53,21 @@
 
 .flexslider-fix-height{
     margin-top:auto;
-
-    margin-right: 10px;
 }
 
 
 
 .flexslider {
-
     background: none;
-
     border: none;
+}
 
-    max-height: 210px;
-
-    margin-top: 10px;
+.flexslider-container{
+    height: 260px;
 }
 
 .flexslider .slides img {
-
+    height: 260px;
 }
 
 
@@ -63,6 +87,29 @@
 
     display: none;
 
+
+}
+
+
+.pricebox-back-img{
+    max-width:60%;
+    height:auto;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.pricebox-back-text{
+
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin-top: 10px;
 }
 
 .pricebox-front{
@@ -90,6 +137,13 @@
     font-size: 1.1em;
 
 }
+
+.pricebox-back > a{
+   color:#D7C3AB;
+   text-decoration: none;
+}
+
+
 
 .pricebox-priceborder{
     border-bottom: 1px solid #412D1E;
@@ -159,6 +213,8 @@
 .pricebox{
     height: 260px;
 }
+
+
 
 
 

@@ -11,8 +11,9 @@
 
     <div class="pricelist-container">
         <div class="pricelist-nav ">
-            <ul class="nav nav-justified pricelist-navbar pricelist-navigation">
-              <li class="pricelist-tab"><a  href="#tab_a" data-toggle="tab">Fitnes</a></li>
+            <ul class="nav nav-justified pricelist-navbar">
+              <li class="pricelist-tab active"><a  href="#tab_a" data-toggle="tab">Fitnes</a></li>
+
               <li class="pricelist-tab"><a  href="#tab_b" data-toggle="tab">Pace</a></li>
               <li class="pricelist-tab"><a  href="#tab_c" data-toggle="tab">Crossfit</a></li>
 
@@ -34,23 +35,67 @@
                                <h3>CENIK
                                   <small>Fitnes</small>
                                </h3>
-                                <div class="pricelist-secondnav pricelist-navigation">
-                                    <ul class="nav nav-justified " role="tablist">
-                                      <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-                                      <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-                                      <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-                                      <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                            </div>
+
+                            <div class="pricelist-secondnav ">
+                                <ul class="nav nav-justified " role="tablist">
+                                  <li class="active"><a href="#home" role="tab" data-toggle="tab">Celodnevna karta</a></li>
+                                  <li><a href="#profile" role="tab" data-toggle="tab">Popoldanska karta</a></li>
+                                  <li><a href="#messages" role="tab" data-toggle="tab">Vodene vadbe</a></li>
+                                  <li><a href="#settings" role="tab" data-toggle="tab">Konbinirana karta</a></li>
                                 </ul>
-                                </div>
+                            </div>
 
 
                                 <!-- Tab panes -->
-                                <div class="tab-content">
-                                      <div class="tab-pane active" id="home">a</div>
-                                      <div class="tab-pane" id="profile">b</div>
-                                      <div class="tab-pane" id="messages">c</div>
-                                      <div class="tab-pane" id="settings">d</div>
-                                </div>
+                            <div class="tab-content">
+                                  <div class="tab-pane active " id="home">
+                                      <div class="pricelist-tab-info">
+                                            Karta je veljavna med delavniki med 8:00 in 13:00 uro in med 16:00 in 23:30 uro.
+                                      </div>
+                                      <table class="table table-colored-rows ">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Veljavnost karte</th>
+                                                    <th>Navadna karta</th>
+                                                    <th>Karta za študente, dijake in upokojence</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>1 mesečna</td>
+                                                    <td>45,00€</td>
+                                                    <td>40,00€</td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td>3 mesečna</td>
+                                                    <td>121,50€</td>
+                                                    <td>108,00€</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>6 mesečna</td>
+                                                    <td>225,00€</td>
+                                                    <td>200.00€</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>12 mesečna</td>
+                                                    <td>405,00€</td>
+                                                    <td>360,00€</td>
+                                                </tr>
+                                            </tbody>
+                                      </table>
+
+
+                                  </div>
+                                  <div class="tab-pane" id="profile">b</div>
+                                  <div class="tab-pane" id="messages">c</div>
+                                  <div class="tab-pane" id="settings">d</div>
                             </div>
 
                     </div>
@@ -99,10 +144,7 @@
 
 {% block extra_script_content %}
     <script>
-        $("ul.pricelist-navigation a").click(function (e) {
-          e.preventDefault();
-            $(this).tab('show');
-        });
+
 
 
     </script>
