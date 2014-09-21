@@ -12,12 +12,18 @@
 
 }
 
+.img-nav-images{
+    height: 120px;
+    width: 230px;
+}
+
 .carousel{
 
 }
 
 body{
     background: url("/static/img/fitness.jpg") no-repeat center top;
+    background-color: rgb(0, 0, 0);
 }
 
 .navbar {

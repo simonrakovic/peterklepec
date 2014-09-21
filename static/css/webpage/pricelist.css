@@ -9,7 +9,9 @@
     height: 60px;
     background: rgba(13,11,11,0.9);
 }
-
+.pricelist-navbar{
+   height: 60px;
+}
 .pricelist-navbar > li > a{
     height: 60px;
     line-height: 40px;
@@ -122,4 +124,19 @@
 
 .table-colored-rows > tbody > tr:nth-child(2n+1){
     background: rgba(215,195,171,0.2);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .nav-justified > li {
+    display: table-cell;
+    
+  }
+  .nav-justified > li > a  {
+
+
+    margin-bottom: 0 !important;
+  }
 }
