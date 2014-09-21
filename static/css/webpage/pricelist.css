@@ -132,7 +132,7 @@
 @media (max-width: 768px) {
   .nav-justified > li {
     display: table-cell;
-    
+
   }
   .nav-justified > li > a  {
 
