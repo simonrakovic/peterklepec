@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^fitnes/', 'webpage.views.fitnes', name='home'),
     url(r'^cenik/', 'webpage.views.pricelist', name='home'),
+    url(r'^urnik/', 'webpage.views.timetable', name='home'),
     url(r'^$', 'webpage.views.home', name='home'),
 
                        )

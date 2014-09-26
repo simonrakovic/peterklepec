@@ -1,0 +1,155 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+    <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' />
+    <link href="/static/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet">
+
+
+    <link href="/static/css/webpage/timetable.css" rel="stylesheet">
+    <link href="/static/css/jquery-ui.theme.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+
+
+    <div class="pricelist-nav ">
+            <ul class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
+              <li class="pricelist-tab active"><a  href="#tab_a" data-toggle="tab">Fitnes</a></li>
+
+              <li class="pricelist-tab"><a  href="#tab_b" data-toggle="tab">Pace</a></li>
+              <li class="pricelist-tab"><a  href="#tab_c" data-toggle="tab">Crossfit</a></li>
+
+              <li class="pricelist-tab"><a  href="#tab_e" data-toggle="tab">Zumba</a></li>
+              <li class="pricelist-tab"><a  href="#tab_f" data-toggle="tab">Zabava</a></li>
+              <li class="pricelist-tab"><a  href="#tab_g" data-toggle="tab">Masaže</a></li>
+              <li class="pricelist-tab"><a  href="#tab_h" data-toggle="tab">Razno</a></li>
+            </ul>
+
+    </div>
+    <div class="pricelist-content">
+        <div id='calendar'></div>
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+    <script src='/static/fullcalendar/lib/moment.min.js'></script>
+    <script src='/static/fullcalendar/fullcalendar.js'></script>
+
+    <script>
+        $(document).ready(function() {
+
+            // page is now ready, initialize the calendar...
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+            $('#calendar').fullCalendar({
+
+                height: 460,
+				header: {
+                    left: 'prev,next today',
+                    center: '',
+                    right: ''
+			    },
+
+                /* sets the current view */
+                defaultView: 'agendaWeek',
+
+                /* sets the specific date */
+                //year: date.getFullYear(),
+                //month: date.getMonth(),
+                //date: ,
+
+                minTime: '09:00:00',
+                maxTime: '22:30:00',
+
+                firstDay: 1,
+                editable: false,
+                allDayDefault: false,
+                allDaySlot: false,
+                slotDuration: '00:45:00',
+
+                /* callbacks */
+                //viewDisplay: viewDisplay,
+                //dayClick: dayClick,
+
+
+                /* translation */
+                buttonText: {
+                    today: 'danes'
+                },
+
+                axisFormat: 'H:mm',
+                timeFormat: 'H:mm',
+
+                columnFormat: {
+                    week: 'ddd D.M '
+                },
+
+                monthNames: ['januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij','avgust', 'september', 'oktober', 'november', 'december'],
+                monthNamesShort:['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul','avg', 'sep', 'okt', 'nov', 'dec'],
+
+                dayNames: ['nedelja', 'ponedeljek', 'torek', 'sreda','četrtek', 'petek', 'sobota'],
+                dayNamesShort: ['NED', 'PON', 'TOR', 'SRE','ČET', 'PET', 'SOB'],
+                /* events data */
+                events: [
+					{
+                        title: 'Fitnes',
+
+                        start: new Date(y, m, 22,9,0),
+                        end: new Date(y, m, 22,13,0)
+
+
+                    },
+                    {
+                        title: 'Fitnes',
+                        start: new Date(y, m, 24,9,0),
+                        end: new Date(y, m, 24,13,0)
+
+                    },
+                    {
+                        title: 'Fitnes',
+                        start: new Date(y, m, 26,9,0),
+                        end: new Date(y, m, 26,13,0)
+
+                    },
+                    {
+                        title: 'Fitnes',
+                        start: new Date(y, m, 22,16,0),
+                        end: new Date(y, m, 22,22,30)
+
+                    },
+                    {
+                        title: 'Fitnes',
+                        start: new Date(y, m, 26,16,0),
+                        end: new Date(y, m, 26,22,30)
+
+                    },
+                    {
+                        title: 'Fitnes',
+                        start: new Date(y, m, 28,16,0),
+                        end: new Date(y, m, 28,22,0)
+
+                    },
+                    {
+                        title: 'ZAPRTO',
+                        start: new Date(y, m, 27,9),
+                        end: new Date(y, m, 27,22,30),
+                        backgroundColor: '#CF7242'
+
+                    }
+
+
+                ]
+
+                /*events: {
+
+                    type: 'GET',
+                    data: {
+                        'service_provider_id': '{{ service.service_provider_id }}', 'service': '{{ service.id }}', 'service_provider_employee_id': employee_id,
+                    }
+                }*/
+            })
+        });
+    </script>
+{% endblock %}

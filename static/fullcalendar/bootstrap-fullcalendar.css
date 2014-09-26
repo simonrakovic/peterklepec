@@ -1,0 +1,64 @@
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+
+
+
+.fc th{
+    background: rgba(5,4,4,0.9);
+
+}
+.fc th,
+.fc td {
+	border-style: solid;
+    border-color: rgba(5,4,4,0.8);;
+	border-width: 1px;
+	padding: 0;
+	vertical-align: top;
+}
+
+.fc td.fc-today {
+	border-style: double; /* overcome neighboring borders */
+}
+
+.fc .fc-axis { /* .fc to overcome default cell styles */
+	background: rgba(5,4,4,0.8);
+}
+
+.fc-slats td {
+	height: 1.5em;
+	border-bottom: 1px solid rgba(5,4,4,0.8); /* each cell is responsible for its top border */
+}
+
+.fc-slats .fc-minor td {
+	border-bottom: 1px ridge rgba(5,4,4,0.8);
+}
+
+
+
+.fc-unthemed .fc-today {
+    background:rgba(5,4,4,0.8);
+}
+
+.fc-bg{
+    background: rgba(163,138,112,0.5);;
+}
+
+.fc-event{
+    border-color: transparent;
+    background: #687242;
+}
+
+
+
+.fc-time-grid-event .fc-content .fc-time {
+    margin-top: 10px;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.fc-time-grid-event .fc-content .fc-title{
+    text-align: center;
+    margin-top: 10px;
+}

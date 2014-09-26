@@ -18,3 +18,6 @@ def fitnes(request):
 
 def pricelist(request):
     return render_to_response('webpages/pricelist.html', locals(),context_instance=RequestContext(request))
+
+def timetable(request):
+    return render_to_response('webpages/timetable.html', locals(),context_instance=RequestContext(request))
