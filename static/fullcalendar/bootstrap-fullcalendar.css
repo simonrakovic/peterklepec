@@ -24,13 +24,15 @@
 	background: rgba(5,4,4,0.8);
 }
 
-.fc-slats td {
-	height: 1.5em;
+.fc-slats  td{
+    font-size: 95%;
+	height: 1.9em;
 	border-bottom: 1px solid rgba(5,4,4,0.8); /* each cell is responsible for its top border */
 }
 
 .fc-slats .fc-minor td {
-	border-bottom: 1px ridge rgba(5,4,4,0.8);
+	border-bottom: 0px solid transparent;
+
 }
 
 

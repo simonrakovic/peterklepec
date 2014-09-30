@@ -1,4 +1,5 @@
 # Django settings for peterklepec_webpage project.
+
 import os.path
 
 
@@ -52,12 +53,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -72,6 +73,7 @@ STATIC_URL = '/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
      os.path.join(ROOT_DIR, 'static/'),
+     os.path.join(ROOT_DIR, 'media/'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -82,6 +84,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
@@ -94,6 +97,8 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
+
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -113,7 +118,17 @@ WSGI_APPLICATION = 'peterklepec_webpage.wsgi.application'
 import os
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
+import django.conf.global_settings as DEFAULT_SETTINGS
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+    "django.core.context_processors.request",
+)
+
+GRAPPELLI_INDEX_DASHBOARD = 'peterklepec_webpage.cms.dashboard.CustomIndexDashboard'
+
+
 INSTALLED_APPS = (
+    'grappelli.dashboard',
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -124,8 +139,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'south',
     'webpage',
-    'gunicorn'
+    'gunicorn',
+    'docutils',
+
+
 
 
 )

@@ -22,7 +22,7 @@
 
 	<body>
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top transparent" role="navigation">
+        <nav class="navbar  navbar-default navbar-fixed-top transparent" role="navigation">
             <a class="navbar-logo" href="/">
                         <img class="navbar-logo pull-left  visible-lg" src="/static/img/logo123.png" alt="logo"/>
             </a>
@@ -74,50 +74,19 @@
                         <!-- Left navigation images -->
 
                         <div class="col-lg-2 visible-lg">
-                            <div class="row pull-right img-nav-left jm-item first ">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="/fitnes/">
-                                            <img src="/static/img/fitness_icon.jpg"  class="img-nav-images" />
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
+                            {% for image in leftMenuImages %}
+                                <div class="row pull-right img-nav-left jm-item first ">
+                                    <div class="jm-item-wrapper">
+                                        <div class="jm-item-image">
+                                            <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
+                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"  class="img-nav-images" />
+                                                <span class="jm-item-overlay "> </span>
+                                            </a>
+                                        </div>
+                                        <div class="jm-item-title jm-item-title-left">{{ image.exercisesID.name }}</div>
                                     </div>
-                                    <div class="jm-item-title jm-item-title-left">Fitnes</div>
                                 </div>
-                            </div>
-                            <div class="row pull-right img-nav-left jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/pace.jpg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-left">Pace</div>
-                                </div>
-                            </div>
-                            <div class="row pull-right img-nav-left jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/crossfit.jpeg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-left">Crossfit</div>
-                                </div>
-                            </div>
-                            <div class="row pull-right img-nav-left jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/crossfit.jpeg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-left">Crossfit</div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <!-- Banner -->
                         <div class="col-lg-8 col-xs-12">
@@ -176,8 +145,8 @@
 
                         <div class="col-lg-4">
                             <div class="container-fluid box">
-                               <h5>{{ title}}</h5>
-                                    {{ content  }}
+
+
 
                             </div>
                         </div>
@@ -220,7 +189,14 @@
                         function(){
                             $($(this).children().first().children().last()).fadeIn( 500 );
                         }
+
                 );
+
+                $('.menuItem').click(
+                        function(){
+                            $('mainForm').submit()
+                        }
+                )
             });
 
         </script>

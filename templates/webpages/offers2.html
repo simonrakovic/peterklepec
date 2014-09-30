@@ -1,0 +1,182 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+    <!-- FlexSlide CSS -->
+    <link href="/static/css/flipBox.css" rel="stylesheet">
+
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+
+    <link href="/static/css/webpage/offers2.css" rel="stylesheet">
+
+
+{% endblock %}
+
+{% block main_content %}
+    <div class="row fitnes-conteiner">
+
+        <div class="col-lg-6">
+            <div class="fitnes-conteiner-info">
+
+               <div class="fitnes-conteiner-title">
+                   {{ exercise.name }}
+               </div>
+
+                <div class="fitnes-conteiner-text owerflow-fix scrollbox">
+
+                    {{ exercise.description }}
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6 flexslider-container visible-lg">
+
+                <div class="flexslider row col-lg-12">
+                    <ul class="slides">
+                        <li >
+                            <img src="/static/img/party.jpg" />
+
+                        </li>
+                        <li >
+                            <img src="/static/img/fitness.jpg" />
+                        </li>
+                        <li >
+                            <img src="/static/img/zumba.jpeg" />
+                        </li>
+                        <li >
+                            <img src="/static/img/massage.jpeg" />
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class=" col-xs-6 col-md-6 col-lg-6 margin-top-fix">
+                      <div class="pricebox-container">
+                        <div class="pricebox-front">
+                            <table class="pricebox-table">
+                                <tr class="pricetable-title">
+                                    <td>NEKI</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-price">30</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-subtitle pricebox-priceborder">neki</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-price ">40</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-subtitle">neki</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="pricetable-button">VEČ INFORMACIJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pricebox-back">
+                            <a href="/cenik/">
+                                <img class="pricebox-back-img"   src="/static/img/pricelist2a.png" alt="pricelist"/>
+                                <div class="">
+                                    Ogled cenika
+                                </div>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-6 col-md-6 col-lg-6 margin-top-fix">
+                      <div class="pricebox-container">
+                        <div class="pricebox-front">
+                            <table class="pricebox-table">
+                                <tr class="pricetable-title">
+                                    <td>NEKI</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-price">30</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-subtitle pricebox-priceborder">neki</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-price ">40</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricetable-subtitle">neki</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="pricetable-button">VEČ INFORMACIJ</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="pricebox-back">
+                            <a href="/cenik/">
+                                <img class="pricebox-back-img"   src="/static/img/pricelist2a.png" alt="pricelist"/>
+                                <div class="">
+                                    Ogled cenika
+                                </div>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+    <!-- flexSlider --->
+    <script src="/static/javascript/jquery.flexslider-min.js"></script>
+    <script src="/static/javascript/enscroll-0.6.1.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+
+       $(document).ready(function(){
+            $('.scrollbox').enscroll({
+                    showOnHover: false,
+                    verticalTrackClass: 'track',
+                    verticalHandleClass: 'handle'
+            });
+        });
+
+        $(document).ready(function(){
+
+            $('.pricebox-container').hover( function(e){
+                $($(this).children().first()).fadeOut( 500 );
+
+                $($(this).children().last()).fadeIn( 500 );
+
+                    var imgHeight =  $($(this).children().last().children().first().children().first()).height();
+                    var marginTop =  $($(this).children().last()).height()/2 - imgHeight/1.5;
+
+                    $($(this).children().last().children().first().children().first()).css('margin-top',marginTop);
+
+            },function(){
+                $($(this).children().first()).fadeIn( 500 );
+
+
+                $($(this).children().last()).fadeOut( 500 );
+
+            })
+        });
+
+        $(document).ready(function(){
+
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                slideshow: true,
+                slideshowSpeed: 3000
+              });
+
+        });
+
+
+    </script>
+{% endblock %}
