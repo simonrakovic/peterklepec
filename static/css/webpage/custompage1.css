@@ -1,0 +1,54 @@
+.image-container{
+    height: 260px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.flex-caption-overlay{
+    position:absolute;
+
+    bottom:0;
+    width: inherit;
+    height: 260px;
+    background-color: rgba(0, 0, 0,0.5);
+    z-index:1;
+ }
+
+.flex-caption-overlay-title{
+
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+
+    color:#ffffff;
+    font-size: 4em;
+    font-family: oregon;
+}
+
+.flex-caption-overlay-text{
+    margin-top:20px;
+    font-size: 2em;
+    font-family: ubuntu-l;
+    text-align:center;
+    color:#D7C3AB;
+}
+
+.text-container{
+    height: 260px;
+    color: #ffffff;
+    margin-top: 20px;
+
+    background: rgba(13,11,11,0.7);
+}
+
+
+
+.text-container-content{
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 20px;
+
+}

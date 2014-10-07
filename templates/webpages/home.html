@@ -12,19 +12,16 @@
     <div class="row flexslider-fix-height ">
         <div class="flexslider">
             <ul class="slides">
-                <li >
-                    <img src="/static/img/party.jpg" />
-                    <div class="flex-caption">Test</div>
-                </li>
-                <li >
-                    <img src="/static/img/fitness.jpg" />
-                </li>
-                <li >
-                    <img src="/static/img/zumba.jpeg" />
-                </li>
-                <li >
-                    <img src="/static/img/massage.jpeg" />
-                </li>
+                {% for news in news %}
+                    <li>
+                        <img src="{{ MEDIA_URL }}{{ news.image_background.imageDestination }}" />
+                        <div class="flex-caption-overlay">
+                            <div class="flex-caption-overlay-title">{{ news.title }}</div>
+                            <div class="flex-caption-overlay-text">{{ news.subtitle }}</div>
+                            <div class="flex-caption-overlay-button"><a href="/novice/{{ news.page_link.id }}">Več informacij</a></div>
+                        </div>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

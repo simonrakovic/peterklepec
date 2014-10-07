@@ -1,7 +1,6 @@
 .img-nav-right{
     margin-top: 20px;
 
-
 }
 
 
@@ -24,10 +23,11 @@
 body{
     background: url("/static/img/fitness.jpg") no-repeat center top;
     background-color: rgb(0, 0, 0);
+    font-family: ubuntu-m;
+
 }
 
 .navbar {
-
 
     background: rgba(13, 11, 11, 0.9);
 }
@@ -51,7 +51,8 @@ body{
 
 }
 .menu-list > li{
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-family:oregon;
     border-left: 1px solid #171414;
 }
 .menu-list > li:hover{
@@ -90,13 +91,15 @@ body{
 
     bottom: 17px;
     background: rgba(13,11,11,0.9);
-    line-height: 1.5em;
+    line-height: 35px;
     font-weight: normal;
-    padding: 7px 9px 6px;
-
-    font-family: 'Oswald', sans-serif;
+    padding-top: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-transform: uppercase;
+    font-family: oregon;
     color: #D7C3AB;
-    font-size: 1.4em;
+    font-size: 1.8em;
 
     -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
@@ -107,10 +110,12 @@ body{
 
 .jm-item-title-left{
     left: -10px;
+
 }
 
 .jm-item-title-right{
     right: -10px;
+
 }
 /*** CSS styles of the span element: ***/
 
@@ -184,6 +189,26 @@ body{
 
 
 @font-face {
-    font-family: 'leaguegothic'; /*a name to be used later*/
-    src: url('/static/fonts/leaguegothic-regular-webfont.ttf'); /*URL to font*/
+    font-family: 'boycott'; /*a name to be used later*/
+    src: url('/static/fonts/BOYCOTT_.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'ubuntu-b'; /*a name to be used later*/
+    src: url('/static/fonts/Ubuntu-B.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'ubuntu-m'; /*a name to be used later*/
+    src: url('/static/fonts/Ubuntu-M.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'ubuntu-l'; /*a name to be used later*/
+    src: url('/static/fonts/Ubuntu-L.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'oregon'; /*a name to be used later*/
+    src: url('/static/fonts/Oregon-LDO.ttf'); /*URL to font*/
 }

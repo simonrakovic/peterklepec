@@ -3,7 +3,7 @@ from django.contrib import admin
 
 
 from models import Exercises, ExercisesWeeklyTimetable, ImagePlacement, Images, CustomerType, News, NotWorkingHours, Prices, PricingPlan, \
-    ExercisesPageLayout
+    ExercisesPageLayout, CustomPage, PageLayout
 
 
 class ExerciseAdmin(admin.ModelAdmin):
@@ -23,10 +23,10 @@ class CustomerTypeAdmin(admin.ModelAdmin):
     list_display = ('description',)
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content')
+    list_display = ('title', 'subtitle', 'image_background', 'page_link')
 
 class NotWorkingHoursAdmin(admin.ModelAdmin):
-    list_display = ('exercisesID', 'weekDay', 'timeFrom', 'timeTo', 'description')
+    list_display = ('exercisesID', 'date', 'timeFrom', 'timeTo', 'description')
 
 class PricesAdmin(admin.ModelAdmin):
     list_display = ('pricingPlanID', 'description', 'customerTypeID', 'price', 'priceUnit')
@@ -36,6 +36,13 @@ class PricingPlanAdmin(admin.ModelAdmin):
 
 class ExercisesPageLayoutAdmin(admin.ModelAdmin):
     list_display = ('description', )
+
+class CustomPageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'title', 'subtitle', 'content', 'active', 'image_background', 'pageLayoutID')
+
+class PageLayoutAdmin(admin.ModelAdmin):
+    list_display = ('name', 'template_path')
+
 
 
 
@@ -52,5 +59,9 @@ admin.site.register(PricingPlan, PricingPlanAdmin)
 
 
 admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
+
+admin.site.register(CustomPage, CustomPageAdmin)
+admin.site.register(PageLayout, PageLayoutAdmin)
+
 
 

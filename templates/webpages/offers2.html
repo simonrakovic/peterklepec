@@ -33,94 +33,121 @@
 
                 <div class="flexslider row col-lg-12">
                     <ul class="slides">
-                        <li >
-                            <img src="/static/img/party.jpg" />
-
-                        </li>
-                        <li >
-                            <img src="/static/img/fitness.jpg" />
-                        </li>
-                        <li >
-                            <img src="/static/img/zumba.jpeg" />
-                        </li>
-                        <li >
-                            <img src="/static/img/massage.jpeg" />
-                        </li>
+                        {% for image in gallery_images %}
+                            <li >
+                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" />
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
 
                 <div class="row">
-                    <div class=" col-xs-6 col-md-6 col-lg-6 margin-top-fix">
-                      <div class="pricebox-container">
-                        <div class="pricebox-front">
-                            <table class="pricebox-table">
-                                <tr class="pricetable-title">
-                                    <td>NEKI</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-price">30</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-subtitle pricebox-priceborder">neki</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-price ">40</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-subtitle">neki</td>
-                                </tr>
+                    {% if num_of_prices == 2  %}
 
-                                <tr>
-                                    <td class="pricetable-button">VEČ INFORMACIJ</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="pricebox-back">
-                            <a href="/cenik/">
-                                <img class="pricebox-back-img"   src="/static/img/pricelist2a.png" alt="pricelist"/>
-                                <div class="">
-                                    Ogled cenika
+                            <div class=" col-xs-12 col-md-12 col-lg-12 margin-top-fix">
+                              <div class="pricebox-container">
+                                <div class="pricebox-front">
+                                    <table class="pricebox-table">
+                                         <tr class="pricetable-title">
+                                            <td>{{ first.description }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-price">{{ first.price }}{{ first.priceUnit }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-subtitle pricebox-priceborder">{{ first.customerTypeID.description }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-price ">{{ second.price  }}{{ second.priceUnit }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-subtitle">{{ second.customerTypeID.description }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="pricetable-button">VEČ INFORMACIJ</td>
+                                        </tr>
+                                            </table>
                                 </div>
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-xs-6 col-md-6 col-lg-6 margin-top-fix">
-                      <div class="pricebox-container">
-                        <div class="pricebox-front">
-                            <table class="pricebox-table">
-                                <tr class="pricetable-title">
-                                    <td>NEKI</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-price">30</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-subtitle pricebox-priceborder">neki</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-price ">40</td>
-                                </tr>
-                                <tr>
-                                    <td class="pricetable-subtitle">neki</td>
-                                </tr>
-
-                                <tr>
-                                    <td class="pricetable-button">VEČ INFORMACIJ</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="pricebox-back">
-                            <a href="/cenik/">
-                                <img class="pricebox-back-img"   src="/static/img/pricelist2a.png" alt="pricelist"/>
-                                <div class="">
-                                    Ogled cenika
+                                <div class="pricebox-back">
+                                    <a href="/cenik/">
+                                        <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
+                                        <div class="pricebox-back-text">
+                                            Ogled cenika
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                              </div>
+                            </div>
+
+                    {% elif num_of_prices == 4 %}
+                        {% for first,second in loop %}
+                            <div class=" col-xs-6 col-md-6 col-lg-6 margin-top-fix">
+                              <div class="pricebox-container">
+                                <div class="pricebox-front">
+                                    <table class="pricebox-table">
+                                         <tr class="pricetable-title">
+                                            <td>{{ first.description }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-price">{{ first.price }}{{ first.priceUnit }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-subtitle pricebox-priceborder">{{ first.customerTypeID.description }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-price ">{{ second.price  }}{{ second.priceUnit }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pricetable-subtitle">{{ second.customerTypeID.description }}</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="pricetable-button">VEČ INFORMACIJ</td>
+                                        </tr>
+                                            </table>
+                                </div>
+                                <div class="pricebox-back">
+                                    <a href="/cenik/">
+                                        <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
+                                        <div class="pricebox-back-text">
+                                            Ogled cenika
+                                        </div>
+                                    </a>
+                                </div>
+                              </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class=" col-xs-12 col-md-12 col-lg-12 margin-top-fix">
+                          <div class="pricebox-container">
+                            <div class="pricebox-front">
+                                <table class="pricebox-table">
+                                    <tr class="">
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="" style="font-size: 2em;font-weight: bold;color: #D7C3AB">CENIK</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class=""></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="pricebox-back">
+                                <a href="/cenik/">
+                                    <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
+                                    <div class="pricebox-back-text">
+                                        Ogled cenika
+                                    </div>
+                                </a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                    {% endif %}
+
+
                 </div>
 
 

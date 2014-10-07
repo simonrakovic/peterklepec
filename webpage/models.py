@@ -15,33 +15,37 @@ class Exercises(models.Model):
     position_number_on_main_page = models.IntegerField(default=None, null=True, blank=True)
 
     def __unicode__(self):
-        return u'%s ' % (self.name)
+        return u'%s ' % self.name
 
 
 class ExercisesPageLayout(models.Model):
     description = models.CharField(max_length=60)
 
     def __unicode__(self):
-        return u'%s ' % (self.description)
+        return u'%s ' % self.description
+
 
 class ExercisesWeeklyTimetable(models.Model):
     exercisesID = models.ForeignKey('Exercises')
 
-    weekDay = models.IntegerField()
+    weekDay = models.ForeignKey('WeekDay')
 
     timeFrom = models.TimeField()
     timeTo = models.TimeField()
 
     description = models.TextField()
 
+class WeekDay(models.Model):
+    name = models.CharField(max_length=60)
+    day_in_week = models.IntegerField()
 
-
+    def __unicode__(self):
+        return u'%s ' % self.name
 
 class NotWorkingHours(models.Model):
     exercisesID = models.ForeignKey('Exercises', default=None, null=True, blank=True)
 
-    weekDay = models.IntegerField()
-
+    date = models.DateField()
     timeFrom =models.TimeField()
     timeTo = models.TimeField()
 
@@ -53,7 +57,7 @@ class PricingPlan(models.Model):
     name = models.TextField()
 
     def __unicode__(self):
-        return u'%s' % (self.name)
+        return u'%s' % self.name
 
 
 class Prices(models.Model):
@@ -66,12 +70,11 @@ class Prices(models.Model):
     priceUnit = models.CharField(max_length=10)
 
 
-
 class CustomerType(models.Model):
     description = models.CharField(max_length=50)
 
     def __unicode__(self):
-        return u'%s ' % (self.description)
+        return u'%s ' % self.description
 
 
 class Images(models.Model):
@@ -84,20 +87,46 @@ class Images(models.Model):
 
     imageDestination = models.ImageField(upload_to='images/')
 
-
+    def __unicode__(self):
+        return u'%s' % self.name
 
 
 class ImagePlacement(models.Model):
     description = models.TextField(default=None)
 
     def __unicode__(self):
-        return u'%s' % (self.description)
+        return u'%s' % self.description
+
 
 class News(models.Model):
-    title = models.TextField()
+    title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
+
+    image_background = models.ForeignKey('Images')
+    page_link = models.ForeignKey('CustomPage', default=None, null=True, blank=True)
+
+
+class CustomPage(models.Model):
+
+    name = models.CharField(max_length=50)
+
+    title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100, default=None, null=True, blank=True)
     content = models.TextField()
 
+    image_background = models.ForeignKey('Images')
+
+    active = models.BooleanField()
+    pageLayoutID = models.ForeignKey('PageLayout')
+
+    def __unicode__(self):
+        return u'%s' % self.name
 
 
+class PageLayout(models.Model):
+    name = models.TextField()
+    template_path = models.CharField(max_length=100)
 
+    def __unicode__(self):
+        return u'%s' % self.name
 

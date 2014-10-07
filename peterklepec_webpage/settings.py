@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     'webpage',
     'gunicorn',
     'docutils',
+    'rest_framework'
 
 
 
@@ -183,7 +184,7 @@ import dj_database_url
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 DATABASES = {'default': dj_database_url.parse('sqlite:///'+PROJECT_PATH+'db.sqlite3')}
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost:8000']
 
 
 STATIC_ROOT = 'staticfiles'

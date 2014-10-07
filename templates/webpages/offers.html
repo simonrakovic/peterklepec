@@ -33,19 +33,11 @@
             <div class="col-lg-6 flexslider-container visible-lg">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li >
-                            <img src="/static/img/party.jpg" />
-
-                        </li>
-                        <li >
-                            <img src="/static/img/fitness.jpg" />
-                        </li>
-                        <li >
-                            <img src="/static/img/zumba.jpeg" />
-                        </li>
-                        <li >
-                            <img src="/static/img/massage.jpeg" />
-                        </li>
+                        {% for image in gallery_images %}
+                            <li >
+                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" />
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

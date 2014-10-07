@@ -11,21 +11,14 @@
 
 {% block main_content %}
 
-
     <div class="pricelist-nav ">
             <ul class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
-              <li class="pricelist-tab active"><a  href="#tab_a" data-toggle="tab">Fitnes</a></li>
-
-              <li class="pricelist-tab"><a  href="#tab_b" data-toggle="tab">Pace</a></li>
-              <li class="pricelist-tab"><a  href="#tab_c" data-toggle="tab">Crossfit</a></li>
-
-              <li class="pricelist-tab"><a  href="#tab_e" data-toggle="tab">Zumba</a></li>
-              <li class="pricelist-tab"><a  href="#tab_f" data-toggle="tab">Zabava</a></li>
-              <li class="pricelist-tab"><a  href="#tab_g" data-toggle="tab">Masaže</a></li>
-              <li class="pricelist-tab"><a  href="#tab_h" data-toggle="tab">Razno</a></li>
+              {% for exercise in exercises %}
+                 <li id="{{ exercise.id }}" class="pricelist-tab {% if active_id == exercise.id %}active{% endif %}"><a  href="" data-toggle="tab">{{ exercise.name }}</a></li>
+              {% endfor %}
             </ul>
-
     </div>
+
     <div class="pricelist-content">
         <div id='calendar'></div>
     </div>
@@ -34,15 +27,26 @@
 {% block extra_script_content %}
     <script src='/static/fullcalendar/lib/moment.min.js'></script>
     <script src='/static/fullcalendar/fullcalendar.js'></script>
-
+    <script src='/static/javascript/date.js'></script>
     <script>
-        $(document).ready(function() {
 
-            // page is now ready, initialize the calendar...
+        $(document).ready(function() {
+            var exerciseID = {{ active_id }};
+            var minTime = '08:00:00';
+            var maxTime = '22:30:00';
+
             var date = new Date();
+
             var d = date.getDate();
             var m = date.getMonth();
             var y = date.getFullYear();
+
+            $('.pricelist-tab').click(function(){
+                exerciseID = $(this).attr('id')
+                 $('#calendar').fullCalendar( 'refetchEvents' )
+
+            });
+
             $('#calendar').fullCalendar({
 
                 height: 455,
@@ -60,8 +64,8 @@
                 //month: date.getMonth(),
                 //date: ,
 
-                minTime: '08:00:00',
-                maxTime: '22:30:00',
+                minTime: minTime,
+                maxTime: maxTime,
 
                 firstDay: 1,
                 editable: false,
@@ -79,6 +83,8 @@
                     today: 'danes'
                 },
 
+
+                slotEventOverlap:false,
                 axisFormat: 'H:mm',
                 timeFormat: 'H:mm',
 
@@ -92,63 +98,146 @@
                 dayNames: ['nedelja', 'ponedeljek', 'torek', 'sreda','četrtek', 'petek', 'sobota'],
                 dayNamesShort: ['NED', 'PON', 'TOR', 'SRE','ČET', 'PET', 'SOB'],
                 /* events data */
-                events: [
-					{
-                        title: 'Fitnes',
+                events: function(start, end, timezone, callback) {
+                     $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost:8000/odsotnosti/'+exerciseID,
+                        data: { get_param: 'value' },
+                        dataType:'json',
+                        success: function (notWorkingHours) {
+                            $.ajax({
+                                type: 'GET',
+                                url: 'http://localhost:8000/casizvajanjavadb/'+exerciseID,
+                                data: { get_param: 'value' },
+                                dataType:'json',
+                                success: function (data) {
+                                    var JSONevents = [];
+                                    var num_of_shown_weeks = 4; //st. prikazanih tednov
+                                    //iteracija za prikaza večih tednov
+                                    for(var j = 0;j < num_of_shown_weeks;j++){
+                                        //iteracija med eventi odsotnosti
+                                        for(var i = 0;i < data.length;i++ ){
+                                            var dateTemp = Date.today().moveToDayOfWeek(1,-1); //doloci prvi dan v prejsnem tednu
+                                            dateTemp = dateTemp.addWeeks(j) //teden prikaza
+                                            dateTemp = dateTemp.addDays(data[i].weekDay.day_in_week); //dnevi prikaza eventa
+                                            var isOnSameDay = false;
 
-                        start: new Date(y, m, 22,9,0),
-                        end: new Date(y, m, 22,13,0)
+                                            var event = {
+                                                        title: data[i].description,
+                                                        start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeFrom).getHours(), Date.parse(data[i].timeFrom).getMinutes()),
+                                                        end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeTo).getHours(), Date.parse(data[i].timeTo).getMinutes())
+                                                        };
+                                            //iritacija med eventi odsotnosti, preverja se za vsak event vadbe, če se prekriva z eventom odsotnosti
+                                            for(var k = 0;k < notWorkingHours.length;k++){
+                                                //ko se event porabi se njegova vrednost postavi na null, tako da se ne pojavlajo dvojni eventi
+                                                if(notWorkingHours[k] != null){
+                                                    //ce je datum enak se zamenja delavni cas vadbe z casom odsotnosti
+                                                    if(Date.parse(notWorkingHours[k].date).equals(dateTemp)){
+                                                        var start_of_exercise_event1 = event.start.getTime();
+                                                        var end_of_exercise_event1 =  event.end.getTime();
+                                                        var start_of_not_working_event2 = Date.parse(notWorkingHours[k].date+" "+notWorkingHours[k].timeFrom).getTime();
+                                                        var end_of_not_working_event2 =Date.parse(notWorkingHours[k].date+" "+notWorkingHours[k].timeTo).getTime();
 
+                                                        //sledeči exercise event in event odsotnosti se ne nanašata na isti event zato zanka preskoči na naslednji event odsotnosti
+                                                        if(end_of_exercise_event1 <= start_of_not_working_event2 || start_of_exercise_event1 >=  end_of_not_working_event2)continue;
 
-                    },
-                    {
-                        title: 'Fitnes',
-                        start: new Date(y, m, 24,9,0),
-                        end: new Date(y, m, 24,13,0)
+                                                        if(start_of_exercise_event1 <= start_of_not_working_event2 && end_of_exercise_event1 <= end_of_not_working_event2){ //
+                                                           //dodamo exercise event
+                                                           JSONevents.push(
+                                                                   {
+                                                                       title: data[i].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.start.getHours(), event.start.getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes())
 
-                    },
-                    {
-                        title: 'Fitnes',
-                        start: new Date(y, m, 26,9,0),
-                        end: new Date(y, m, 26,13,0)
+                                                                   }
+                                                           )
+                                                           //dodamo notWorking event
+                                                           JSONevents.push(
+                                                                   {
 
-                    },
-                    {
-                        title: 'Fitnes',
-                        start: new Date(y, m, 22,16,0),
-                        end: new Date(y, m, 22,22,30)
+                                                                       title: notWorkingHours[k].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       backgroundColor: '#CF7242'
+                                                                   }
+                                                           )
+                                                        }else if(start_of_exercise_event1 >= start_of_not_working_event2  &&  end_of_exercise_event1 >= end_of_not_working_event2 ){
+                                                            //dodamo exercise event
+                                                           JSONevents.push(
+                                                                   {
+                                                                       title: data[i].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.end.getHours(),event.end.getMinutes())
 
-                    },
-                    {
-                        title: 'Fitnes',
-                        start: new Date(y, m, 26,16,0),
-                        end: new Date(y, m, 26,22,30)
+                                                                   }
+                                                           )
+                                                           //dodamo notWorking event
+                                                           JSONevents.push(
+                                                                   {
 
-                    },
-                    {
-                        title: 'Fitnes',
-                        start: new Date(y, m, 28,16,0),
-                        end: new Date(y, m, 28,22,0)
+                                                                       title: notWorkingHours[k].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       backgroundColor: '#CF7242'
+                                                                   }
+                                                           )
+                                                        }else if(start_of_exercise_event1 < start_of_not_working_event2 && end_of_exercise_event1 > end_of_not_working_event2){
+                                                            JSONevents.push(
+                                                                   {
+                                                                       title: data[i].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.start.getHours(), event.start.getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes())
 
-                    },
-                    {
-                        title: 'ZAPRTO',
-                        start: new Date(y, m, 27,9),
-                        end: new Date(y, m, 27,22,30),
-                        backgroundColor: '#CF7242'
+                                                                   }
+                                                           )
 
-                    }
+                                                           JSONevents.push(
+                                                                   {
+                                                                       title: data[i].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.end.getHours(),event.end.getMinutes())
 
+                                                                   }
+                                                           )
 
-                ]
+                                                           //dodamo notWorking event
+                                                           JSONevents.push(
+                                                                   {
 
-                /*events: {
+                                                                       title: notWorkingHours[k].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       backgroundColor: '#CF7242'
+                                                                   }
+                                                           )
+                                                        }else{
+                                                            JSONevents.push(
+                                                                   {
 
-                    type: 'GET',
-                    data: {
-                        'service_provider_id': '{{ service.service_provider_id }}', 'service': '{{ service.id }}', 'service_provider_employee_id': employee_id,
-                    }
-                }*/
+                                                                       title: notWorkingHours[k].description,
+                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
+                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
+                                                                       backgroundColor: '#CF7242'
+                                                                   }
+                                                           )
+                                                        }
+                                                        isOnSameDay = true;
+                                                        notWorkingHours[k] = null;
+                                                        break;// prekine zanko, če najde event, ki se prekriva. Tako pohitrimo samo izvajanje, vendar hrati obogočamo samo toliko eventov odsotnosti kolikor je na dan prikazanih eventov vadb
+                                                    }
+                                                }
+                                            }
+                                            if(!isOnSameDay){
+                                                JSONevents.push(event);
+                                            }
+                                        }
+                                    }
+                                    callback(JSONevents);
+                                }
+                            });
+                        }
+                     });
+                }
             })
         });
     </script>

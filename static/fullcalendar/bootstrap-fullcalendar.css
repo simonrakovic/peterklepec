@@ -53,14 +53,17 @@
 
 
 .fc-time-grid-event .fc-content .fc-time {
-    margin-top: 10px;
-    font-size: 1.3em;
+    margin-top:3%;
+    width:100%;
+    font-size: 1.5em;
     text-align: center;
     text-decoration: underline;
 }
 
 
 .fc-time-grid-event .fc-content .fc-title{
+    width: 100%;
     text-align: center;
-    margin-top: 10px;
+    font-size: 1.4em;
+    margin-top:1%;
 }
