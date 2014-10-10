@@ -73,12 +73,19 @@ def pricelist(request):
     return render_to_response('webpages/pricelist.html', locals(), context_instance=RequestContext(request))
 
 
-def timetable(request):
+def timetable(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    active_exercise = Exercises.objects.get(pk=id)
     exercises = Exercises.objects.all()
-    active_id = 1
+    not_working_events = NotWorkingHours.objects.filter(exercisesID=id)
+    exercise_events = ExercisesWeeklyTimetable.objects.filter(exercisesID=id)
+
     return render_to_response('webpages/timetable.html', locals(), context_instance=RequestContext(request))
 
+def info(request):
+    leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+
+    return render_to_response('webpages/info.html', locals(), context_instance=RequestContext(request))
 
 def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
@@ -108,7 +115,6 @@ class NotWorkingHoursSerializer(serializers.ModelSerializer):
     """Serializes a User object"""
     class Meta:
         model = NotWorkingHours
-
 
 #imprtanje classa generic iz django-rest-framework, ki poskrbi za GET request in posreduje zeljeni model v JSON oblik
 class ExercisesWeeklyTimetableList(generics.ListAPIView):

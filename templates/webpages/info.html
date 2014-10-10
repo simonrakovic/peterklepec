@@ -1,0 +1,129 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+    <link href="/static/css/webpage/info.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=sl"></script>
+    <script>
+
+
+        function initialize() {
+              var myLatlng = new google.maps.LatLng(46.006213, 14.347381);
+              var mapOptions = {
+                zoom:16,
+                center: myLatlng
+              }
+              var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+              var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  title: 'Fitnes studio Peter Klepec'
+              });
+        }
+
+        function resize(){
+            var myLatlng = new google.maps.LatLng(46.006213, 14.347381);
+            var mapOptions = {
+                zoom:16,
+                center: myLatlng
+            }
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  title: 'Fitnes studio Peter Klepec'
+              });
+
+            google.maps.event.trigger(map, "resize");
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+{% endblock %}
+
+{% block main_content %}
+    <div class="info-conteiner">
+        <div class="info-content col-lg-6">
+            <div class="info-title">O podjetju</div>
+            <div class="info-content-text-box">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Naziv:</th>
+                        <td>Fitnes studio Peter Klepec d.o.o.</td>
+                    </tr>
+                    <tr>
+                        <th>Lokacija:</th>
+                        <td>Rimska 33, 1358 Log pri Brezovici</td>
+                    </tr>
+                    <tr>
+                        <th>Davčna št.:</th>
+                        <td>43538053</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="info-title">Kontakti</div>
+            <div class="info-content-text-box">
+                 <table>
+                    <tbody>
+                    <tr>
+                        <th>Telefon:</th>
+                        <td>01/756 50 23</td>
+                    </tr>
+                    <tr>
+                        <th>GSM:</th>
+                        <td>041 972 169</td>
+                    </tr>
+                    <tr>
+                        <th>E-pošta:</th>
+                        <td>fitnes.peter.klepec1995@gmail.com</td>
+                    </tr>
+                    </tbody>
+                 </table>
+            </div>
+
+        </div>
+        <div class="info-map-container small col-lg-6">
+            <div class="info-map row">
+                <div id="map-canvas"></div>
+                <div class="map-canvas-button">Povečaj zemljevid</div>
+            </div>
+        </div>
+
+
+
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+    <script>
+        $(".map-canvas-button").click(function(){
+
+            if ($(".info-map-container ").hasClass('small')){
+               $(".info-content").hide();
+                $(".info-map-container ").removeClass('col-lg-6');
+                $(".info-map-container ").addClass('col-lg-12');
+
+                $(".info-map-container ").removeClass('small');
+                $(".info-map-container ").addClass('large');
+                resize();
+                $(".map-canvas-button").text("Pomanjšaj zemljevid");
+                }
+            else{
+                $(".info-content").show();
+                $(".info-map-container ").removeClass('col-lg-12');
+                $(".info-map-container ").addClass('col-lg-6');
+
+                $(".info-map-container ").removeClass('large');
+                $(".info-map-container ").addClass('small');
+                resize();
+                $(".map-canvas-button").text("Povečaj zemljevid");
+            }
+
+        })
+
+
+    </script>
+{% endblock %}

@@ -3,7 +3,7 @@ from django.contrib import admin
 
 
 from models import Exercises, ExercisesWeeklyTimetable, ImagePlacement, Images, CustomerType, News, NotWorkingHours, Prices, PricingPlan, \
-    ExercisesPageLayout, CustomPage, PageLayout
+    ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength
 
 
 class ExerciseAdmin(admin.ModelAdmin):
@@ -43,6 +43,9 @@ class CustomPageAdmin(admin.ModelAdmin):
 class PageLayoutAdmin(admin.ModelAdmin):
     list_display = ('name', 'template_path')
 
+class ExerciseLengthAdmin(admin.ModelAdmin):
+    list_display = ('name', 'start_of_exercise', 'end_of_exercise')
+
 
 
 
@@ -62,6 +65,8 @@ admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
 
 admin.site.register(CustomPage, CustomPageAdmin)
 admin.site.register(PageLayout, PageLayoutAdmin)
+
+admin.site.register(ExerciseLength, ExerciseLengthAdmin)
 
 
 

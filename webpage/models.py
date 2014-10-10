@@ -14,9 +14,21 @@ class Exercises(models.Model):
     show_on_main_page = models.BooleanField()
     position_number_on_main_page = models.IntegerField(default=None, null=True, blank=True)
 
+    length = models.ForeignKey('ExerciseLength')
+
     def __unicode__(self):
         return u'%s ' % self.name
 
+
+class ExerciseLength(models.Model):
+    name = models.CharField(max_length=50)
+
+    start_of_exercise = models.TimeField()
+    end_of_exercise = models.TimeField()
+    slotInterval = models.TimeField()
+
+    def __unicode__(self):
+        return u'%s ' % self.name
 
 class ExercisesPageLayout(models.Model):
     description = models.CharField(max_length=60)

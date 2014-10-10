@@ -14,7 +14,7 @@
     <div class="pricelist-nav ">
             <ul class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
               {% for exercise in exercises %}
-                 <li id="{{ exercise.id }}" class="pricelist-tab {% if active_id == exercise.id %}active{% endif %}"><a  href="" data-toggle="tab">{{ exercise.name }}</a></li>
+                 <li class="pricelist-tab {% if active_exercise.id == exercise.id %}active{% endif %}"><a  href="/urnik/{{ exercise.id }}">{{ exercise.name }}</a></li>
               {% endfor %}
             </ul>
     </div>
@@ -22,6 +22,7 @@
     <div class="pricelist-content">
         <div id='calendar'></div>
     </div>
+
 {% endblock %}
 
 {% block extra_script_content %}
@@ -29,23 +30,11 @@
     <script src='/static/fullcalendar/fullcalendar.js'></script>
     <script src='/static/javascript/date.js'></script>
     <script>
-
         $(document).ready(function() {
-            var exerciseID = {{ active_id }};
-            var minTime = '08:00:00';
-            var maxTime = '22:30:00';
-
-            var date = new Date();
-
-            var d = date.getDate();
-            var m = date.getMonth();
-            var y = date.getFullYear();
-
-            $('.pricelist-tab').click(function(){
-                exerciseID = $(this).attr('id')
-                 $('#calendar').fullCalendar( 'refetchEvents' )
-
-            });
+            var exerciseID = {{ active_exercise.id }} ;
+            var minTime = "{{ active_exercise.length.start_of_exercise|time:'H:i:s' }}";
+            var maxTime = "{{ active_exercise.length.end_of_exercise|time:'H:i:s'}}";
+            var slotInterval = "{{ active_exercise.length.slotInterval|time:'H:i:s'}}";
 
             $('#calendar').fullCalendar({
 
@@ -71,7 +60,7 @@
                 editable: false,
                 allDayDefault: false,
                 allDaySlot: false,
-                slotDuration: '01:00:00',
+                slotDuration: slotInterval,
 
                 /* callbacks */
                 //viewDisplay: viewDisplay,
@@ -85,7 +74,7 @@
 
 
                 slotEventOverlap:false,
-                axisFormat: 'H:mm',
+                axisFormat: '',
                 timeFormat: 'H:mm',
 
                 columnFormat: {
@@ -120,13 +109,14 @@
                                             var dateTemp = Date.today().moveToDayOfWeek(1,-1); //doloci prvi dan v prejsnem tednu
                                             dateTemp = dateTemp.addWeeks(j) //teden prikaza
                                             dateTemp = dateTemp.addDays(data[i].weekDay.day_in_week); //dnevi prikaza eventa
-                                            var isOnSameDay = false;
 
+                                            var isOnSameDay = false; // če je event na isti dan se sam event že zapiše v sledeči for zanki in ga ni potrebno pushati seenkrat
                                             var event = {
                                                         title: data[i].description,
                                                         start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeFrom).getHours(), Date.parse(data[i].timeFrom).getMinutes()),
                                                         end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeTo).getHours(), Date.parse(data[i].timeTo).getMinutes())
                                                         };
+
                                             //iritacija med eventi odsotnosti, preverja se za vsak event vadbe, če se prekriva z eventom odsotnosti
                                             for(var k = 0;k < notWorkingHours.length;k++){
                                                 //ko se event porabi se njegova vrednost postavi na null, tako da se ne pojavlajo dvojni eventi
@@ -227,11 +217,13 @@
                                                     }
                                                 }
                                             }
+
                                             if(!isOnSameDay){
                                                 JSONevents.push(event);
                                             }
                                         }
                                     }
+
                                     callback(JSONevents);
                                 }
                             });
@@ -239,6 +231,8 @@
                      });
                 }
             })
+
+
         });
     </script>
 {% endblock %}
