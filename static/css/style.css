@@ -8,7 +8,6 @@
     margin-top: 20px;
     margin-right:-15px;
 
-
 }
 
 .img-nav-images{
@@ -140,11 +139,51 @@ body{
 
 
 .box{
-    height:200px;
-    border-left: 5px solid #735842;
-    border-radius: 1px;
-    background-color: rgba(13,11,11,0.3);
 
+    margin-top:20px;
+    height:200px;
+    background-color: rgba(13,11,11,0.7);
+}
+
+.box-title{
+    margin-left: 10px;
+    border-bottom: 1px solid #D7C3AB;
+    width: 90%;
+    padding-top:10px;
+
+    color:  #D7C3AB;
+    font-size:1.3em
+}
+
+
+
+.box > table{
+    margin-top: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box > table > tbody > tr > td{
+    text-align: left;
+    color: #D7C3AB;
+    width: 70%;
+}
+
+.box > table > thead > tr > th{
+    width: 70%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.box > table > thead > tr > td{
+    width: 30%;
+}
+
+.box > table > tbody > tr > th{
+
+
+    width: 30%;
 }
 
 

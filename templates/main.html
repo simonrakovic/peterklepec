@@ -81,7 +81,7 @@
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
-                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"  class="img-nav-images" />
+                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"   class="img-nav-images" />
                                                 <span class="jm-item-overlay "> </span>
                                             </a>
                                         </div>
@@ -144,20 +144,73 @@
                     </div>
 
                     <div class="row">
-
                         <div class="col-lg-4">
-                            <div class="container-fluid box">
-
+                            <div class="box">
+                                <div class="box-title">Trenutno na urniku</div>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="container-fluid box">
-                                <h5>Delvni čas</h5>
+                            <div class="box">
+                                <div class="box-title">Delvni čas</div>
+                                <table>
+                                            <thead>
+                                                <tr>
+                                                    <td></td>
+                                                    <th>Pondedeljek - Petek</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>Dopoldan:</th>
+                                                <td>8:00 - 13:00 </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Popoldan:</th>
+                                                <td>16:00 - 22:30</td>
+                                            </tr>
+                                            </tbody>
+
+
+                                    </table>
+                                    <table >
+                                            <thead>
+                                                <tr>
+                                                    <td></td>
+                                                    <th>Nedelja</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>Popoldan:</th>
+                                                <td>16:00 - 22:00 </td>
+                                            </tr>
+                                            </tbody>
+
+
+                                    </table>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="container-fluid box">
-                                <h5>Info</h5>
+                            <div class="box">
+
+                                <div class="box-title">Kontakti</div>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th>Telefon:</th>
+                                        <td>01/756 50 23</td>
+                                    </tr>
+                                    <tr>
+                                        <th>GSM:</th>
+                                        <td>041 972 169</td>
+                                    </tr>
+                                    <tr>
+                                        <th>E-pošta:</th>
+                                        <td>fitnes.peter.klepec1995@gmail.com</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </div>
