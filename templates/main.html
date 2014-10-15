@@ -25,7 +25,9 @@
         <nav class="navbar  navbar-default navbar-fixed-top transparent" role="navigation">
             <a class="navbar-logo" href="/">
                     <!-- <img class="navbar-logo pull-left  visible-lg" src="/static/img/logo123.png" alt="logo"/> -->
-                    <div class="navbar-logo pull-left" style="font-family: oregon;font-size: 4.5em;line-height: 60px;margin-top: 15px"> PETER KLEPEC <small style="font-size: 0.6em">FITNES STUDIO</small></div>
+                    <div class="navbar-logo pull-left" style="font-family: oregon;font-size: 4.5em;line-height: 60px;margin-top: 15px">
+                        <img src="/static/img/logo4.png" />
+                    </div>
 
             </a>
             <div class=" container-padding-fix">
@@ -81,7 +83,7 @@
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
-                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"   class="img-nav-images" />
+                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="img-nav-images"/>
                                                 <span class="jm-item-overlay "> </span>
                                             </a>
                                         </div>
@@ -96,50 +98,19 @@
                         </div>
                         <!-- Right navigation images -->
                         <div class="col-lg-2 visible-lg">
-                            <div class="row img-nav-right jm-item first ">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/massage.jpeg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
+                            {% for image in rightMenuImages %}
+                                <div class="row img-nav-right jm-item first ">
+                                    <div class="jm-item-wrapper">
+                                        <div class="jm-item-image">
+                                            <a href="/ponudba/{{ image.exercisesID.id }}">
+                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"  class="img-nav-images"/>
+                                                <span class="jm-item-overlay "> </span>
+                                            </a>
+                                        </div>
+                                        <div class="jm-item-title jm-item-title-right">{{ image.exercisesID.name }}</div>
                                     </div>
-                                    <div class="jm-item-title jm-item-title-right">Masaža</div>
                                 </div>
-                            </div>
-                            <div class="row img-nav-right jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/zumba.jpeg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-right">Zumba</div>
-                                </div>
-                            </div>
-                            <div class="row img-nav-right jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/party.jpg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "></span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-right">Zabave</div>
-                                </div>
-                            </div>
-                            <div class="row img-nav-right jm-item first">
-                                <div class="jm-item-wrapper">
-                                    <div class="jm-item-image">
-                                        <a href="#">
-                                            <img src="/static/img/party.jpg"  class="img-nav-images" alt="Sample Image">
-                                            <span class="jm-item-overlay "> </span>
-                                        </a>
-                                    </div>
-                                    <div class="jm-item-title jm-item-title-right">Zabave</div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
 

@@ -12,6 +12,7 @@ from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, Exe
 
 def home(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     news = News.objects.all()
     return render_to_response('webpages/home.html', locals(), context_instance=RequestContext(request))
@@ -19,6 +20,7 @@ def home(request):
 
 def offers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     exercise = Exercises.objects.get(pk=id)
     gallery_images = Images.objects.filter(exercisesID=exercise).filter(imagePlacementID=3)
@@ -64,6 +66,7 @@ def offers(request, id):
 
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     active_id = 1
     exercises = Exercises.objects.all()
@@ -75,6 +78,8 @@ def pricelist(request):
 
 def timetable(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
     active_exercise = Exercises.objects.get(pk=id)
     exercises = Exercises.objects.all()
     not_working_events = NotWorkingHours.objects.filter(exercisesID=id)
@@ -84,11 +89,13 @@ def timetable(request, id):
 
 def info(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     return render_to_response('webpages/info.html', locals(), context_instance=RequestContext(request))
 
 def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     custompage = CustomPage.objects.get(pk=id)
     if not custompage.active:

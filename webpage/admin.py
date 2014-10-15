@@ -52,21 +52,17 @@ class ExerciseLengthAdmin(admin.ModelAdmin):
 
 admin.site.register(Exercises, ExerciseAdmin)
 admin.site.register(ExercisesWeeklyTimetable, ExercisesWeeklyTimetableAdmin)
-admin.site.register(ImagePlacement, ImagePlacementAdmin)
+#admin.site.register(ImagePlacement, ImagePlacementAdmin)
 admin.site.register(Images, ImagesAdmin)
-admin.site.register(CustomerType, CustomerTypeAdmin)
+#admin.site.register(CustomerType, CustomerTypeAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(NotWorkingHours, NotWorkingHoursAdmin)
 admin.site.register(Prices, PricesAdmin)
 admin.site.register(PricingPlan, PricingPlanAdmin)
-
-
-admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
-
+#admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
 admin.site.register(CustomPage, CustomPageAdmin)
-admin.site.register(PageLayout, PageLayoutAdmin)
-
-admin.site.register(ExerciseLength, ExerciseLengthAdmin)
+#admin.site.register(PageLayout, PageLayoutAdmin)
+#admin.site.register(ExerciseLength, ExerciseLengthAdmin)
 
 
 
