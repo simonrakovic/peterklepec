@@ -147,10 +147,6 @@ INSTALLED_APPS = (
     'gunicorn',
     'docutils',
     'rest_framework'
-
-
-
-
 )
 
 # A sample logging configuration. The only tangible logging
@@ -182,7 +178,6 @@ LOGGING = {
     }
 }
 
-
 import dj_database_url
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 DATABASES = {'default': dj_database_url.parse('sqlite:///'+PROJECT_PATH+'db.sqlite3')}
@@ -194,7 +189,4 @@ ALLOWED_HOSTS = [
     '0.0.0.0:32432/'
 ]
 
-
 STATIC_ROOT = 'staticfiles'
-
-

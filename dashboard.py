@@ -21,6 +21,8 @@ class CustomIndexDashboard(Dashboard):
     """
     Custom index dashboard for peterklepec.
     """
+    columns = 1
+
     def init_with_context(self, context):
         site_name = get_admin_site_name(context)
         # append a link list module for "quick links"
@@ -31,25 +33,50 @@ class CustomIndexDashboard(Dashboard):
             deletable=False,
             collapsible=False,
             children=[
-                [_('Return to site'), '/'],
-                [_('Change password'),
+                [_('NAZAJ NA STRAN'), '/'],
+                [_('Urejevalnik besedil'), 'http://ckeditor.com/demo#full'],
+                [_('Spremeni geslo'),
                  reverse('%s:password_change' % site_name)],
-                [_('Log out'), reverse('%s:logout' % site_name)],
+                [_('Odjava'), reverse('%s:logout' % site_name)],
+
+            ]
+        ))
+        self.children.append(modules.Group(
+            title="UREJANJE SPLETNE STRANI",
+            display="tabs",
+            children=[
+                modules.ModelList(
+                    title='PONUDBE',
+                    models=('webpage.models.Exercises',)
+                ),
+                modules.ModelList(
+                    title='CENIK',
+                    models=('webpage.models.Prices', 'webpage.models.PricingPlan')
+                ),
+                modules.ModelList(
+                    title='URNIK',
+                    models=('webpage.models.ExercisesWeeklyTimetable', 'webpage.models.NotWorkingHours')
+                ),
+                modules.ModelList(
+                    title='NOVICE',
+                    models=('webpage.models.News', 'webpage.models.CustomPage')
+                ),
+                modules.ModelList(
+                    title='SLIKE',
+                    models=('webpage.models.Images')
+                ),
+
             ]
         ))
 
-        # append an app list module for "Applications"
-        self.children.append(modules.AppList(
-            _('Applications'),
-            exclude=('django.contrib.*',),
-        ))
 
         # append an app list module for "Administration"
+        """
         self.children.append(modules.AppList(
             _('Administration'),
             models=('django.contrib.*',),
         ))
-
+        """
         # append a recent actions module
         self.children.append(modules.RecentActions(_('Recent Actions'), 5))
 

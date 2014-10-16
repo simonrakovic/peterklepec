@@ -4,6 +4,17 @@ from django.contrib import admin
 
 from models import Exercises, ExercisesWeeklyTimetable, ImagePlacement, Images, CustomerType, News, NotWorkingHours, Prices, PricingPlan, \
     ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength
+from peterklepec_webpage.settings import PROJECT_PATH
+
+
+class CommonMedia:
+  js = (
+    'https://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js',
+    '/static/javascript/editor.js',
+  )
+  css = {
+    'all': ('/static/css/editor.css',),
+  }
 
 
 class ExerciseAdmin(admin.ModelAdmin):
@@ -39,6 +50,7 @@ class ExercisesPageLayoutAdmin(admin.ModelAdmin):
 
 class CustomPageAdmin(admin.ModelAdmin):
     list_display = ('name', 'title', 'subtitle', 'content', 'active', 'image_background', 'pageLayoutID')
+    Media = CommonMedia
 
 class PageLayoutAdmin(admin.ModelAdmin):
     list_display = ('name', 'template_path')
