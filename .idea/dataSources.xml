@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Django default" uuid="760fae62-3c07-4f42-b6c9-1e8b39d9f63c">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../GitHub/webpage/eArchiver/../sqlite3.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db</jdbc-url>
       <libraries />
     </data-source>
   </component>

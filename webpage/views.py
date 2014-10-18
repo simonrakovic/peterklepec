@@ -63,14 +63,21 @@ def offers(request, id):
     else: #omogoca prikaz, ki ne izpolnjuje zgornje pogoje
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
 
+def gallery(request):
+    leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    images = Images.objects.filter(imagePlacementID=3)
+
+    return render_to_response('webpages/gallery.html', locals(), context_instance=RequestContext(request))
 
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     active_id = 1
-    exercises = Exercises.objects.all()
-    pricing_plans = PricingPlan.objects.all()
+    exercises = Exercises.objects.filter(show_on_pricelist=True)
+    pricing_plans = PricingPlan.objects.filter(exercisesID__show_on_pricelist=True)
     prices = Prices.objects.all().order_by('customerTypeID')
 
     return render_to_response('webpages/pricelist.html', locals(), context_instance=RequestContext(request))
@@ -81,7 +88,7 @@ def timetable(request, id):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
     active_exercise = Exercises.objects.get(pk=id)
-    exercises = Exercises.objects.all()
+    exercises = Exercises.objects.filter(show_on_timetable=True)
     not_working_events = NotWorkingHours.objects.filter(exercisesID=id)
     exercise_events = ExercisesWeeklyTimetable.objects.filter(exercisesID=id)
 
@@ -137,3 +144,5 @@ class NotWorkingHoursList(generics.ListAPIView):
     def get_queryset(self):
         current_date = datetime.date.today()
         return NotWorkingHours.objects.filter(date__gte=current_date).filter(exercisesID__pk=self.kwargs.get('id')).order_by('date')
+
+

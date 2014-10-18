@@ -63,7 +63,7 @@ class CustomIndexDashboard(Dashboard):
                 ),
                 modules.ModelList(
                     title='SLIKE',
-                    models=('webpage.models.Images')
+                    models=('webpage.models.Images', )
                 ),
 
             ]

@@ -5,7 +5,7 @@ from django.db import models
 
 class Exercises(models.Model):
     name = models.CharField(max_length=50, verbose_name='IME PONUDBE')
-    description = models.TextField(verbose_name='OPIS PONUDBE')
+    description = models.TextField(verbose_name='OPIS PONUDBE', default=None, null=True, blank=True)
 
     show_on_timetable = models.BooleanField(verbose_name='PRIKAZI NA URNIKU')
     show_on_pricelist = models.BooleanField(verbose_name='PRIKAZI NA CENIKU')

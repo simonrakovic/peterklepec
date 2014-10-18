@@ -1,0 +1,75 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+    <!-- FlexSlide CSS -->
+
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+
+    <link href="/static/css/webpage/gallery.css" rel="stylesheet">
+
+    <link href="/static/css/magnific-popup.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+    <div class="gallery-conteiner">
+        <div class="gallery-wrapper">
+            <div class="scrollbox">
+                <div class="gallery-wrapper-row col-lg-12">
+                    {% for image in images %}
+                       <div class="col-lg-4 col-sm-6 col-xs-12">
+                            <a href="{{ MEDIA_URL }}{{ image.imageDestination }}" data-source="{{ MEDIA_URL }}{{ image.imageDestination }}" title="Into The Blue" style="width:193px;height:125px;">
+                                 <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img img-responsive">
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+    <!-- flexSlider --->
+    <script src="/static/javascript/jquery.magnific-popup.min.js"></script>
+    <script src="/static/javascript/enscroll-0.6.1.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+
+       $(document).ready(function(){
+            $('.scrollbox').enscroll({
+                    showOnHover: true,
+                    verticalTrackClass: 'track',
+                    verticalHandleClass: 'handle'
+
+            });
+        });
+
+        $(document).ready(function() {
+            $('.gallery-wrapper-row').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                closeOnContentClick: false,
+                closeBtnInside: false,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                image: {
+                    verticalFit: true,
+                    titleSrc: function(item) {
+                        return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+                    }
+                },
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300, // don't foget to change the duration also in CSS
+                    opener: function(element) {
+                        return element.find('img');
+                    }
+                }
+
+            });
+        });
+    </script>
+{% endblock %}
