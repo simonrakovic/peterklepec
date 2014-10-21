@@ -3,7 +3,7 @@ from django.contrib import admin
 
 
 from models import Exercises, ExercisesWeeklyTimetable, ImagePlacement, Images, CustomerType, News, NotWorkingHours, Prices, PricingPlan, \
-    ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength
+    ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength, SubExercises
 from peterklepec_webpage.settings import PROJECT_PATH
 
 
@@ -58,23 +58,27 @@ class PageLayoutAdmin(admin.ModelAdmin):
 class ExerciseLengthAdmin(admin.ModelAdmin):
     list_display = ('name', 'start_of_exercise', 'end_of_exercise')
 
+class SubExercisesAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
 
 
 
 
 admin.site.register(Exercises, ExerciseAdmin)
 admin.site.register(ExercisesWeeklyTimetable, ExercisesWeeklyTimetableAdmin)
-#admin.site.register(ImagePlacement, ImagePlacementAdmin)
+admin.site.register(ImagePlacement, ImagePlacementAdmin)
 admin.site.register(Images, ImagesAdmin)
-#admin.site.register(CustomerType, CustomerTypeAdmin)
+admin.site.register(CustomerType, CustomerTypeAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(NotWorkingHours, NotWorkingHoursAdmin)
 admin.site.register(Prices, PricesAdmin)
 admin.site.register(PricingPlan, PricingPlanAdmin)
-#admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
+admin.site.register(ExercisesPageLayout, ExercisesPageLayoutAdmin)
 admin.site.register(CustomPage, CustomPageAdmin)
-#admin.site.register(PageLayout, PageLayoutAdmin)
-#admin.site.register(ExerciseLength, ExerciseLengthAdmin)
+admin.site.register(PageLayout, PageLayoutAdmin)
+admin.site.register(ExerciseLength, ExerciseLengthAdmin)
+admin.site.register(SubExercises, SubExercisesAdmin)
 
 
 

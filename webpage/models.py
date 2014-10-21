@@ -7,6 +7,9 @@ class Exercises(models.Model):
     name = models.CharField(max_length=50, verbose_name='IME PONUDBE')
     description = models.TextField(verbose_name='OPIS PONUDBE', default=None, null=True, blank=True)
 
+    has_subexercise = models.BooleanField(verbose_name='PONUDBA IMA PODPONUDBE')
+    subexerciseID = models.ForeignKey('SubExercises', default=None, null=True, blank=True)
+
     show_on_timetable = models.BooleanField(verbose_name='PRIKAZI NA URNIKU')
     show_on_pricelist = models.BooleanField(verbose_name='PRIKAZI NA CENIKU')
     exercises_page_layout = models.ForeignKey('ExercisesPageLayout', default=None, null=True, blank=True, verbose_name='IZGLED OPISNE STRANI')
@@ -14,7 +17,7 @@ class Exercises(models.Model):
     show_on_main_page = models.BooleanField(verbose_name='PRIKAZI NA PRVI STRANI')
     position_number_on_main_page = models.IntegerField(default=None, null=True, blank=True, verbose_name='ZAPOREDNA STEVILKA PRIKAZA NA PRVI STRANI')
 
-    length = models.ForeignKey('ExerciseLength', verbose_name='KDAJ SE PONUDBA IZVAJA')
+    length = models.ForeignKey('ExerciseLength', verbose_name='KDAJ SE PONUDBA IZVAJA', default=None, null=True, blank=True)
 
     def __unicode__(self):
         return u'%s ' % self.name
@@ -22,6 +25,13 @@ class Exercises(models.Model):
     class Meta:
         verbose_name = 'Ponudba'
         verbose_name_plural = 'Ponudbe'
+
+class SubExercises(models.Model):
+    name = models.CharField(max_length=50, verbose_name='IME PONUDBE')
+    exercisesID = models.ForeignKey('Exercises')
+
+    def __unicode__(self):
+        return u'%s ' % self.name
 
 class ExerciseLength(models.Model):
     name = models.CharField(max_length=50)

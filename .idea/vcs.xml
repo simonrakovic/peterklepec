@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../../../GitHub/Sprint3/eNarocanje" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../GitHub/eNarocanje" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../GitHub/webpage" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../eNarocanje" vcs="Git" />

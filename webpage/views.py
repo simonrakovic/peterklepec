@@ -1,13 +1,14 @@
 # Create your views here.
 import pdb
 import datetime
+from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from rest_framework import serializers,generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
-    WeekDay
+    WeekDay, SubExercises
 
 
 def home(request):
@@ -27,6 +28,12 @@ def offers(request, id):
     prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise)
     num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise).count()
     num_of_prices = prices.count()
+
+    if exercise.has_subexercise:
+        return suboffers(request, id)
+
+    if exercise.exercises_page_layout.id == 4:
+        return HttpResponseRedirect('/galerija_slik')
 
     #ker so v izgledu cene izpisane v skolpih po dva glede na pricingPlan, se lahko prikaze maxsimalno 2 pricingPlana
     if num_of_pricingPlans > 2 or prices.count() > 8:
@@ -62,6 +69,16 @@ def offers(request, id):
 
     else: #omogoca prikaz, ki ne izpolnjuje zgornje pogoje
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
+
+def suboffers(request, id):
+    leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    subexercise = Exercises.objects.filter(subexerciseID__exercisesID=id)
+
+    images = Images.objects.filter(exercisesID=subexercise).order_by('exercisesID')
+
+    return render_to_response('webpages/suboffer.html', locals(), context_instance=RequestContext(request))
 
 def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
