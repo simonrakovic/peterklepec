@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block extra_head_content %}
+    <!-- FlexSlide CSS -->
+
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+
+    <link href="/static/css/webpage/questions.css" rel="stylesheet">
+
+    <link href="/static/css/magnific-popup.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+    <div class="question-conteiner col-lg-12">
+        <div class="form-container">
+            <form action="">
+                <div class="form-group">
+                  <label for="name">Ime in priimek:</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">E-poštni naslov</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                  <label for="text">Vprašanje:</label>
+                  <textarea class="form-control" rows="8" id="text"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_script_content %}
+{% endblock %}

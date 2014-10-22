@@ -88,6 +88,13 @@ def gallery(request):
 
     return render_to_response('webpages/gallery.html', locals(), context_instance=RequestContext(request))
 
+def questions(request):
+    leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+
+    return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
+
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
