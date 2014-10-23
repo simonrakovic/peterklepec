@@ -13,19 +13,28 @@
 {% block main_content %}
     <div class="question-conteiner col-lg-12">
         <div class="form-container">
-            <form action="">
+            <form method="POST">
+                {% csrf_token %}
+
                 <div class="form-group">
                   <label for="name">Ime in priimek:</label>
-                  <input type="text" class="form-control" id="name">
+                  {{ question_form.name }}
+                  {{ question_form.name.errors }}
                 </div>
                 <div class="form-group">
                   <label for="email">E-poštni naslov</label>
-                  <input type="email" class="form-control" id="email">
+                  {{ question_form.email }}
+                  {{ question_form.email.errors }}
+
+
                 </div>
                 <div class="form-group">
                   <label for="text">Vprašanje:</label>
-                  <textarea class="form-control" rows="8" id="text"></textarea>
+                  {{ question_form.text }}
+                  {{ question_form.text.errors }}
                 </div>
+
+                <button type="submit" class="btn btn-default ">POŠLJI</button>
             </form>
         </div>
     </div>

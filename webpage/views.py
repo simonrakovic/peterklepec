@@ -1,6 +1,7 @@
 # Create your views here.
 import pdb
 import datetime
+from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -9,6 +10,7 @@ from rest_framework import serializers,generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
     WeekDay, SubExercises
+from webpage.forms import QuestionForm
 
 
 def home(request):
@@ -91,9 +93,22 @@ def gallery(request):
 def questions(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    question_form = QuestionForm()
+
+    if request.method == 'POST':
+        question_form = QuestionForm(request.POST)
+        if question_form.is_valid():
+            name = question_form.cleaned_data['name']
+            email = question_form.cleaned_data['email']
+            text = question_form.cleaned_data['text']
+
+            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['simonrakovic@gmail.com'], fail_silently=False)
+            question_form = QuestionForm()
+            return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
 
 
     return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
+
 
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
