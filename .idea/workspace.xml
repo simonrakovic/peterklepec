@@ -35,7 +35,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="53" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.0" vertical-offset="1470" max-vertical-offset="3474">
+            <state line="100" column="53" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3474">
               <folding>
                 <element signature="e#26#36#0" expanded="true" />
               </folding>
@@ -43,19 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings-server.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings-server.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3618">
+            <state line="15" column="16" selection-start="290" selection-end="290" vertical-scroll-proportion="-0.44189852" vertical-offset="540" max-vertical-offset="3816">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/peterklepec_webpage/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="86" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.41080198" vertical-offset="127" max-vertical-offset="738">
+            <state line="16" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="738">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="23" selection-start="6337" selection-end="6337" vertical-scroll-proportion="-7.5" vertical-offset="3042" max-vertical-offset="3690">
+            <state line="125" column="0" selection-start="4435" selection-end="4567" vertical-scroll-proportion="-37.5" vertical-offset="0" max-vertical-offset="3690">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/temp.html" />
         <option value="$PROJECT_DIR$/static/css/flexslider.css" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -160,9 +159,10 @@
         <option value="$PROJECT_DIR$/templates/webpages/questions.html" />
         <option value="$PROJECT_DIR$/webpage/forms.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/questions.css" />
-        <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
         <option value="$PROJECT_DIR$/webpage/views.py" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/wsgi.py" />
+        <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
+        <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
       </list>
     </option>
   </component>
@@ -841,15 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="181" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/questions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="60" selection-start="795" selection-end="795" vertical-scroll-proportion="-10.666667" vertical-offset="144" max-vertical-offset="882">
@@ -887,16 +878,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
+    <entry file="file://$PROJECT_DIR$/../../../GitHub/Sprint3/eNarocanje/enarocanje/reservations/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="23" selection-start="6337" selection-end="6337" vertical-scroll-proportion="-7.5" vertical-offset="3042" max-vertical-offset="3690">
+        <state line="68" column="22" selection-start="2198" selection-end="2209" vertical-scroll-proportion="-4.576244" vertical-offset="3499" max-vertical-offset="5526">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../GitHub/Sprint3/eNarocanje/enarocanje/reservations/views.py">
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="22" selection-start="2198" selection-end="2209" vertical-scroll-proportion="-4.576244" vertical-offset="3499" max-vertical-offset="5526">
+        <state line="16" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="738">
           <folding />
         </state>
       </provider>
@@ -910,16 +901,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3618">
+        <state line="125" column="0" selection-start="4435" selection-end="4567" vertical-scroll-proportion="-37.5" vertical-offset="0" max-vertical-offset="3690">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/webpage/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="86" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.41080198" vertical-offset="127" max-vertical-offset="738">
+        <state line="7" column="181" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding>
+            <element signature="e#24#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="290" selection-end="290" vertical-scroll-proportion="-0.44189852" vertical-offset="540" max-vertical-offset="3816">
           <folding />
         </state>
       </provider>

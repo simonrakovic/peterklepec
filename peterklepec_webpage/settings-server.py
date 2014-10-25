@@ -123,10 +123,15 @@ TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
     "django.core.context_processors.request",
 )
 
-GRAPPELLI_INDEX_DASHBOARD = 'peterklepec_webpage.cms.dashboard.CustomIndexDashboard'
+ADMIN_TOOLS_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
+ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'dashboard.CustomAppIndexDashboard'
 
 
 INSTALLED_APPS = (
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -192,4 +197,10 @@ ALLOWED_HOSTS = [
 
 STATIC_ROOT = 'staticfiles'
 
+#email relay gmail-smtp
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'simonrakovic@gmail.com'
+EMAIL_HOST_PASSWORD = 'tqwffdaickuuhdqr'
+EMAIL_PORT = 587
 
