@@ -83,7 +83,7 @@
 }
 
 .pricelist-secondnav > ul > li > a:hover{
-    background: rgba(5,4,4,0.8); ;
+    background: rgba(5,4,4,0.8);
 }
 
 .pricelist-secondnav > ul > li > a:focus{
@@ -96,7 +96,24 @@
     outline: none;
 }
 
+.pricelist-thirdnav{
+    width:90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.thirdnav-tab-content{
+   width:90%;
+   margin-left: auto;
+   margin-right: auto;
+   height: 250px;
+   background: rgba(5,4,4,0.8) ;
+}
+
+.pricelist-thirdnav > ul > li > a:hover{
+    background: rgba(5,4,4,0.8); ;
+}
 
 
 .active > a{
@@ -114,11 +131,19 @@
 
 }
 
+.table-container{
+    padding-top: 60px;
+}
+
 .table{
-    margin-top: 10px;
     width:90%;
     margin-left:auto;
     margin-right:auto;
+}
+
+
+
+.tbody{
 
 }
 
@@ -129,6 +154,7 @@
 
 .table-colored-rows > tbody > tr > td{
     border:none;
+
     text-align: center;
     font-size: 1.1em;
 }
@@ -146,7 +172,6 @@
 
   }
   .nav-justified > li > a  {
-
 
     margin-bottom: 0 !important;
   }

@@ -1,0 +1,43 @@
+.flexslider {
+    background: transparent;
+    max-height: 540px;
+
+    border: 0px solid transparent;
+
+    margin-top: 20px;
+    min-width: 700px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.flexslider .slides img {
+    min-width: 700px;
+    height: 540px;
+}
+
+.flexslider-fix-height{
+   height: 540px;
+}
+
+
+.flex-caption-overlay{
+    position:absolute;
+
+    bottom:0;
+    width: inherit;
+    height: 120px;
+    background-color: rgba(13, 11, 11,0.95);
+    z-index:1;
+ }
+
+
+
+.flex-caption-overlay-text{
+    margin-top:10px;
+    margin-left: 10px;
+    font-size: 2em;
+    font-family: ubuntu-l;
+
+    color:#D7C3AB;
+}
+

@@ -9,7 +9,7 @@ from django.http import Http404, HttpResponseRedirect
 from rest_framework import serializers,generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
-    WeekDay, SubExercises
+    WeekDay, SubExercises, CustomerType
 from webpage.forms import QuestionForm
 
 
@@ -36,6 +36,12 @@ def offers(request, id):
 
     if exercise.exercises_page_layout.id == 4:
         return HttpResponseRedirect('/galerija_slik')
+
+    if exercise.exercises_page_layout.id == 6:
+        return HttpResponseRedirect('/vprasanja')
+
+    if exercise.exercises_page_layout.id == 7:
+        return HttpResponseRedirect('/dosezki')
 
     #ker so v izgledu cene izpisane v skolpih po dva glede na pricingPlan, se lahko prikaze maxsimalno 2 pricingPlana
     if num_of_pricingPlans > 2 or prices.count() > 8:
@@ -109,15 +115,24 @@ def questions(request):
 
     return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
 
+def achievements(request):
+    leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
+    rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    images = Images.objects.filter(imagePlacementID=6)
+
+    return render_to_response('webpages/achievements.html', locals(), context_instance=RequestContext(request))
 
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
-    active_id = 1
+
     exercises = Exercises.objects.filter(show_on_pricelist=True)
     pricing_plans = PricingPlan.objects.filter(exercisesID__show_on_pricelist=True)
     prices = Prices.objects.all().order_by('customerTypeID')
+
+    customer_types = CustomerType.objects.all()
 
     return render_to_response('webpages/pricelist.html', locals(), context_instance=RequestContext(request))
 

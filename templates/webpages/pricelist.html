@@ -15,7 +15,7 @@
         <div class="pricelist-nav">
             <ul id="temp" class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
               {% for exercise in exercises %}
-                 <li  class="pricelist-tab"><a id="exercise_tab_{{ exercise.id }}"  href="#tab_{{ exercise.id }}" data-toggle="tab">{{ exercise.name }}</a></li>
+                 <li  class="pricelist-tab {% if forloop.first %}active{% endif %}"><a id="exercise_tab_{{ exercise.id }}"  href="#tab_{{ exercise.id }}" data-toggle="tab">{{ exercise.name }}</a></li>
               {% endfor %}
             </ul>
         </div>
@@ -24,7 +24,7 @@
         <div class="pricelist-content col-lg-12">
             <div class="tab-content ">
                     {% for exercise in exercises %}
-                        <div class="tab-pane {% if active_id == exercise.id %}active{% endif %}" id="tab_{{ exercise.id }}">
+                        <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_{{ exercise.id }}">
 
                             <div class="tab-pane-title">
                                <h3>CENIK
@@ -35,7 +35,7 @@
                                 <ul class="nav nav-justified " role="tablist">
                                   {% for pricing_plan in pricing_plans %}
                                       {% if pricing_plan.exercisesID.id == exercise.id %}
-                                           <li class=""><a id="prcing_plan_tab_{{ pricing_plan.id }}" href="#tab_prcing_plan_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ pricing_plan.name }}</a></li>
+                                           <li class="{% if forloop.first %}active{% endif %}"><a id="prcing_plan_tab_{{ pricing_plan.id }}" href="#tab_prcing_plan_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ pricing_plan.name }}</a></li>
                                       {% endif %}
                                   {% endfor %}
                                 </ul>
@@ -43,23 +43,39 @@
                             <div class="tab-content">
                                   {% for pricing_plan in pricing_plans %}
                                       {% if pricing_plan.exercisesID.id == exercise.id %}
-                                          <div class="tab-pane" id="tab_prcing_plan_{{ pricing_plan.id }}">
+                                          <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_prcing_plan_{{ pricing_plan.id }}">
                                               <div class="pricelist-tab-info">
-                                                    Karta je veljavna med delavniki med 8:00 in 13:00 uro in med 16:00 in 23:30 uro.
+
                                               </div>
-                                              <table class="table table-colored-rows ">
-                                                    <tbody>
-                                                        {% for price in prices %}
-                                                            {% if price.pricingPlanID.id == pricing_plan.id %}
-                                                                <tr>
-                                                                    <td>{{ price.description }}</td>
-                                                                    <td>{{ price.customerTypeID.description }}</td>
-                                                                    <td>{{ price.price }} {{ price.priceUnit }}</td>
-                                                                </tr>
-                                                            {% endif %}
+
+                                               <div class="pricelist-thirdnav visible-lg visible-md visible-sm">
+                                                    <ul class="nav nav-justified " role="tablist">
+                                                        {% for customer_type in customer_types %}
+                                                             <li class="{% if forloop.first %}active{% endif %}"><a id="customer_type_tab_{{ customer_type.id }}"  href="#tab_customer_type_{{ customer_type.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
                                                         {% endfor %}
-                                                    </tbody>
-                                              </table>
+                                                    </ul>
+                                               </div>
+                                                <div class="tab-content thirdnav-tab-content">
+                                                      {% for customer_type in customer_types %}
+                                                            <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_customer_type_{{ customer_type.id }}">
+                                                                 <div class="row table-container">
+                                                                     <table class="table table-colored-rows ">
+                                                                        <tbody>
+                                                                            {% for price in prices %}
+                                                                                {% if price.pricingPlanID.id == pricing_plan.id and price.customerTypeID.id == customer_type.id %}
+                                                                                    <tr>
+                                                                                        <td>{{ price.description }}</td>
+
+                                                                                        <td>{{ price.price }} {{ price.priceUnit }}</td>
+                                                                                    </tr>
+                                                                                {% endif %}
+                                                                            {% endfor %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                 </div>
+                                                            </div>
+                                                      {% endfor %}
+                                                </div>
                                           </div>
                                       {% endif %}
                                   {% endfor %}
@@ -79,8 +95,7 @@
 
             var active_tabs = document.location.hash.split('#')
             if(active_tabs.length == 1){
-               $("#exercise_tab_{{ exercises.first.id }}").tab('show');
-               $("#prcing_plan_tab_{{ pricing_plans.first.id }}").tab('show');
+
 
             }else if(active_tabs.length == 3){
                 var tab1 = "#"+active_tabs[1]

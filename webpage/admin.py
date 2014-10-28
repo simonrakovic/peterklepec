@@ -29,6 +29,7 @@ class ImagePlacementAdmin(admin.ModelAdmin):
 
 class ImagesAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'imagePlacementID', 'exercisesID')
+    Media = CommonMedia
 
 class CustomerTypeAdmin(admin.ModelAdmin):
     list_display = ('description',)

@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+
+
+{% block extra_head_content %}
+    <!-- FlexSlide CSS -->
+    <link href="/static/css/flexslider.css" rel="stylesheet">
+
+    <link href="/static/css/webpage/achievements.css" rel="stylesheet">
+{% endblock %}
+
+{% block main_content %}
+    <div class="row flexslider-fix-height ">
+        <div class="flexslider">
+            <ul class="slides">
+                {% for image in images %}
+                    <li>
+                        <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" />
+                        <div class="flex-caption-overlay">
+                            <div class="flex-caption-overlay-text">
+                                {{ image.description | safe }}
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block extra_script_content %}
+    <!-- flexSlider --->
+    <script src="/static/javascript/jquery.flexslider-min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+       $(document).ready(function(){
+             $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false
+              });
+
+        });
+
+
+    </script>
+{% endblock %}

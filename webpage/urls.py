@@ -12,7 +12,8 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
 
         url(r'^ponudba/(?P<id>\d+)/$', 'webpage.views.offers', name='home'),
-        url(r'^questions/$', 'webpage.views.questions', name='home'),
+        url(r'^vprasanja/$', 'webpage.views.questions', name='home'),
+        url(r'^dosezki/$', 'webpage.views.achievements', name='home'),
         url(r'^galerija_slik/$', 'webpage.views.gallery', name='home'),
         url(r'^novice/(?P<id>\d+)/$', 'webpage.views.custompage', name='home'),
         url(r'^cenik/$', 'webpage.views.pricelist', name='home'),
