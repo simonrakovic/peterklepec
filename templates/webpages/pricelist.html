@@ -51,13 +51,13 @@
                                                <div class="pricelist-thirdnav visible-lg visible-md visible-sm">
                                                     <ul class="nav nav-justified " role="tablist">
                                                         {% for customer_type in customer_types %}
-                                                             <li class="{% if forloop.first %}active{% endif %}"><a id="customer_type_tab_{{ customer_type.id }}"  href="#tab_customer_type_{{ customer_type.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
+                                                             <li class="{% if forloop.first %}active{% endif %}"><a  href="#tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
                                                         {% endfor %}
                                                     </ul>
                                                </div>
                                                 <div class="tab-content thirdnav-tab-content">
                                                       {% for customer_type in customer_types %}
-                                                            <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_customer_type_{{ customer_type.id }}">
+                                                            <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}">
                                                                  <div class="row table-container">
                                                                      <table class="table table-colored-rows ">
                                                                         <tbody>

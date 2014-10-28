@@ -26,7 +26,7 @@
       <file leaf-file-name="pricelist.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/webpages/pricelist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="55" selection-start="856" selection-end="856" vertical-scroll-proportion="-0.5100671" vertical-offset="772" max-vertical-offset="2196">
+            <state line="53" column="116" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.39597315" vertical-offset="718" max-vertical-offset="2196">
               <folding />
             </state>
           </provider>
@@ -114,8 +114,8 @@
         <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
         <option value="$PROJECT_DIR$/webpage/urls.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/pricelist.css" />
-        <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
         <option value="$PROJECT_DIR$/webpage/views.py" />
+        <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
       </list>
     </option>
   </component>
@@ -959,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/pricelist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="55" selection-start="856" selection-end="856" vertical-scroll-proportion="-0.5100671" vertical-offset="772" max-vertical-offset="2196">
+        <state line="53" column="116" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.39597315" vertical-offset="718" max-vertical-offset="2196">
           <folding />
         </state>
       </provider>
