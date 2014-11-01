@@ -15,13 +15,22 @@
 
             <div class="scrollbox ">
                 <div class="gallery-wrapper-row">
-                    {%   for image in images %}
-                        <div class="col-lg-4 col-sm-6 col-xs-12">
-                            <a href="/ponudba/{{ image.exercisesID.id }}" class="img-overlay">
-                                 <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img">
-                                 <div class="gallery-conteiner-img-title">{{ image.exercisesID.name }}</div>
-                            </a>
-                        </div>
+                    {% for image in images %}
+                        {% if images.count > 4 %}
+                            <div class="col-lg-4 col-sm-6 col-xs-12">
+                                <a href="/ponudba/{{ image.exercisesID.id }}" class="img-overlay">
+                                     <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img">
+                                     <div class="gallery-conteiner-img-title">{{ image.exercisesID.name }}</div>
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="col-lg-6 col-sm-12 col-xs-12">
+                                <a href="/ponudba/{{ image.exercisesID.id }}" class="img-overlay-lg">
+                                     <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img-lg">
+                                     <div class="gallery-conteiner-img-title">{{ image.exercisesID.name }}</div>
+                                </a>
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -38,7 +47,7 @@
     <script>
 
        $(document).ready(function(){
-           $('.gallery-conteiner-img').hover(
+           $(".gallery-conteiner-img,.gallery-conteiner-img-lg").hover(
                function(){
                   $(this).fadeTo("slow" , 1);
                 },

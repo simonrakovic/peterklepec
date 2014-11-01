@@ -14,11 +14,17 @@
 }
 .pricelist-navbar > li > a{
     height: 60px;
-    line-height: 40px;
+
+    display: block;
 
     font-weight: bold;
     text-transform: uppercase;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+
 }
+
+
 
 .pricelist-navbar > li > a:hover{
     background-color: rgba(5,4,4,0.8);
@@ -67,17 +73,23 @@
 
 
 
+
 .pricelist-secondnav{
     margin-left: 10px;
     margin-right: 10px;
+
+    border-right:  1px solid rgba(0, 0, 0, 0.4);
+    border-left:  1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .pricelist-secondnav > ul > li{
-    border-bottom: 1px solid #ffffff;
+
 }
 
 
 .pricelist-secondnav > ul > li > a{
+
 
 
 }
@@ -115,11 +127,22 @@
     background: rgba(5,4,4,0.8); ;
 }
 
+.pricelist-thirdnav > ul > li > a:focus{
+    background: rgba(5,4,4,0.8) ;
+    outline: none;
+}
+
+.pricelist-thirdnav > ul > li > a:active{
+    background: rgba(5,4,4,0.8) ;
+    outline: none;
+}
+
 
 .active > a{
     background: rgba(5,4,4,0.8);
     color:#ffffff;
     outline: none;
+    border-bottom: 2px solid #D7C3AB;
 }
 
 .pricelist-tab-info{
