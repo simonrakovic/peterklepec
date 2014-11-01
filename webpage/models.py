@@ -89,6 +89,10 @@ class PricingPlan(models.Model):
     exercisesID = models.ForeignKey('Exercises', verbose_name='IME PONUDBE')
     name = models.TextField(verbose_name='IME PODZVRSTI CENIKA')
 
+    show_customer_type = models.BooleanField(verbose_name='PRIKZI DELITEV NA KUPCE')
+
+    info = models.TextField(verbose_name='DODATEN OPIS', default=None, null=True, blank=True)
+
     def __unicode__(self):
         return u'%s' % self.name
 

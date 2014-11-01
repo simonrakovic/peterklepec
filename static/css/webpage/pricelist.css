@@ -78,8 +78,7 @@
     margin-left: 10px;
     margin-right: 10px;
 
-    border-right:  1px solid rgba(0, 0, 0, 0.4);
-    border-left:  1px solid rgba(0, 0, 0, 0.4);
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
@@ -164,6 +163,14 @@
     margin-right:auto;
 }
 
+.table > tbody > tr{
+    width: 100%;
+}
+
+.table > tbody > tr > td{
+    width: 50%;
+    color:#D7C3AB;
+}
 
 
 .tbody{
@@ -198,4 +205,14 @@
 
     margin-bottom: 0 !important;
   }
+}
+
+.pricelist-info{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 5px;
+
+    color: #D7C3AB;
 }

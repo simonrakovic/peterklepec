@@ -42,40 +42,55 @@
                                   {% for pricing_plan in pricing_plans|in_pricing_plans:exercise %}
 
                                           <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_prcing_plan_{{ pricing_plan.id }}">
-                                              <div class="pricelist-tab-info">
 
-                                              </div>
+                                               {% if pricing_plan.show_customer_type %}
+                                                   <div class="pricelist-thirdnav visible-lg visible-md visible-sm">
+                                                        <ul class="nav nav-justified " role="tablist">
+                                                            {% for customer_type in customer_types %}
+                                                                 <li class="{% if forloop.first %}active{% endif %}"><a  href="#tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                   </div>
+                                                    <div class="tab-content thirdnav-tab-content">
+                                                          {% for customer_type in customer_types %}
+                                                                <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}">
+                                                                     <div class="row table-container">
+                                                                         <table class="table table-colored-rows ">
+                                                                            <tbody>
+                                                                                {% for price in prices %}
+                                                                                    {% if price.pricingPlanID.id == pricing_plan.id and price.customerTypeID.id == customer_type.id %}
+                                                                                        <tr>
+                                                                                            <td>{{ price.description }}</td>
 
-                                               <div class="pricelist-thirdnav visible-lg visible-md visible-sm">
-                                                    <ul class="nav nav-justified " role="tablist">
-                                                        {% for customer_type in customer_types %}
-                                                             <li class="{% if forloop.first %}active{% endif %}"><a  href="#tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
-                                                        {% endfor %}
-                                                    </ul>
-                                               </div>
-                                                <div class="tab-content thirdnav-tab-content">
-                                                      {% for customer_type in customer_types %}
-                                                            <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}">
-                                                                 <div class="row table-container">
-                                                                     <table class="table table-colored-rows ">
-                                                                        <tbody>
-                                                                            {% for price in prices %}
-                                                                                {% if price.pricingPlanID.id == pricing_plan.id and price.customerTypeID.id == customer_type.id %}
-                                                                                    <tr>
-                                                                                        <td>{{ price.description }}</td>
+                                                                                            <td>{{ price.price }} {{ price.priceUnit }}</td>
+                                                                                        </tr>
+                                                                                    {% endif %}
+                                                                                {% endfor %}
+                                                                            </tbody>
+                                                                        </table>
+                                                                     </div>
+                                                                </div>
+                                                          {% endfor %}
+                                                    </div>
+                                               {% else %}
+                                                   <div class="row table-container">
 
-                                                                                        <td>{{ price.price }} {{ price.priceUnit }}</td>
-                                                                                    </tr>
-                                                                                {% endif %}
-                                                                            {% endfor %}
-                                                                        </tbody>
-                                                                    </table>
-                                                                 </div>
-                                                            </div>
-                                                      {% endfor %}
-                                                </div>
+                                                         <table class="table table-colored-rows ">
+                                                            <tbody>
+                                                                {% for price in prices %}
+                                                                    {% if price.pricingPlanID.id == pricing_plan.id %}
+                                                                        <tr>
+                                                                            <td>{{ price.description }}</td>
+                                                                            <td>{{ price.price }} {{ price.priceUnit }}</td>
+                                                                        </tr>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                   </div>
+                                               {% endif %}
+                                          <div class="pricelist-info">{% if pricing_plan.info %}{{ pricing_plan.info }}{% endif %}</div>
                                           </div>
-
                                   {% endfor %}
                             </div>
                         </div>
