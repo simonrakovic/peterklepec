@@ -135,6 +135,12 @@ class Images(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
+    def image_tag(self):
+        return '<img width=100px height=auto src="'+self.imageDestination.url+'"/>'
+
+    image_tag.short_description = 'SLIKA'
+    image_tag.allow_tags = True
+
 
 class ImagePlacement(models.Model):
     description = models.TextField(default=None)

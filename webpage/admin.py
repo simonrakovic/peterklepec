@@ -28,8 +28,11 @@ class ImagePlacementAdmin(admin.ModelAdmin):
     list_display = ('description',)
 
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'imagePlacementID', 'exercisesID')
+
+    list_display = ('name', 'description', 'imagePlacementID', 'exercisesID', 'image_tag',)
+    readonly_fields = ('image_tag',)
     Media = CommonMedia
+
 
 class CustomerTypeAdmin(admin.ModelAdmin):
     list_display = ('description',)
