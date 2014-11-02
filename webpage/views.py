@@ -103,7 +103,7 @@ def suboffers(request, id):
 
     subexercise = Exercises.objects.filter(subexerciseID__exercisesID=id)
 
-    images = Images.objects.filter(exercisesID=subexercise).order_by('exercisesID')
+    images = Images.objects.filter(exercisesID=subexercise).filter(imagePlacementID=5)
 
     return render_to_response('webpages/suboffer.html', locals(), context_instance=RequestContext(request))
 
