@@ -19,7 +19,7 @@ class CommonMedia:
 
 class ExerciseAdmin(admin.ModelAdmin):
     list_display = ('name', 'show_on_main_page', 'position_number_on_main_page')
-
+    Media = CommonMedia
 
 class ExercisesWeeklyTimetableAdmin(admin.ModelAdmin):
     list_display = ('weekDay', 'timeFrom', 'timeTo', 'description')

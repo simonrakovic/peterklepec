@@ -23,8 +23,9 @@
 }
 
 .fitnes-conteiner-text{
- margin-top: 30px;
+ margin-top: 15px;
  margin-left: 10px;
+ text-align: justify;
 }
 
 .track{
@@ -38,7 +39,7 @@
 .owerflow-fix{
     padding-right: 10px;
     overflow:auto;
-    height: 170px;
+    height: 420px;
 }
 
 .page-header{
