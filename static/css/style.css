@@ -143,6 +143,7 @@ body{
     margin-top:20px;
     height:200px;
     background-color: rgba(13,11,11,0.7);
+    min-width: 350px;
 }
 
 .box-title{

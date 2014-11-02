@@ -8,10 +8,12 @@ class Exercises(models.Model):
     description = models.TextField(verbose_name='OPIS PONUDBE', default=None, null=True, blank=True)
 
     has_subexercise = models.BooleanField(verbose_name='PONUDBA IMA PODPONUDBE')
-    subexerciseID = models.ForeignKey('SubExercises', default=None, null=True, blank=True)
+    subexerciseID = models.ForeignKey('SubExercises', default=None, null=True, blank=True, verbose_name='JE DEL PONUDBE')
+    subexercise_prices = models.BooleanField(verbose_name='UPORABI CENO PONUDBE, KATERE DEL JE PODPONUDBA')
 
     show_on_timetable = models.BooleanField(verbose_name='PRIKAZI NA URNIKU')
     show_on_pricelist = models.BooleanField(verbose_name='PRIKAZI NA CENIKU')
+
     exercises_page_layout = models.ForeignKey('ExercisesPageLayout', default=None, null=True, blank=True, verbose_name='IZGLED OPISNE STRANI')
 
     show_on_main_page = models.BooleanField(verbose_name='PRIKAZI NA PRVI STRANI')
@@ -94,7 +96,7 @@ class PricingPlan(models.Model):
     info = models.TextField(verbose_name='DODATEN OPIS', default=None, null=True, blank=True)
 
     def __unicode__(self):
-        return u'%s' % self.name
+        return u'%s(%s)' % (self.exercisesID.name, self.name)
 
     class Meta:
         verbose_name = 'Podvrsta cenika'

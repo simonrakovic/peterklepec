@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpage/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="8" selection-start="3297" selection-end="3301" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="3600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpage/admin.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,10 +32,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pricelist.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pricelist.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/webpage/pricelist.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="18" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.78125" vertical-offset="3438" max-vertical-offset="4014">
+            <state line="199" column="23" selection-start="2753" selection-end="2753" vertical-scroll-proportion="-2.8" vertical-offset="3414" max-vertical-offset="4014">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/webpage/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="24" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="149" column="22" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0" vertical-offset="2553" max-vertical-offset="4662">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suboffer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/suboffer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="31" selection-start="435" selection-end="435" vertical-scroll-proportion="-7.6296296" vertical-offset="82" max-vertical-offset="1368">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offers.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="-15.333333" vertical-offset="864" max-vertical-offset="2610">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offers.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/webpage/offers.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="144" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-3.2" vertical-offset="2400" max-vertical-offset="4032">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offers2.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/offers2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="0" selection-start="2811" selection-end="2811" vertical-scroll-proportion="-14.0" vertical-offset="864" max-vertical-offset="3888">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offers2.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/webpage/offers2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="143" column="4" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.33333334" vertical-offset="2382" max-vertical-offset="4176">
               <folding />
             </state>
           </provider>
@@ -78,11 +132,6 @@
         <option value="$PROJECT_DIR$/static/css/webpage/timetable.css" />
         <option value="$PROJECT_DIR$/webpage/adminx.py" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/cms/dashboard.py" />
-        <option value="$PROJECT_DIR$/static/css/webpage/offers.css" />
-        <option value="$PROJECT_DIR$/static/css/webpage/offers2.css" />
-        <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
-        <option value="$PROJECT_DIR$/templates/webpages/offers2.html" />
-        <option value="$PROJECT_DIR$/static/css/webpage/home.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/custompage1.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/custompage1.css" />
         <option value="$PROJECT_DIR$/templates/webpages/home.html" />
@@ -110,19 +159,24 @@
         <option value="$PROJECT_DIR$/templates/webpages/achievements.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
         <option value="$PROJECT_DIR$/webpage/urls.py" />
-        <option value="$PROJECT_DIR$/webpage/views.py" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/wsgi.py" />
         <option value="$PROJECT_DIR$/webpage/admin.py" />
-        <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/webpage/migrations/filter_tag.py" />
         <option value="$PROJECT_DIR$/webpage/filter_tag.py" />
         <option value="$PROJECT_DIR$/webpage/templatetags/filter_tag.py" />
         <option value="$PROJECT_DIR$/templates/webpages/suboffer.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/suboffers.css" />
-        <option value="$PROJECT_DIR$/webpage/models.py" />
         <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/pricelist.css" />
+        <option value="$PROJECT_DIR$/static/css/webpage/home.css" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/webpage/views.py" />
+        <option value="$PROJECT_DIR$/webpage/models.py" />
+        <option value="$PROJECT_DIR$/static/css/webpage/offers.css" />
+        <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
+        <option value="$PROJECT_DIR$/templates/webpages/offers2.html" />
+        <option value="$PROJECT_DIR$/static/css/webpage/offers2.css" />
       </list>
     </option>
   </component>
@@ -583,31 +637,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webpage/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <folding>
-            <element signature="e#1#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="14" selection-start="5488" selection-end="5488" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="2610">
-          <folding>
-            <element signature="e#26#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="51" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="4212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="69" selection-start="4567" selection-end="4567" vertical-scroll-proportion="0.0" vertical-offset="2268" max-vertical-offset="3708">
@@ -693,13 +722,6 @@
     <entry file="file://$PROJECT_DIR$/peterklepec_webpage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="51" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="0" selection-end="4816" vertical-scroll-proportion="0.11302983" vertical-offset="216" max-vertical-offset="2574">
           <folding />
         </state>
       </provider>
@@ -824,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/webpage/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="847" max-vertical-offset="1458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpage/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="181" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
@@ -859,22 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="43" selection-start="5379" selection-end="5379" vertical-scroll-proportion="3.4876847" vertical-offset="0" max-vertical-offset="4212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="6661" selection-end="6661" vertical-scroll-proportion="0.0" vertical-offset="1944" max-vertical-offset="3744">
-          <folding>
-            <element signature="e#26#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpage/templatetags/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="636">
@@ -896,37 +895,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/suboffer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="36" selection-start="1984" selection-end="1984" vertical-scroll-proportion="-6.962963" vertical-offset="676" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="1215" selection-end="1221" vertical-scroll-proportion="-5.75" vertical-offset="1419" max-vertical-offset="4644">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/suboffers.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="19" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="1512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="91" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="8" selection-start="3297" selection-end="3301" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
@@ -945,9 +916,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="44" selection-start="5619" selection-end="5619" vertical-scroll-proportion="-11.555555" vertical-offset="1902" max-vertical-offset="4212">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/pricelist.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="18" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.78125" vertical-offset="3438" max-vertical-offset="4014">
+        <state line="199" column="23" selection-start="2753" selection-end="2753" vertical-scroll-proportion="-2.8" vertical-offset="3414" max-vertical-offset="4014">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="24" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="66" selection-start="2858" selection-end="2858" vertical-scroll-proportion="0.0" vertical-offset="793" max-vertical-offset="4086">
+          <folding>
+            <element signature="e#26#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpage/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="91" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3636">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="22" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0" vertical-offset="2553" max-vertical-offset="4662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/suboffer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="435" selection-end="435" vertical-scroll-proportion="-7.6296296" vertical-offset="82" max-vertical-offset="1368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/offers.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="0" selection-start="1694" selection-end="1694" vertical-scroll-proportion="-3.2" vertical-offset="2400" max-vertical-offset="4032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="-15.333333" vertical-offset="864" max-vertical-offset="2610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/offers2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="2811" selection-end="2811" vertical-scroll-proportion="-14.0" vertical-offset="864" max-vertical-offset="3888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/offers2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="4" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.33333334" vertical-offset="2382" max-vertical-offset="4176">
           <folding />
         </state>
       </provider>

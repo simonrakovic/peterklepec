@@ -29,6 +29,11 @@ def offers(request, id):
     gallery_images = Images.objects.filter(exercisesID=exercise).filter(imagePlacementID=3)
     prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise)
     num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise).count()
+
+    if exercise.subexerciseID and exercise.subexercise_prices:
+        prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise.subexerciseID.exercisesID)
+        num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise.subexerciseID.exercisesID).count()
+
     num_of_prices = prices.count()
 
     if exercise.has_subexercise:
@@ -43,15 +48,29 @@ def offers(request, id):
     if exercise.exercises_page_layout.id == 7:
         return HttpResponseRedirect('/dosezki')
 
+    if exercise.exercises_page_layout.id == 3:
+        return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
+
+
     #ker so v izgledu cene izpisane v skolpih po dva glede na pricingPlan, se lahko prikaze maxsimalno 2 pricingPlana
-    if num_of_pricingPlans > 2 or prices.count() > 8:
+    if num_of_pricingPlans >= 2 and prices.count() > 8:
         #ce ima vec kot 2 plana, se za pirkaz na ponudbeni strani izbere samo prvega
         #ce je vec kot 8 cen se izbere prvi plan in se stem zmanjsa stevilo prikazanih cen( pod pogojem da ima ponudba vec pricingPlanov)
+
+
         pricingPlans = PricingPlan.objects.filter(exercisesID=exercise)
-        prices = Prices.objects.filter(pricingPlanID=pricingPlans[0])
+        if exercise.subexerciseID and exercise.subexercise_prices:
+            pricingPlans = PricingPlan.objects.filter(exercisesID=exercise.subexerciseID.exercisesID)
+
+        num_of_prices = 0
+        prices = None
+        for pricingPlan in pricingPlans:
+            temp = Prices.objects.filter(pricingPlanID=pricingPlan)
+            if num_of_prices < temp.count():
+                prices = temp
+
         num_of_prices = prices.count()
-        if prices.count() > 8:
-            return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
+
 
     #zaradi izgleda spletne strani je omejen prikaz cen na strani, prikazano je lahko 8,4,2 ali 0 razlicnih cen (toliko je prostora)
     #ker je stevilo cen glede na ponudbo razlicno, so potrebni tudi razlicni prikazi, ki omogocajo prikaz razlicno ptevilo cen

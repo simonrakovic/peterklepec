@@ -5,13 +5,13 @@
     border: 0px solid transparent;
 
     margin-top: 20px;
-    min-width: 700px;
+    min-width: 500px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .flexslider .slides img {
-    min-width: 700px;
+    min-width: 500px;
     height: 540px;
 }
 
