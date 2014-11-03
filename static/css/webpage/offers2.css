@@ -11,10 +11,15 @@
 
 .fitnes-conteiner-title{
     width:90%;
-    margin-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
     padding-top: 10px;
     font-size: 1.7em;
 
+    text-transform: uppercase;
+    color:#D7C3AB;
+    
     border-bottom: 1px solid #D7C3AB;
 }
 
@@ -23,9 +28,12 @@
 }
 
 .fitnes-conteiner-text{
- margin-top: 15px;
- margin-left: 10px;
- text-align: justify;
+     width:93%;
+     margin-right: auto;
+     margin-left: auto;
+
+    margin-top: 15px;
+    text-align: justify;
 }
 
 .track{
