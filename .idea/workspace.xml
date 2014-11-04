@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="info.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="info.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/webpage/info.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6603774" vertical-offset="858" max-vertical-offset="1512">
+            <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1512">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gallery.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="53" selection-start="2077" selection-end="2077" vertical-scroll-proportion="-12.740741" vertical-offset="682" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="achievements.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="14" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5943396" vertical-offset="108" max-vertical-offset="882">
               <folding />
             </state>
           </provider>
@@ -81,7 +99,6 @@
         <option value="$PROJECT_DIR$/static/css/webpage/achivments.css" />
         <option value="$PROJECT_DIR$/templates/webpages/achivments.html" />
         <option value="$PROJECT_DIR$/templates/webpages/achievements.html" />
-        <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
         <option value="$PROJECT_DIR$/webpage/urls.py" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/wsgi.py" />
         <option value="$PROJECT_DIR$/webpage/migrations/filter_tag.py" />
@@ -98,13 +115,14 @@
         <option value="$PROJECT_DIR$/webpage/admin.py" />
         <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
         <option value="$PROJECT_DIR$/templates/webpages/offers2.html" />
-        <option value="$PROJECT_DIR$/templates/webpages/gallery.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/gallery.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/timetable.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/pricelist.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/offers2.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/offers.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/info.css" />
+        <option value="$PROJECT_DIR$/templates/webpages/gallery.html" />
+        <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
       </list>
     </option>
   </component>
@@ -732,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="8" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="882">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/achievements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="936">
@@ -839,13 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="78" selection-start="603" selection-end="618" vertical-scroll-proportion="-4.6666665" vertical-offset="198" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/gallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="23" selection-start="304" selection-end="304" vertical-scroll-proportion="0.5377358" vertical-offset="0" max-vertical-offset="1260">
@@ -911,7 +915,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/info.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.6603774" vertical-offset="858" max-vertical-offset="1512">
+        <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="53" selection-start="2077" selection-end="2077" vertical-scroll-proportion="-12.740741" vertical-offset="682" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="14" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5943396" vertical-offset="108" max-vertical-offset="882">
           <folding />
         </state>
       </provider>
