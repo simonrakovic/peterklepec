@@ -90,13 +90,13 @@
                 events: function(start, end, timezone, callback) {
                      $.ajax({
                         type: 'GET',
-                        url: 'http://192.168.0.109:32432/odsotnosti/'+exerciseID,
+                        url: 'http://simonrakovic.webfactional.com/odsotnosti/'+exerciseID,
                         data: { get_param: 'value' },
                         dataType:'json',
                         success: function (notWorkingHours) {
                             $.ajax({
                                 type: 'GET',
-                                url: 'http://192.168.0.109:32432/casizvajanjavadb/'+exerciseID,
+                                url: 'http://simonrakovic.webfactional.com/casizvajanjavadb/'+exerciseID,
                                 data: { get_param: 'value' },
                                 dataType:'json',
                                 success: function (data) {
