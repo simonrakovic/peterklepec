@@ -46,7 +46,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="35" selection-start="6317" selection-end="6317" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="3708">
+            <state line="189" column="34" selection-start="6287" selection-end="6316" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="3708">
               <folding />
             </state>
           </provider>
@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/rest_framework/js/default.js">
+      <file leaf-file-name="settings-server.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="620" selection-end="620" vertical-scroll-proportion="0.6226415" vertical-offset="0" max-vertical-offset="1116">
+            <state line="194" column="35" selection-start="6390" selection-end="6390" vertical-scroll-proportion="0.5188679" vertical-offset="3162" max-vertical-offset="3834">
               <folding />
             </state>
           </provider>
@@ -112,7 +112,6 @@
         <option value="$PROJECT_DIR$/templates/webpages/questions.html" />
         <option value="$PROJECT_DIR$/webpage/forms.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/questions.css" />
-        <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/achivments.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/achivments.css" />
         <option value="$PROJECT_DIR$/templates/webpages/achivments.html" />
@@ -143,6 +142,7 @@
         <option value="$PROJECT_DIR$/webpage/views.py" />
         <option value="$PROJECT_DIR$/templates/webpages/timetable.html" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
+        <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
       </list>
     </option>
   </component>
@@ -506,14 +506,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20453289" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20453289" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28854167" sideWeight="0.5002764" order="1" side_tool="true" content_ui="tabs" />
@@ -673,13 +673,6 @@
     <entry file="file://$PROJECT_DIR$/../../../GitHub/Sprint3/eNarocanje/enarocanje/reservations/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="22" selection-start="2198" selection-end="2209" vertical-scroll-proportion="-4.576244" vertical-offset="3499" max-vertical-offset="5526">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="0" selection-start="6387" selection-end="6562" vertical-scroll-proportion="0.0" vertical-offset="3205" max-vertical-offset="3816">
           <folding />
         </state>
       </provider>
@@ -882,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="35" selection-start="6317" selection-end="6317" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="3708">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/peterklepec_webpage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="51" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
@@ -905,7 +891,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/rest_framework/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="620" selection-end="620" vertical-scroll-proportion="0.6226415" vertical-offset="0" max-vertical-offset="1116">
+        <state line="22" column="14" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="34" selection-start="6287" selection-end="6316" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="3708">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="35" selection-start="6390" selection-end="6390" vertical-scroll-proportion="0.5188679" vertical-offset="3162" max-vertical-offset="3834">
           <folding />
         </state>
       </provider>

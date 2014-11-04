@@ -191,7 +191,8 @@ DATABASES = {'default': dj_database_url.parse('sqlite:///'+PROJECT_PATH+'db.sqli
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = [
     'localhost:8000',
-    '0.0.0.0:32432/'
+    '0.0.0.0:32432/',
+    'simonrakovic.webfactional.com'
 ]
 
 
