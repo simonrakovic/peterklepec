@@ -11,10 +11,13 @@
 
 
 .info-title{
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     border-bottom: 1px solid #D7C3AB;
-    font-size: 1.5em;
+
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.6em;
 
 }
 
@@ -29,12 +32,15 @@
     text-align: center;
     color: #D7C3AB;
     width: 80%;
+    font-size: 1.1em;
 }
 
 .info-content-text-box > table > tbody > tr > th{
     color:#A38A70;
     text-decoration: underline;
     width: 20%;
+
+    font-size: 1.1em;
 
 }
 
@@ -63,6 +69,7 @@
     color: #D7C3AB;
     line-height: 60px;
     font-size: 1.5em;
+    text-transform: uppercase;
 
  }
 

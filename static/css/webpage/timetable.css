@@ -10,10 +10,15 @@
 }
 .pricelist-navbar > li > a{
     height: 60px;
-    line-height: 40px;
 
-    font-weight: bold;
+
+
     text-transform: uppercase;
+
+    font-size: 1.1em;
+    text-transform: uppercase;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .pricelist-navbar > li > a:hover{
@@ -53,6 +58,8 @@
     background: rgba(5,4,4,0.8);
     color:#ffffff;
     outline: none;
+
+    border-bottom: 2px solid #D7C3AB;
 }
 @media (max-width: 768px) {
   .nav-justified > li {

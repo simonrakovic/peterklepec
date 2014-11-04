@@ -17,7 +17,7 @@
     padding-top: 10px;
     font-size: 1.7em;
     text-transform: uppercase;
-    color:#D7C3AB;
+    color:#ffffff;
     border-bottom: 1px solid #D7C3AB;
 }
 
@@ -30,11 +30,14 @@
 
     margin-left: auto;
     margin-right: auto;
-    width:92%;
+    width:90%;
+    color: #A38A70;
+    text-align: justify;
 }
 
 .track{
-    margin-top:30px;
+    margin-top:20px;
+
 }
 
 .margin-fix{
@@ -42,9 +45,10 @@
 }
 
 .owerflow-fix{
-    padding-right: 10px;
+
     overflow:auto;
     height: 170px;
+
 }
 
 .page-header{
@@ -133,11 +137,26 @@
     height: 50px;
     background: rgba(13,11,11,0.9);
 
+    text-transform: uppercase;
+    font-size: 1.2em;
 
-    font-weight: bold;
-    font-size: 1.1em;
+    display: inline-block;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+
+    width: 100%;
 
 }
+
+.pricetable-title > td {
+    width: 100%;
+    display: inline-block;
+    margin-top: 5px;
+    line-height: 22px;
+    height: 45px;
+
+}
+
 
 .pricebox-back > a{
    color:#D7C3AB;

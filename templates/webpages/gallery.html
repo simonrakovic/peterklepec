@@ -16,7 +16,7 @@
             <div class="scrollbox">
                 <div class="gallery-wrapper-row col-lg-12">
                     {% for image in images %}
-                       <div class="col-lg-4 col-sm-6 col-xs-12">
+                       <div class="col-lg-4 col-sm-6 col-xs-12 image-container">
                             <a href="{{ MEDIA_URL }}{{ image.imageDestination }}" data-source="{{ MEDIA_URL }}{{ image.imageDestination }}" title="Into The Blue" style="width:193px;height:125px;">
                                  <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img img-responsive">
                             </a>

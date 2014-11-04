@@ -21,9 +21,11 @@
                    {{ exercise.name }}
                </div>
 
-                <div class="fitnes-conteiner-text owerflow-fix scrollbox">
+                <div class=" owerflow-fix scrollbox">
+                    <div class="fitnes-conteiner-text">
+                        {{ exercise.description|safe}}
+                    </div>
 
-                    {{ exercise.description|safe}}
 
                 </div>
 

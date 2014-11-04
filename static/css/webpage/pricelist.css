@@ -53,9 +53,15 @@
     margin-left: 10px;
     margin-right: 10px;
 
-    padding-top:5px;
+}
 
+.tab-pane-title > h3 {
+    color:#A38A70;
+}
 
+.tab-pane-title > h3 > small {
+    color:#ffffff;
+    text-transform: uppercase;
 }
 
 .nav-tabs > li > a{
@@ -88,9 +94,7 @@
 
 
 .pricelist-secondnav > ul > li > a{
-
-
-
+    text-transform: uppercase;
 }
 
 .pricelist-secondnav > ul > li > a:hover{
@@ -120,6 +124,10 @@
    margin-right: auto;
    height: 250px;
    background: rgba(5,4,4,0.8) ;
+}
+
+.pricelist-thirdnav > ul > li > a{
+   text-transform: uppercase;
 }
 
 .pricelist-thirdnav > ul > li > a:hover{

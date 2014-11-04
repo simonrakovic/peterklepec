@@ -28,10 +28,11 @@
 }
 
 .fitnes-conteiner-text{
-     width:93%;
-     margin-right: auto;
-     margin-left: auto;
+    width:89%;
+    margin-right: auto;
+    margin-left: auto;
 
+    color:#A38A70;
     margin-top: 15px;
     text-align: justify;
 }
@@ -45,7 +46,7 @@
 }
 
 .owerflow-fix{
-    padding-right: 10px;
+
     overflow:auto;
     height: 420px;
 }
@@ -137,8 +138,22 @@
     background: rgba(13,11,11,0.9);
 
 
-    font-weight: bold;
-    font-size: 1.1em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+
+    display: inline-block;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+
+    width: 100%;
+}
+
+.pricetable-title > td{
+    width: 100%;
+    display: inline-block;
+    margin-top: 5px;
+    line-height: 22px;
+    height: 45px;
 
 }
 
