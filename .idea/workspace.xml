@@ -23,65 +23,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="info.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/webpage/info.css">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1512">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="53" selection-start="2077" selection-end="2077" vertical-scroll-proportion="-12.740741" vertical-offset="682" max-vertical-offset="1440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="achievements.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="16" selection-start="116" selection-end="116" vertical-scroll-proportion="0.16981132" vertical-offset="0" max-vertical-offset="990">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="4698">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="55" selection-start="4052" selection-end="4052" vertical-scroll-proportion="-4.888889" vertical-offset="1578" max-vertical-offset="4212">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="achievements.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/webpages/achievements.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="25" selection-start="287" selection-end="287" vertical-scroll-proportion="-6.0" vertical-offset="36" max-vertical-offset="936">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="2412">
-              <folding />
+            <state line="151" column="10" selection-start="7450" selection-end="7456" vertical-scroll-proportion="0.47955975" vertical-offset="2413" max-vertical-offset="4086">
+              <folding>
+                <element signature="e#26#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +83,6 @@
         <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/home.css" />
         <option value="$PROJECT_DIR$/webpage/models.py" />
-        <option value="$PROJECT_DIR$/webpage/views.py" />
         <option value="$PROJECT_DIR$/webpage/admin.py" />
         <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
         <option value="$PROJECT_DIR$/templates/webpages/offers2.html" />
@@ -150,6 +97,7 @@
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
+        <option value="$PROJECT_DIR$/webpage/views.py" />
       </list>
     </option>
   </component>
@@ -210,78 +158,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -826,15 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="86" selection-start="5059" selection-end="5059" vertical-scroll-proportion="0.0" vertical-offset="1549" max-vertical-offset="4086">
-          <folding>
-            <element signature="e#26#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/suboffer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="32" selection-start="481" selection-end="486" vertical-scroll-proportion="-8.296296" vertical-offset="82" max-vertical-offset="1368">
@@ -912,16 +779,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
+    <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="53" selection-start="2077" selection-end="2077" vertical-scroll-proportion="-12.740741" vertical-offset="682" max-vertical-offset="1440">
+        <state line="3" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="0.08866995" vertical-offset="0" max-vertical-offset="2412">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
+    <entry file="file://$PROJECT_DIR$/templates/webpages/achievements.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="2412">
+        <state line="11" column="25" selection-start="287" selection-end="287" vertical-scroll-proportion="0.26600984" vertical-offset="36" max-vertical-offset="936">
           <folding />
         </state>
       </provider>
@@ -929,6 +796,20 @@
     <entry file="file://$PROJECT_DIR$/static/css/webpage/info.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="53" selection-start="2077" selection-end="2077" vertical-scroll-proportion="-12.740741" vertical-offset="682" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
@@ -942,22 +823,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="55" selection-start="4052" selection-end="4052" vertical-scroll-proportion="-4.888889" vertical-offset="1578" max-vertical-offset="4212">
+        <state line="95" column="55" selection-start="4052" selection-end="4052" vertical-scroll-proportion="0.4827586" vertical-offset="1416" max-vertical-offset="4212">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/achievements.html">
+    <entry file="file://$PROJECT_DIR$/webpage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="287" selection-end="287" vertical-scroll-proportion="-6.0" vertical-offset="36" max-vertical-offset="936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/webpage/achievements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="116" selection-end="116" vertical-scroll-proportion="0.16981132" vertical-offset="0" max-vertical-offset="990">
-          <folding />
+        <state line="151" column="10" selection-start="7450" selection-end="7456" vertical-scroll-proportion="0.47955975" vertical-offset="2413" max-vertical-offset="4086">
+          <folding>
+            <element signature="e#26#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -111,7 +111,7 @@ def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
-    images = Images.objects.filter(imagePlacementID=3)
+    images = Images.objects.filter(imagePlacementID=7)
 
     return render_to_response('webpages/gallery.html', locals(), context_instance=RequestContext(request))
 
