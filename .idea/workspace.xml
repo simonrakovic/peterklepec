@@ -26,7 +26,7 @@
       <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="56" selection-start="1388" selection-end="1401" vertical-scroll-proportion="-10.0" vertical-offset="360" max-vertical-offset="4194">
+            <state line="46" column="75" selection-start="2134" selection-end="2178" vertical-scroll-proportion="-9.333333" vertical-offset="576" max-vertical-offset="4176">
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
@@ -37,10 +37,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <file leaf-file-name="info.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="20" selection-start="875" selection-end="875" vertical-scroll-proportion="0.8404669" vertical-offset="648" max-vertical-offset="5256">
+            <state line="2" column="0" selection-start="27" selection-end="84" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2448">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offers.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2682">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pricelist.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/pricelist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="18" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timetable.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/webpages/timetable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="70" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.4017857" vertical-offset="1134" max-vertical-offset="5580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpage/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="162" column="19" selection-start="7936" selection-end="7951" vertical-scroll-proportion="0.0" vertical-offset="2629" max-vertical-offset="4086">
+              <folding>
+                <element signature="e#26#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timetable.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/webpage/timetable.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="0" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-fullcalendar.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/fullcalendar/bootstrap-fullcalendar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="26" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1962">
               <folding />
             </state>
           </provider>
@@ -66,10 +122,7 @@
         <option value="$PROJECT_DIR$/peterklepec_webpage/cms/dashboard.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/custompage1.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/custompage1.css" />
-        <option value="$PROJECT_DIR$/templates/webpages/home.html" />
-        <option value="$PROJECT_DIR$/static/fullcalendar/bootstrap-fullcalendar.css" />
         <option value="$PROJECT_DIR$/webpage/migrations/forms.py" />
-        <option value="$PROJECT_DIR$/templates/webpages/info.html" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/urls.py" />
         <option value="$PROJECT_DIR$/templates/webpages/custompage1.html" />
         <option value="$PROJECT_DIR$/static/editor.css" />
@@ -89,13 +142,10 @@
         <option value="$PROJECT_DIR$/webpage/templatetags/filter_tag.py" />
         <option value="$PROJECT_DIR$/templates/webpages/suboffer.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/suboffers.css" />
-        <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
         <option value="$PROJECT_DIR$/webpage/models.py" />
         <option value="$PROJECT_DIR$/webpage/admin.py" />
-        <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
         <option value="$PROJECT_DIR$/templates/webpages/offers2.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/gallery.css" />
-        <option value="$PROJECT_DIR$/static/css/webpage/timetable.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/pricelist.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/offers2.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/offers.css" />
@@ -104,12 +154,18 @@
         <option value="$PROJECT_DIR$/templates/webpages/achievements.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
         <option value="$PROJECT_DIR$/webpage/views.py" />
-        <option value="$PROJECT_DIR$/templates/webpages/timetable.html" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/settings.py" />
         <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
         <option value="$PROJECT_DIR$/static/css/webpage/home.css" />
+        <option value="$PROJECT_DIR$/templates/webpages/home.html" />
+        <option value="$PROJECT_DIR$/templates/webpages/info.html" />
+        <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
+        <option value="$PROJECT_DIR$/templates/webpages/pricelist.html" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/static/css/webpage/timetable.css" />
+        <option value="$PROJECT_DIR$/static/fullcalendar/bootstrap-fullcalendar.css" />
+        <option value="$PROJECT_DIR$/templates/webpages/timetable.html" />
       </list>
     </option>
   </component>
@@ -173,57 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webpages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec_webpage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peterklepec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="webpage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,18 +268,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/static/javascript" />
       <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/static/fonts" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/peterklepec_webpage" />
-      <recent name="$PROJECT_DIR$/static/javascript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/javascript" />
       <recent name="$PROJECT_DIR$/webpage/templatetags" />
       <recent name="$PROJECT_DIR$/webpage" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/templates/webpages" />
-      <recent name="$PROJECT_DIR$/static/css" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.peterklepec_webpage">
@@ -520,7 +526,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28854167" sideWeight="0.5002764" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37083334" sideWeight="0.4997236" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.371875" sideWeight="0.4997236" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -548,34 +554,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/custompage1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="51" selection-start="863" selection-end="863" vertical-scroll-proportion="0.34146342" vertical-offset="328" max-vertical-offset="738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.63529414" vertical-offset="0" max-vertical-offset="468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="3" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.9458824" vertical-offset="426" max-vertical-offset="954" />
@@ -757,30 +735,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/pricelist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="59" selection-start="1226" selection-end="1235" vertical-scroll-proportion="0.54362416" vertical-offset="270" max-vertical-offset="2430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/webpage/timetable.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="4" selection-start="849" selection-end="849" vertical-scroll-proportion="0.7169811" vertical-offset="642" max-vertical-offset="1422">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/pricelist.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="127" column="0" selection-start="1795" selection-end="1795" vertical-scroll-proportion="-4.4" vertical-offset="2022" max-vertical-offset="4158">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="39" selection-start="1764" selection-end="1766" vertical-scroll-proportion="0.36288998" vertical-offset="751" max-vertical-offset="2646">
           <folding />
         </state>
       </provider>
@@ -795,13 +752,6 @@
     <entry file="file://$PROJECT_DIR$/static/css/webpage/offers.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="147" column="0" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.6792453" vertical-offset="2214" max-vertical-offset="4464">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="63" selection-end="63" vertical-scroll-proportion="0.08866995" vertical-offset="0" max-vertical-offset="2412">
           <folding />
         </state>
       </provider>
@@ -862,22 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="10" selection-start="7450" selection-end="7456" vertical-scroll-proportion="0.0" vertical-offset="2413" max-vertical-offset="4086">
-          <folding>
-            <element signature="e#26#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webpages/timetable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="105" selection-start="3674" selection-end="3674" vertical-scroll-proportion="-9.333333" vertical-offset="1512" max-vertical-offset="4374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/info.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="29" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1512">
@@ -894,14 +828,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="25" selection-start="423" selection-end="961" vertical-scroll-proportion="0.8215768" vertical-offset="0" max-vertical-offset="936">
+        <state line="4" column="30" selection-start="110" selection-end="110" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/offers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2682">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="27" selection-end="84" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/jquery.qtip-1.0.0-rc3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/jquery.qtip.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/jquery.qtip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8262">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="36" selection-start="2783" selection-end="2789" vertical-scroll-proportion="0.56031126" vertical-offset="2952" max-vertical-offset="5544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webpages/pricelist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="19" selection-start="7936" selection-end="7951" vertical-scroll-proportion="0.0" vertical-offset="2629" max-vertical-offset="4086">
+          <folding>
+            <element signature="e#26#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/fullcalendar/bootstrap-fullcalendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="26" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/webpage/timetable.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="56" selection-start="1388" selection-end="1401" vertical-scroll-proportion="-10.0" vertical-offset="360" max-vertical-offset="4194">
+        <state line="46" column="75" selection-start="2134" selection-end="2178" vertical-scroll-proportion="-9.333333" vertical-offset="576" max-vertical-offset="4176">
           <folding>
             <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
@@ -911,9 +917,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/templates/webpages/timetable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="20" selection-start="875" selection-end="875" vertical-scroll-proportion="0.8404669" vertical-offset="648" max-vertical-offset="5256">
+        <state line="73" column="70" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.4017857" vertical-offset="1134" max-vertical-offset="5580">
           <folding />
         </state>
       </provider>

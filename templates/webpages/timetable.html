@@ -1,5 +1,5 @@
 {% extends "main.html" %}
-
+{% block nav-urnik %}menu-list-active{% endblock %}
 {% block extra_head_content %}
     <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' />
     <link href="/static/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet">
@@ -7,6 +7,8 @@
 
     <link href="/static/css/webpage/timetable.css" rel="stylesheet">
     <link href="/static/css/jquery-ui.theme.min.css" rel="stylesheet">
+
+    <link href="/static/css/jquery.qtip.css" rel="stylesheet">
 {% endblock %}
 
 {% block main_content %}
@@ -29,6 +31,7 @@
     <script src='/static/fullcalendar/lib/moment.min.js'></script>
     <script src='/static/fullcalendar/fullcalendar.js'></script>
     <script src='/static/javascript/date.js'></script>
+    <script src='/static/javascript/jquery.qtip.min.js'></script>
     <script>
         $(document).ready(function() {
             var exerciseID = {{ active_exercise.id }} ;
@@ -36,17 +39,42 @@
             var maxTime = "{{ active_exercise.length.end_of_exercise|time:'H:i:s'}}";
             var slotInterval = "{{ active_exercise.length.slotInterval|time:'H:i:s'}}";
 
+            var tooltip = $('<div/>').qtip({
+                id: 'fullcalendar',
+                prerender: true,
+                content: {
+                    text: ' ',
+                    title: {
+                        button: true
+                    }
+                },
+                position: {
+                    my: 'bottom center',
+                    at: 'top center',
+                    target: 'mouse',
+                    viewport: $('#fullcalendar'),
+                    adjust: {
+                        mouse: false,
+                        scroll: false
+                    }
+                },
+                show: false,
+                hide: false,
+                style: 'qtip-light'
+            }).qtip('api');
+
             $('#calendar').fullCalendar({
 
                 height: 455,
 				header: {
-                    left: 'prev,next today',
+                    left: ' title',
                     center: '',
-                    right: ''
+                    right: 'today prev,next '
 			    },
-
+                titleFormat: '[Za več informacij o vadbi z miško označite željeni termin.]',
                 /* sets the current view */
                 defaultView: 'agendaWeek',
+
 
                 /* sets the specific date */
                 //year: date.getFullYear(),
@@ -87,16 +115,57 @@
                 dayNames: ['nedelja', 'ponedeljek', 'torek', 'sreda','četrtek', 'petek', 'sobota'],
                 dayNamesShort: ['NED', 'PON', 'TOR', 'SRE','ČET', 'PET', 'SOB'],
                 /* events data */
+
+                /*eventClick: function(data, event, view) {
+                    var content = '<h3>'+data.title+'</h3>' +
+                        '<p><b>Start:</b> '+data.start+'<br />' +
+                        (data.end && '<p><b>End:</b> '+data.end+'</p>' || '');
+
+                    tooltip.set({
+                        'content.text': content
+                    })
+                    .reposition(event).show(event);
+                },
+                dayClick: function() { tooltip.hide() },
+                eventResizeStart: function() { tooltip.hide() },
+                eventDragStart: function() { tooltip.hide() },
+                viewDisplay: function() { tooltip.hide() },*/
+
+                eventRender:function(event,element,data){
+                      var startDate = new Date(event.start)
+                      var endDate = new Date(event.end)
+
+                      element.qtip({
+                            content:{
+                            text:'<div class="callendar-popup-title">'+'{{ active_exercise.name }}'+'<span class="pull-right">'+startDate.toString('d.M.yyyy')+'</span>'+'</div>'+
+                                  '<div class="callendar-popup-time">'+'<span class="pull-right">'+startDate.toString('H:mm')+'-'+endDate.toString('H:mm')+'</span>'+'</div>'+
+                                  '<div class="callendar-popup-description">'+event.title+'</div>'
+                          },
+                          position:{
+                            my:'bottom left',
+                            at:'center center'
+                          },
+                          show:'mouseover',
+                          style: {
+                              classes:'qtip-youtube callendar-popup',
+                              def: false
+                          }
+
+                      });
+                },
+
                 events: function(start, end, timezone, callback) {
                      $.ajax({
                         type: 'GET',
-                        url: 'http://simonrakovic.webfactional.com/odsotnosti/'+exerciseID,
+                        //url: 'http://simonrakovic.webfactional.com/odsotnosti/'+exerciseID,
+                        url: 'http://localhost:8000/odsotnosti/'+exerciseID,
                         data: { get_param: 'value' },
                         dataType:'json',
                         success: function (notWorkingHours) {
                             $.ajax({
                                 type: 'GET',
-                                url: 'http://simonrakovic.webfactional.com/casizvajanjavadb/'+exerciseID,
+                                //url: 'http://simonrakovic.webfactional.com/casizvajanjavadb/'+exerciseID,
+                                url: 'http://localhost:8000/casizvajanjavadb/'+exerciseID,
                                 data: { get_param: 'value' },
                                 dataType:'json',
                                 success: function (data) {
@@ -231,8 +300,6 @@
                      });
                 }
             })
-
-
         });
     </script>
 {% endblock %}

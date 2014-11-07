@@ -41,21 +41,20 @@
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul  class="nav navbar-nav menu-list nav-position">
+                <div class="collapse navbar-collapse nav-position" id="bs-example-navbar-collapse-1">
+                    <ul  class="nav navbar-nav menu-list ">
                         <li>
-                            <a href="/">Domov</a>
-
+                            <a class ="{% block nav-domov %}{% endblock %}" href="/">Domov</a>
                         </li>
 
                         <li>
-                            <a href="/cenik/">Cenik</a>
+                            <a class ="{% block nav-cenik %}{% endblock %}" href="/cenik/">Cenik</a>
                         </li>
                         <li>
-                            <a href="/urnik/1">Urniki</a>
+                            <a class ="{% block nav-urnik %}{% endblock %}" href="/urnik/1">Urniki</a>
                         </li>
                         <li>
-                            <a href="/informacije/">O nas</a>
+                            <a class ="{% block nav-informacije %}{% endblock %}" href="/informacije/">O nas</a>
                         </li>
 
                     </ul>
