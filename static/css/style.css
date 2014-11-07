@@ -3,7 +3,6 @@
 
 }
 
-
 .img-nav-left{
     margin-top: 20px;
     margin-right:-15px;
@@ -13,10 +12,6 @@
 .img-nav-images{
     height: 120px;
     width: 230px;
-}
-
-.carousel{
-
 }
 
 body{
@@ -30,28 +25,52 @@ body{
 
     background: rgba(13, 11, 11, 0.9);
 }
-.navbar-fixed-top {
+
+.navbar-brand{
+
+
+    font-size: 4.5em;
+    height: 80px;
+    line-height: 65px;
+    font-family:hemi;
+
+    text-shadow: 0 0 2px #735842,
+
+             -1px -1px 0 hsla(0, 8%, 5%, 1),
+
+             -2px -2px 1px hsla(0, 8%, 5%, 1),
+
+             -2px -2px 2px hsla(0, 8%, 5%, 1);
+}
+
+.navbar-brand > small{
+    font-size: 0.6em;
+    margin-left: 10px;
+}
+
+.navbar-brand > img {
+    padding-top: 0px;
+    height: 75px;
 
 }
 
-.navbar-logo{
-    margin-left:50px;
+.nav-brand-img{
+    height: 75px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
 }
 
-
-
-.container-padding-fix{
-
+.nav-position{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 0;right: 0
 }
 
-#bs-example-navbar-collapse-1{
-    margin-top: 10px;
-
-
-}
 .menu-list > li{
-    font-size: 1.3em;
-    font-family:oregon;
+    font-size: 1.2em;
+    font-family:hemi;
     border-left: 1px solid #171414;
 }
 .menu-list > li:hover{
@@ -64,11 +83,6 @@ body{
 
     margin-top: 40px;
 }
-
-.main-content{
-
-}
-
 
 .jm-item {
     padding: 0px;
@@ -92,15 +106,16 @@ body{
 
     bottom: 17px;
     background: rgba(13,11,11,0.9);
-    line-height: 35px;
+    line-height: 25px;
     font-weight: normal;
     padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 9px;
     padding-right: 9px;
     text-transform: uppercase;
-    font-family: oregon;
+    font-family: hemi;
     color: #D7C3AB;
-    font-size: 1.8em;
+    font-size: 1.7em;
 
     -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
@@ -253,4 +268,19 @@ body{
 @font-face {
     font-family: 'oregon'; /*a name to be used later*/
     src: url('/static/fonts/Oregon-LDO.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family:'sofa'; /*a name to be used later*/
+    src: url('/static/fonts/sofachromerg.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family:'ethno'; /*a name to be used later*/
+    src: url('/static/fonts/ethnocentricrg.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family:'hemi'; /*a name to be used later*/
+    src: url('/static/fonts/hemiheadbdit.ttf'); /*URL to font*/
 }
