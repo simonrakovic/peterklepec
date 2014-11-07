@@ -50,6 +50,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="13" selection-start="1252" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="3708">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings-server.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="29" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.52899826" vertical-offset="311" max-vertical-offset="3834">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pricelist.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/webpage/pricelist.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/webpage/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="22" selection-start="754" selection-end="754" vertical-scroll-proportion="0.49384886" vertical-offset="565" max-vertical-offset="1530">
+            <state line="47" column="22" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -123,7 +141,6 @@
         <option value="$PROJECT_DIR$/templates/webpages/gallery.html" />
         <option value="$PROJECT_DIR$/templates/webpages/achievements.html" />
         <option value="$PROJECT_DIR$/static/css/webpage/achievements.css" />
-        <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
         <option value="$PROJECT_DIR$/templates/webpages/home.html" />
         <option value="$PROJECT_DIR$/templates/webpages/info.html" />
         <option value="$PROJECT_DIR$/templates/webpages/offers.html" />
@@ -141,6 +158,7 @@
         <option value="$PROJECT_DIR$/static/css/webpage/pricelist.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/timetable.css" />
         <option value="$PROJECT_DIR$/static/css/webpage/home.css" />
+        <option value="$PROJECT_DIR$/peterklepec_webpage/settings-server.py" />
       </list>
     </option>
   </component>
@@ -824,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="0" selection-start="6394" selection-end="6394" vertical-scroll-proportion="0.6037736" vertical-offset="3162" max-vertical-offset="3834">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/webpages/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="30" selection-start="110" selection-end="110" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="954">
@@ -883,13 +894,6 @@
     <entry file="file://$PROJECT_DIR$/static/fullcalendar/bootstrap-fullcalendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="26" selection-start="1677" selection-end="1677" vertical-scroll-proportion="1.2513089" vertical-offset="1065" max-vertical-offset="1962">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="29" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-0.26666668" vertical-offset="748" max-vertical-offset="3708">
           <folding />
         </state>
       </provider>
@@ -975,7 +979,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/webpage/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="22" selection-start="754" selection-end="754" vertical-scroll-proportion="0.49384886" vertical-offset="565" max-vertical-offset="1530">
+        <state line="47" column="22" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="1252" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="3708">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peterklepec_webpage/settings-server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="29" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.52899826" vertical-offset="311" max-vertical-offset="3834">
           <folding />
         </state>
       </provider>
