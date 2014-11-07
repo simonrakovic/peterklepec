@@ -19,6 +19,9 @@
 
     font-weight: bold;
     text-transform: uppercase;
+    font-family: hemi;
+
+    font-size: 1.2em;
 
     border-right: 1px solid rgba(0, 0, 0, 0.4);
 
@@ -57,11 +60,15 @@
 
 .tab-pane-title > h3 {
     color:#A38A70;
+    font-family: hemi;
+    font-size: 2em;
 }
 
 .tab-pane-title > h3 > small {
     color:#ffffff;
     text-transform: uppercase;
+    font-family: hemi;
+
 }
 
 .nav-tabs > li > a{
@@ -95,6 +102,8 @@
 
 .pricelist-secondnav > ul > li > a{
     text-transform: uppercase;
+    font-family: hemi;
+    font-size: 1.2em;
 }
 
 .pricelist-secondnav > ul > li > a:hover{
@@ -128,6 +137,8 @@
 
 .pricelist-thirdnav > ul > li > a{
    text-transform: uppercase;
+   font-family: hemi;
+   font-size: 1.1em;
 }
 
 .pricelist-thirdnav > ul > li > a:hover{

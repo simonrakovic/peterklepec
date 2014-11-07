@@ -171,16 +171,19 @@ body{
 .box{
 
     margin-top:20px;
-    height:200px;
+    height:210px;
     background-color: rgba(13,11,11,0.7);
     min-width: 320px;
 }
 
 .box-title{
-    margin-left: 10px;
+
     border-bottom: 1px solid #D7C3AB;
     width: 90%;
     padding-top:10px;
+
+    margin-right: auto;
+    margin-left: auto;
 
     font-family: hemi;
     text-transform: uppercase;
@@ -188,7 +191,38 @@ body{
     font-size:1.4em
 }
 
+.box-content{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
 
+.box-subtitle{
+    width: 100%;
+    text-align: center;
+    color: #D7C3AB;
+    font-size: 1.3em;
+    font-family: hemi;
+
+    text-transform: uppercase;
+    background: rgba(163,138,112,0.2);
+}
+
+
+.box-data{
+   width: 100%;
+   text-align: center;
+   font-size: 1.1em;
+   font-family: hemi;
+
+}
+
+.box-data > span{
+    margin-left: 20px;
+    color: #D7C3AB;
+
+}
 
 .box > table{
     margin-top: 20px;

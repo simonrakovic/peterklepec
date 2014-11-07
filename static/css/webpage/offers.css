@@ -19,6 +19,8 @@
     text-transform: uppercase;
     color:#ffffff;
     border-bottom: 1px solid #D7C3AB;
+
+    font-family: hemi;
 }
 
 .fitnes-conteiner-title > small{
@@ -139,6 +141,7 @@
 
     text-transform: uppercase;
     font-size: 1.2em;
+    font-family: hemi;
 
     display: inline-block;
     overflow:hidden !important;

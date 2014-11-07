@@ -116,69 +116,60 @@
                         <div class="col-lg-4">
                             <div class="box">
                                 <div class="box-title">Trenutno na urniku</div>
+
+                                <div class="box-container">
+                                    <div class="box-content">
+                                        <div class="box-subtitle">Fitnes:</div>
+                                        {% if fitness_working_hours %}
+                                            {% for  fitness_working_hour in fitness_working_hours %}
+                                                   <div class="box-data">Odprto<span>{{ fitness_working_hour.timeFrom|time:'H:i'}} - {{ fitness_working_hour.timeTo|time:'H:i' }}</span></div>
+                                            {% endfor %}
+                                        {% else%}
+                                            <div class="box-data">Zaprto</div>
+                                        {% endif %}
+
+                                        {% if exercises_working_hours %}
+                                            <div class="box-subtitle">Vadbe:</div>
+                                            {% for  exercises_working_hour in exercises_working_hours %}
+                                                <div class="box-data">{{ exercises_working_hour.exercisesID.name }}<span>{{ exercises_working_hour.timeFrom|time:'H:i'}} - {{ exercises_working_hour.timeTo|time:'H:i' }}</span></div>
+                                            {% endfor %}
+                                        {% endif %}
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="box ">
                                 <div class="box-title">Delvni čas</div>
-                                <table>
-                                            <thead>
-                                                <tr>
-                                                    <td></td>
-                                                    <th>Pondedeljek - Petek</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <th>Dopoldan:</th>
-                                                <td>8:00 - 13:00 </td>
-                                            </tr>
-                                            <tr>
-                                                <th>Popoldan:</th>
-                                                <td>16:00 - 22:30</td>
-                                            </tr>
-                                            </tbody>
+                                <div class="box-container">
+                                    <div class="box-content">
+                                        <div class="box-subtitle" >Pondedeljek - Petek</div>
+                                        <div class="box-data">Dopoldan:<span>8:00 - 13:00</span></div>
+                                        <div class="box-data">Popoldan:<span>16:00 - 22:30</span></div>
 
-
-                                    </table>
-                                    <table >
-                                            <thead>
-                                                <tr>
-                                                    <td></td>
-                                                    <th>Nedelja</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <th>Popoldan:</th>
-                                                <td>16:00 - 22:00 </td>
-                                            </tr>
-                                            </tbody>
-
-
-                                    </table>
+                                        <div class="box-subtitle">Nedelja</div>
+                                        <div class="box-data">Popoldan:<span>16:00 - 22:00 </span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="box">
-
                                 <div class="box-title">Kontakti</div>
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <th>Telefon:</th>
-                                        <td>01/756 50 23</td>
-                                    </tr>
-                                    <tr>
-                                        <th>GSM:</th>
-                                        <td>041 972 169</td>
-                                    </tr>
-                                    <tr>
-                                        <th>E-pošta:</th>
-                                        <td>fitnes.peter.klepec1995@gmail.com</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <div class="box-container">
+                                    <div class="box-content">
+                                        <div class="box-subtitle" >Telefon</div>
+                                        <div class="box-data"><span>01/756 50 23</span></div>
+
+
+                                        <div class="box-subtitle">Mobitel:</div>
+                                        <div class="box-data"><span>041 972 169</span></div>
+
+                                        <div class="box-subtitle">E-pošta:</div>
+                                        <div class="box-data"><span>fitnes.peter.klepec1995@gmail.com</span></div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>

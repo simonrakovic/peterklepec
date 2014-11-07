@@ -17,6 +17,13 @@ def home(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
+
+
     news = News.objects.all()
     return render_to_response('webpages/home.html', locals(), context_instance=RequestContext(request))
 
@@ -24,6 +31,11 @@ def home(request):
 def offers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     exercise = Exercises.objects.get(pk=id)
     gallery_images = Images.objects.filter(exercisesID=exercise).filter(imagePlacementID=3)
@@ -101,6 +113,11 @@ def suboffers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     subexercise = Exercises.objects.filter(subexerciseID__exercisesID=id)
 
     images = Images.objects.filter(exercisesID=subexercise).filter(imagePlacementID=5)
@@ -111,6 +128,11 @@ def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     images = Images.objects.filter(imagePlacementID=7)
 
     return render_to_response('webpages/gallery.html', locals(), context_instance=RequestContext(request))
@@ -118,6 +140,12 @@ def gallery(request):
 def questions(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     question_form = QuestionForm()
 
     if request.method == 'POST':
@@ -138,6 +166,11 @@ def achievements(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     images = Images.objects.filter(imagePlacementID=6)
 
     return render_to_response('webpages/achievements.html', locals(), context_instance=RequestContext(request))
@@ -145,6 +178,11 @@ def achievements(request):
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
 
     exercises = Exercises.objects.filter(show_on_pricelist=True)
@@ -160,6 +198,11 @@ def timetable(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     active_exercise = Exercises.objects.get(pk=id)
     exercises = Exercises.objects.filter(show_on_timetable=True)
     not_working_events = NotWorkingHours.objects.filter(exercisesID=id)
@@ -171,11 +214,21 @@ def info(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
 
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+
     return render_to_response('webpages/info.html', locals(), context_instance=RequestContext(request))
 
 def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+
+    current_week_day = datetime.datetime.today().weekday()+1
+    current_time = datetime.datetime.now().time()
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     custompage = CustomPage.objects.get(pk=id)
     if not custompage.active:

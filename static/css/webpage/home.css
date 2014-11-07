@@ -39,13 +39,13 @@
 
     color:#ffffff;
     font-size: 4em;
-    font-family: ubuntu-b;
+    font-family: hemi;
 }
 
 .flex-caption-overlay-text{
     margin-top:20px;
     font-size: 2em;
-    font-family: ubuntu-l;
+    font-family: hemi;
     text-align:center;
     color:#D7C3AB;
 }
@@ -53,7 +53,11 @@
 .flex-caption-overlay-button{
     margin-top: 50px;
     font-size: 1.5em;
-    font-family: ubuntu-l;
+    font-family: hemi;
+
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 
     text-align: center;
     text-transform: uppercase;
