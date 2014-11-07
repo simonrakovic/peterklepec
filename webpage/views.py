@@ -42,6 +42,9 @@ def offers(request, id):
     prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise)
     num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise).count()
 
+
+
+
     if exercise.subexerciseID and exercise.subexercise_prices:
         prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise.subexerciseID.exercisesID)
         num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise.subexerciseID.exercisesID).count()

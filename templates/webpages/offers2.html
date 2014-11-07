@@ -73,7 +73,7 @@
                                     </table>
                                 </div>
                                 <div class="pricebox-back">
-                                    <a href="/cenik/">
+                                    <a href="/cenik/#exercise_tab_{% if exercise.subexerciseID %}{{ exercise.subexerciseID.exercisesID.id }}{% else %}{{ exercise.id }}{% endif %}">
                                         <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
                                         <div class="pricebox-back-text">
                                             Ogled cenika
@@ -112,7 +112,7 @@
                                     </table>
                                 </div>
                                 <div class="pricebox-back">
-                                    <a href="/cenik/">
+                                    <a href="/cenik/#exercise_tab_{% if exercise.subexerciseID %}{{ exercise.subexerciseID.exercisesID.id }}{% else %}{{ exercise.id }}{% endif %}">
                                         <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
                                         <div class="pricebox-back-text">
                                             Ogled cenika
@@ -140,7 +140,7 @@
                                 </table>
                             </div>
                             <div class="pricebox-back">
-                                <a href="/cenik/">
+                                <a href="/cenik/#exercise_tab_{% if exercise.subexerciseID %}{{ exercise.subexerciseID.exercisesID.id }}{% else %}{{ exercise.id }}{% endif %}">
                                     <img class="pricebox-back-img"  style="max-width: 35%"  src="/static/img/pricelist2a.png" alt="pricelist"/>
                                     <div class="pricebox-back-text">
                                         Ogled cenika

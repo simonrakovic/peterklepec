@@ -77,7 +77,7 @@
                             </table>
                         </div>
                         <div class="pricebox-back">
-                            <a href="/cenik/">
+                            <a href="/cenik/#exercise_tab_{% if exercise.subexerciseID %}{{ exercise.subexerciseID.exercisesID.id }}{% else %}{{ exercise.id }}{% endif %}">
                                 <img class="pricebox-back-img"   src="/static/img/pricelist2a.png" alt="pricelist"/>
                                 <div class="pricebox-back-text">
                                     Ogled cenika

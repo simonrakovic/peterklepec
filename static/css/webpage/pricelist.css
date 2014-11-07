@@ -187,10 +187,17 @@
 }
 
 .table > tbody > tr > td{
-    width: 50%;
+
     color:#D7C3AB;
 }
 
+.table-data-description{
+    width: 70%;
+}
+
+.table-data-value{
+    width: 30%;
+}
 
 .tbody{
 
