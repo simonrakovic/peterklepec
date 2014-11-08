@@ -25,13 +25,13 @@
 
     color:#ffffff;
     font-size: 4em;
-    font-family: oregon;
+    font-family: hemi;
 }
 
 .flex-caption-overlay-text{
     margin-top:20px;
     font-size: 2em;
-    font-family: ubuntu-l;
+    font-family: hemi;
     text-align:center;
     color:#D7C3AB;
 }
@@ -47,8 +47,10 @@
 
 
 .text-container-content{
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: center;
     padding-top: 20px;
+    color:#D7C3AB;
 
+    font-family: hemi;
 }

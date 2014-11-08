@@ -43,6 +43,12 @@ body{
              -2px -2px 2px hsla(0, 8%, 5%, 1);
 }
 
+@media (max-width: 1500px) {
+  .navbar-brand{
+    font-size: 3em;
+  }
+}
+
 .navbar-brand > small{
     font-size: 0.6em;
     margin-left: 10px;
