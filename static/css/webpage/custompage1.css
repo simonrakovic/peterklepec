@@ -18,7 +18,7 @@
 
 .flex-caption-overlay-title{
 
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
@@ -40,7 +40,7 @@
     height: 260px;
     color: #ffffff;
     margin-top: 20px;
-
+    overflow: auto;
     background: rgba(13,11,11,0.7);
 }
 
@@ -53,4 +53,8 @@
     color:#D7C3AB;
 
     font-family: hemi;
+}
+
+.track{
+    margin-top: 20px;
 }

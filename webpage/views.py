@@ -234,6 +234,8 @@ def custompage(request, id):
     exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     custompage = CustomPage.objects.get(pk=id)
+
+
     if not custompage.active:
         raise Http404
     return render_to_response('webpages/'+custompage.pageLayoutID.template_path, locals(), context_instance=RequestContext(request))
