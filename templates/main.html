@@ -20,6 +20,9 @@
         <!-- Custom CSS -->
         <link href="/static/css/style.css" rel="stylesheet">
 
+
+
+
 	<body>
         <!-- Navigation -->
         <nav class="navbar  navbar-default navbar-fixed-top transparent" role="navigation">
@@ -214,5 +217,26 @@
 
         </script>
         {% block extra_script_content %}{% endblock %}
+
+
+
+
+        <script src="/static/javascript/jquery.cookiesdirective.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.cookiesDirective({
+
+                    position: 'bottom',
+                    explicitConsent: false,
+                    duration: 30,
+                    message:'Za nemoteno delovanje in varnost spletna stran uporablja piškotke.',
+                    privacyPolicyUri: '/piskotki/',
+                    backgroundColor: 'rgb(13,11,11)',
+                    backgroundOpacity:'99',
+                    fontSize:'1.1em',
+                    fontFamily:'ubuntu-l'
+                });
+            });
+        </script>
 	</body>
 </html>
