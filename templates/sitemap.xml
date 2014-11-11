@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/1</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/4</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/6</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/9</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/10</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/11</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/12</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/13</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/16</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/ponudba/17</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>yeraly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/cenik/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>http://www.fitnes-peter-klepec.si/informacije/</loc>
+        <lastmod>2014-11-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+</urlset>

@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
@@ -147,6 +148,7 @@ INSTALLED_APPS = (
     'gunicorn',
     'docutils',
     'rest_framework'
+
 )
 
 # A sample logging configuration. The only tangible logging

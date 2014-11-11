@@ -1,0 +1,18 @@
+User-agent: Yandex
+Disallow: /admin
+Disallow: /static
+Disallow: /media
+Host: fitnes-peter-klepec.si
+
+User-agent: Goolebot
+Disallow: /admin
+Disallow: /static
+Disallow: /media
+
+User-agent: *
+Crawl-delay: 30
+Disallow: /admin
+Disallow: /static
+Disallow: /media
+
+Sitemap: http://www.fitnes-peter-klepec.si/sitemap.xml
