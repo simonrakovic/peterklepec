@@ -14,19 +14,12 @@
         <!-- Custom CSS -->
          <link href="/static/css/modern-business.css" rel="stylesheet">
 
-
-        {% block extra_head_content %}{% endblock %}
-
         <!-- Custom CSS -->
         <link href="/static/css/style.css" rel="stylesheet">
-
-
-
         <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
         <link rel="stylesheet" type="text/css" href="/static/css/cookieconsent.css"/>
         <script type="text/javascript" src="/static/javascript/cookieconsent.js"></script>
         <script type="text/javascript">
-
             // <![CDATA[
             cc.initialise({
                 cookies: {
@@ -55,14 +48,14 @@
                     savePreference:'Vredu',
                     hideDetails:'Zapri podrobnosti'
                 }
-
             });
             // ]]>
-
         </script>
         <!-- End Cookie Consent plugin -->
         <!-- jQuery Version 1.11.0 -->
         <script src="/static/javascript/jquery-1.11.0.js"></script>
+        
+        {% block extra_head_content %}{% endblock %}
 	<body>
         <!-- Navigation -->
         <nav class="navbar  navbar-default navbar-fixed-top transparent" role="navigation">
