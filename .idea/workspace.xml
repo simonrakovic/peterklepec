@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/templates/main.html" line="25" />
+    <bookmark url="file://$PROJECT_DIR$/templates/main.html" line="27" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10072a6d-5409-4ef0-a2ec-e4d65441af93" name="Default" comment="" />
@@ -29,8 +29,8 @@
       <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24489796" vertical-offset="252" max-vertical-offset="4104">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.9510204" vertical-offset="3945" max-vertical-offset="4788">
+              <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
@@ -632,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24489796" vertical-offset="252" max-vertical-offset="4104">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.9510204" vertical-offset="3945" max-vertical-offset="4788">
+          <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#span#0;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#a#1;n#div#0;n#div#0;n#nav#0;n#body#0;n#!!top" expanded="true" />

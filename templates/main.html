@@ -22,7 +22,9 @@
 
 
 
-        
+        <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+        <link rel="stylesheet" type="text/css" href="/static/css/cookieconsent.css"/>
+
         <!-- jQuery Version 1.11.0 -->
         <script src="/static/javascript/jquery-1.11.0.js"></script>
 	<body>
@@ -218,6 +220,42 @@
 
         </script>
         {% block extra_script_content %}{% endblock %}
+        <script type="text/javascript" src="/static/javascript/cookieconsent.js"></script>
+        <script type="text/javascript">
 
+            // <![CDATA[
+            cc.initialise({
+                cookies: {
+                    mycookie:{
+                        title: 'CSRF  token',
+                        description: 'CSRF token preprečuje "Cross-site request forgery".'
+
+
+                    }
+                },
+                settings: {
+                    bannerPosition: "bottom",
+
+                    style: "dark",
+
+                    consenttype: "implicit",
+
+                    hideallsitesbutton: true,
+                    disableallsites: true,
+                    hideprivacysettingstab: true
+                },
+                strings:{
+                     customCookie:'Spletna stran zaradi varnost uporablja piškotke.',
+                     seeDetailsImplicit: 'Podrobnosti',
+                    allowCookiesImplicit:'Vredu',
+                    savePreference:'Vredu',
+                    hideDetails:'Zapri podrobnosti'
+                }
+
+            });
+            // ]]>
+
+        </script>
+        <!-- End Cookie Consent plugin -->
 	</body>
 </html>
