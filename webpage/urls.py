@@ -19,7 +19,7 @@ urlpatterns = patterns('',
         url(r'^cenik/$', 'webpage.views.pricelist', name='home'),
         url(r'^urnik/(?P<id>\d+)/$', 'webpage.views.timetable', name='home'),
         url(r'^informacije/$', 'webpage.views.info', name='home'),
-        url(r'^piskotki/$', 'webpage.views.piskotki', name='home'),
+
         url(r'^$', 'webpage.views.home', name='home'),
         url(r'^casizvajanjavadb/(?P<id>\d+)/$', views.ExercisesWeeklyTimetableList.as_view() , name='timetable-list'),
         url(r'^odsotnosti/(?P<id>\d+)/$', views.NotWorkingHoursList.as_view() , name='timetable-list'),
