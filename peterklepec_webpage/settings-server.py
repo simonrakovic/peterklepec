@@ -3,7 +3,7 @@
 import os.path
 
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -190,7 +190,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = [
     'localhost:8000',
     '0.0.0.0:32432/',
-    'simonrakovic.webfactional.com'
+    'fitnes-peter-klepec.si',
+    'www.fitnes-peter-klepec.si'
 ]
 
 

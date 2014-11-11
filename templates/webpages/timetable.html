@@ -157,14 +157,14 @@
                 events: function(start, end, timezone, callback) {
                      $.ajax({
                         type: 'GET',
-                        url: 'http://simonrakovic.webfactional.com/odsotnosti/'+exerciseID,
+                        url: 'http://www.fitnes-peter-klepec.si/odsotnosti/'+exerciseID,
                         //url: 'http://localhost:8000/odsotnosti/'+exerciseID,
                         data: { get_param: 'value' },
                         dataType:'json',
                         success: function (notWorkingHours) {
                             $.ajax({
                                 type: 'GET',
-                                url: 'http://simonrakovic.webfactional.com/casizvajanjavadb/'+exerciseID,
+                                url: 'http://www.fitnes-peter-klepec.si/casizvajanjavadb/'+exerciseID,
                                 //url: 'http://localhost:8000/casizvajanjavadb/'+exerciseID,
                                 data: { get_param: 'value' },
                                 dataType:'json',
