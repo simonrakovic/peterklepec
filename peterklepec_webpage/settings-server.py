@@ -68,7 +68,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, 'static/'),
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://simonrakovic.webfactional.com/static/'
+STATIC_URL = 'http://www.fitnes-peter-klepec.si/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
