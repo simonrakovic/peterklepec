@@ -11,10 +11,6 @@
 
         <link href="/static/css/custom/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-         <link href="/static/css/modern-business.css" rel="stylesheet">
-
-
         {% block extra_head_content %}{% endblock %}
 
         <!-- Custom CSS -->
@@ -27,9 +23,11 @@
 
         <!-- jQuery Version 1.11.0 -->
         <script src="/static/javascript/jquery-1.11.0.js"></script>
+        <script src="/static/javascript/jquery.cookie.js"></script>
+    </head>
 	<body>
         <!-- Navigation -->
-        <nav class="navbar  navbar-default navbar-fixed-top transparent" role="navigation">
+        <nav class="navbar  navbar-default  transparent" role="navigation">
 
             <div class=" container-padding-fix">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -221,11 +219,13 @@
         </script>
         {% block extra_script_content %}{% endblock %}
         <script type="text/javascript" src="/static/javascript/cookieconsent.js"></script>
+
         <script type="text/javascript">
 
             // <![CDATA[
             cc.initialise({
                 cookies: {
+                    analytics: {},
                     mycookie:{
                         title: 'CSRF  token',
                         description: 'CSRF token preprečuje "Cross-site request forgery".'
@@ -242,19 +242,66 @@
 
                     hideallsitesbutton: true,
                     disableallsites: true,
-                    hideprivacysettingstab: true
+                    hideprivacysettingstab: true,
+                    refreshOnConsent: true
                 },
                 strings:{
-                     customCookie:'Spletna stran zaradi varnost uporablja piškotke.',
-                     seeDetailsImplicit: 'Podrobnosti',
-                    allowCookiesImplicit:'Vredu',
-                    savePreference:'Vredu',
-                    hideDetails:'Zapri podrobnosti'
+                    customCookie:'Spletna stran zaradi varnost uporablja piškotke.',
+
+
+                    analyticsDefaultTitle: 'Statistika',
+                    analyticsDefaultDescription: 'Za izboljšanje uporabniške izkušnje anonimno merimo obisk spletne strani.',
+                    advertisingDefaultTitle: 'Oglaševanje',
+                    advertisingDefaultDescription: 'Prikazani oglasi bodo izbrani avtomatično, glede na vaš interes.',
+                    necessaryDefaultTitle: 'Nujno potrebni',
+                    necessaryDefaultDescription: 'Pri nakupu vstopnice nujno potrebujemo piškotek za osnovno delovanje te storitve',
+                    defaultTitle: 'Piškotek',
+                    defaultDescription: 'Vrsta piškotka',
+                    learnMore: 'Več informacij &raquo;',
+                    closeWindow: 'Zapri okno',
+                    notificationTitle: 'Vaša uporabniška izkušnja na spletni strani bo izboljšana z uporabo piškotkov.',
+                    notificationTitleImplicit: 'Ta stran uporablja piškotke za izboljšanje uporabniške izkušnje',
+
+                    seeDetails: 'Poglej podrobnosti',
+                    seeDetailsImplicit: 'Podrobnosti',
+                    hideDetails: 'Skrij podrobnosti',
+                    allowCookies: 'Dovoli piškotke',
+                    allowCookiesImplicit: 'Zapri',
+                    allowForAllSites: 'Dovoli za vse spetne strani',
+                    savePreference: 'Shrani nastavitve',
+                    saveForAllSites: 'Shrani nastavitve za vse spletne strani',
+                    privacySettings: 'Nastavitve zasebnosti',
+                    privacySettingsDialogTitleA: 'Nastavitve zasebnosti',
+                    privacySettingsDialogTitleB: 'za to spletno stran',
+                    privacySettingsDialogSubtitle: 'Nakatere možnosti spletne strani rabijo vašo privolitev, da si vas zapomnijo.',
+                    changeForAllSitesLink: 'Spremenite nastavitve za vse spletne strani',
+                    preferenceUseGlobal: 'Uporabite globalne nastavitve',
+                    preferenceConsent: 'Se strinjam',
+                    preferenceDecline: 'Ne strinjam se',
+                    notUsingCookies: 'Ta stran ne uporablja piškotkov',
+                    allSitesSettingsDialogTitleA: 'Nastavitve zasebnosti',
+                    allSitesSettingsDialogTitleB: 'za vse spletne strani',
+                    allSitesSettingsDialogSubtitle: 'Lahko se strinjate z uporobo piškotkov na vseh spletnih straneh, ki uporabljajo ta vtičnik.',
+                    backToSiteSettings: 'Nazaj na spletne nastavitve',
+                    preferenceAsk: 'Vsakič me vprašaj',
+                    preferenceAlways: 'Vedno dovoli',
+                    preferenceNever: 'Nikoli ne dovoli'
                 }
 
             });
             // ]]>
 
+        </script>
+        <script>
+              if($.cookie('cc_analytics') == 'yes') {
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-56951950-1', 'auto');
+                  ga('send', 'pageview');
+              }
         </script>
         <!-- End Cookie Consent plugin -->
 	</body>
