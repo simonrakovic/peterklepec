@@ -24,21 +24,39 @@
         <!-- jQuery Version 1.11.0 -->
         <script src="/static/javascript/jquery-1.11.0.js"></script>
         <script src="/static/javascript/jquery.cookie.js"></script>
-    </head>
-	<body>
-        <!-- Navigation -->
-        <nav class="navbar  navbar-default  transparent" role="navigation">
 
-            <div class=" container-padding-fix">
+    </head>
+	<body class="cbp-spmenu-push">
+        <!-- Navigation -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left visible-md visible-sm visible-xs" id="cbp-spmenu-s1">
+            <div class="side-menu-logo">
+                <img class="side-menu-img" src="/static/img/logo_peterklepec.png" alt="logo"/>
+            </div>
+            <a href="#">DOMOV</a>
+            <a href="#">CENIK</a>
+            <a href="#">URNIK</a>
+            <a href="#">O NAS</a>
+            <h3>Ponudba</h3>
+            {% for image in leftMenuImages %}
+                <a href="#">{{ image.exercisesID.name }}</a>
+            {% endfor %}
+            {% for image in rightMenuImages %}
+                <a href="#">{{ image.exercisesID.name }}</a>
+            {% endfor %}
+
+        </nav>
+        <nav class="navbar  navbar-default navbar-static-top transparent" role="navigation">
+
+            <div class="container-padding-fix">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header ">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button id="showLeftPush" type="button" style="margin-left: 10px" class="navbar-toggle navbar-collapse-button visible-md visible-sm visible-xs pull-left" >
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand nav-brand-img">
+                    <a class="navbar-brand nav-brand-img visible-lg">
                         <img class="" src="/static/img/logo_peterklepec.png" alt="logo"/>
                     </a>
                     <a class="navbar-brand" href="/">
@@ -46,8 +64,8 @@
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse nav-position" id="bs-example-navbar-collapse-1">
-                    <ul  class="nav navbar-nav menu-list ">
+                <div class="collapse navbar-collapse nav-fix visible-lg" id="main-navigation">
+                    <ul  class="nav navbar-nav menu-list navbar-right">
                         <li>
                             <a class ="{% block nav-domov %}{% endblock %}" href="/">Domov</a>
                         </li>
@@ -69,9 +87,11 @@
             <!-- /.container -->
         </nav>
 
+
         <!-- Header Carousel -->
 
         <!-- Page Content -->
+
         <div class="container-fluid">
 
                 <div class="col-lg-1"></div>
@@ -80,9 +100,9 @@
 
                         <!-- Left navigation images -->
 
-                        <div class="col-lg-2 visible-lg">
+                        <div class="col-lg-2 col-md-2 col-xs-1 ">
                             {% for image in leftMenuImages %}
-                                <div class="row pull-right img-nav-left jm-item first ">
+                                <div class="row  img-nav-left jm-item first visible-lg">
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
@@ -93,16 +113,18 @@
                                         <div class="jm-item-title jm-item-title-left">{{ image.exercisesID.name }}</div>
                                     </div>
                                 </div>
+
                             {% endfor %}
+
                         </div>
                         <!-- Banner -->
-                        <div class="col-lg-8 col-xs-12 ">
+                        <div class="col-lg-8 col-md-12 col-xs-12">
                             {% block main_content %}{% endblock %}
                         </div>
                         <!-- Right navigation images -->
-                        <div class="col-lg-2 visible-lg">
+                        <div class="col-lg-2 col-md-2  col-xs-1">
                             {% for image in rightMenuImages %}
-                                <div class="row img-nav-right jm-item first ">
+                                <div class="row img-nav-right jm-item first visible-lg">
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a href="/ponudba/{{ image.exercisesID.id }}">
@@ -118,7 +140,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4">
                             <div class="box">
                                 <div class="box-title">Trenutno na urniku</div>
 
@@ -144,7 +166,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4">
                             <div class="box ">
                                 <div class="box-title">Delovni čas</div>
                                 <div class="box-container">
@@ -159,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-4">
                             <div class="box">
                                 <div class="box-title">Kontakti</div>
                                 <div class="box-container">
@@ -187,7 +209,12 @@
 
 
         <!-- Bootstrap Core JavaScript -->
+
+
         <script src="/static/javascript/bootstrap.min.js"></script>
+
+        <script src="/static/javascript/classie.js"></script>
+        <script src="/static/javascript/pushMenu.js"></script>
         <script>
             $(document).ready(function(){
                 $(".img-nav-right").hover(
