@@ -32,16 +32,17 @@
             <div class="side-menu-logo">
                 <img class="side-menu-img" src="/static/img/logo_peterklepec.png" alt="logo"/>
             </div>
-            <a href="#">DOMOV</a>
-            <a href="#">CENIK</a>
-            <a href="#">URNIK</a>
-            <a href="#">O NAS</a>
+            <a class ="{% block nav-domov-mobile %}{% endblock %}" href="/">DOMOV</a>
+            <!-- <a class ="{% block nav-cenik-mobile %}{% endblock %}" href="/cenik/">CENIK</a>
+            <a class ="{% block nav-urnik-mobile %}{% endblock %}" href="/urnik/1">URNIK</a>
+            -->
+            <a class ="{% block nav-informacije-mobile %}{% endblock %}" href="/informacije/">O NAS</a>
             <h3>Ponudba</h3>
             {% for image in leftMenuImages %}
-                <a href="#">{{ image.exercisesID.name }}</a>
+                <a href="/ponudba/{{ image.exercisesID.id }}">{{ image.exercisesID.name }}</a>
             {% endfor %}
             {% for image in rightMenuImages %}
-                <a href="#">{{ image.exercisesID.name }}</a>
+                <a href="/ponudba/{{ image.exercisesID.id }}">{{ image.exercisesID.name }}</a>
             {% endfor %}
 
         </nav>

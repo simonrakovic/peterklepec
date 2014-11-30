@@ -36,6 +36,16 @@
     color:#D7C3AB;
 }
 
+@media (max-width: 650px){
+    .flex-caption-overlay-title{
+        font-size: 2em;
+    }
+
+    .flex-caption-overlay-text{
+        font-size: 1.5em;
+    }
+}
+
 .text-container{
     height: 260px;
     color: #ffffff;
