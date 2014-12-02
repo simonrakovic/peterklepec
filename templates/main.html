@@ -33,9 +33,22 @@
                 <img class="side-menu-img" src="/static/img/logo_peterklepec.png" alt="logo"/>
             </div>
             <a class ="{% block nav-domov-mobile %}{% endblock %}" href="/">DOMOV</a>
-            <!-- <a class ="{% block nav-cenik-mobile %}{% endblock %}" href="/cenik/">CENIK</a>
-            <a class ="{% block nav-urnik-mobile %}{% endblock %}" href="/urnik/1">URNIK</a>
-            -->
+            <a class ="mobile-nav-dropdown-button {% block nav-cenik-mobile %}{% endblock %}" href="#">CENIK</a>
+            <div style="display: none" class="mobile-nav-dropdown">
+                {% for exercise in all_exercises %}
+                    {% if exercise.show_on_pricelist %}
+                        <a id="{{ exercise.id }}" class="cbp-spsubmenu" href="/cenik/#exercise_tab_{{ exercise.id }}">{{ exercise.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <a class ="mobile-nav-dropdown-button-2 {% block nav-urnik-mobile %}{% endblock %}" href="#">URNIK</a>
+            <div style="display: none" class="mobile-nav-dropdown-2">
+                {% for exercise in all_exercises %}
+                    {% if exercise.show_on_timetable %}
+                        <a id="{{ exercise.id }}" class="cbp-spsubmenu" href="/urnik/{{ exercise.id }}">{{ exercise.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
             <a class ="{% block nav-informacije-mobile %}{% endblock %}" href="/informacije/">O NAS</a>
             <h3>Ponudba</h3>
             {% for image in leftMenuImages %}
@@ -242,6 +255,18 @@
                             $('mainForm').submit()
                         }
                 )
+
+                $('.mobile-nav-dropdown-button').click(
+                    function(){
+                        $('.mobile-nav-dropdown').toggle();
+                    }
+                )
+
+                $('.mobile-nav-dropdown-button-2').click(
+                    function(){
+                        $('.mobile-nav-dropdown-2').toggle();
+                    }
+                )
             });
 
         </script>
@@ -330,6 +355,8 @@
                   ga('create', 'UA-56951950-1', 'auto');
                   ga('send', 'pageview');
               }
+
+
         </script>
         <!-- End Cookie Consent plugin -->
 	</body>

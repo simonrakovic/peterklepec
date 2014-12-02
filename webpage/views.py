@@ -16,6 +16,8 @@ from webpage.forms import QuestionForm
 def home(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
+
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -31,6 +33,7 @@ def home(request):
 def offers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -115,6 +118,7 @@ def offers(request, id):
 def suboffers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -130,6 +134,7 @@ def suboffers(request, id):
 def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -143,6 +148,7 @@ def gallery(request):
 def questions(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -168,6 +174,7 @@ def questions(request):
 def achievements(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -181,6 +188,7 @@ def achievements(request):
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -200,6 +208,7 @@ def pricelist(request):
 def timetable(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -216,6 +225,7 @@ def timetable(request, id):
 def info(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -227,6 +237,7 @@ def info(request):
 def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
+    all_exercises = Exercises.objects.all()
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()

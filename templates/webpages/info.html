@@ -45,7 +45,7 @@
 
 {% block main_content %}
     <div class="info-conteiner">
-        <div class="info-content col-lg-6">
+        <div class="info-content col-lg-6 col-md-6 col-sm-6">
             <div class="info-title">O podjetju</div>
             <div class="info-content-text-box">
                 <table>
@@ -87,15 +87,12 @@
             </div>
 
         </div>
-        <div class="info-map-container small col-lg-6">
+        <div class="info-map-container small col-lg-6 col-md-6 col-sm-6">
             <div class="info-map row">
                 <div id="map-canvas"></div>
-                <div class="map-canvas-button">Povečaj zemljevid</div>
+                <div class="map-canvas-button visible-lg visible-md visible-sm">Povečaj zemljevid</div>
             </div>
         </div>
-
-
-
     </div>
 {% endblock %}
 
@@ -105,8 +102,8 @@
 
             if ($(".info-map-container ").hasClass('small')){
                $(".info-content").hide();
-                $(".info-map-container ").removeClass('col-lg-6');
-                $(".info-map-container ").addClass('col-lg-12');
+                $(".info-map-container ").removeClass('col-lg-6 col-md-6 col-sm-6');
+                $(".info-map-container ").addClass('col-lg-12 col-md-12 col-sm-12');
 
                 $(".info-map-container ").removeClass('small');
                 $(".info-map-container ").addClass('large');
@@ -115,8 +112,8 @@
                 }
             else{
                 $(".info-content").show();
-                $(".info-map-container ").removeClass('col-lg-12');
-                $(".info-map-container ").addClass('col-lg-6');
+                $(".info-map-container ").removeClass('col-lg-12 col-md-12 col-sm-12');
+                $(".info-map-container ").addClass('col-lg-6 col-md-6 col-sm-6');
 
                 $(".info-map-container ").removeClass('large');
                 $(".info-map-container ").addClass('small');

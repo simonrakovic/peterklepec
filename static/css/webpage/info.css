@@ -1,14 +1,12 @@
 .info-conteiner{
-    height:540px;
+
     width:100%;
     margin-top: 20px;
 }
 .info-content{
     background: rgba(13,11,11,0.8);
-    height: inherit;
+    height: 540px;
 }
-
-
 
 .info-title{
     margin-top: 10px;

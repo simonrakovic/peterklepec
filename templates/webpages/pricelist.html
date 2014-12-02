@@ -10,8 +10,8 @@
     <div class="pricelist-container">
 
 
-        <div class="pricelist-nav">
-            <ul id="temp" class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
+        <div class="pricelist-nav visible-lg visible-md visible-sm">
+            <ul id="temp" class="nav nav-justified pricelist-navbar ">
               {% for exercise in exercises %}
                  <li  class="pricelist-tab {% if forloop.first %}active{% endif %}"><a id="exercise_tab_{{ exercise.id }}"  href="#tab_{{ exercise.id }}" data-toggle="tab">{{ exercise.name }}</a></li>
               {% endfor %}
@@ -29,7 +29,7 @@
                                   <small>{{ exercise.name }}</small>
                                </h3>
                             </div>
-                            <div class="pricelist-secondnav visible-lg visible-md visible-sm">
+                            <div class="pricelist-secondnav">
                                 <ul class="nav nav-justified " role="tablist">
                                   {% for pricing_plan in pricing_plans|in_pricing_plans:exercise %}
                                         <li class="{% if forloop.first %}active{% endif %}"><a id="prcing_plan_tab_{{ pricing_plan.id }}" href="#tab_prcing_plan_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ pricing_plan.name }}</a></li>
@@ -42,7 +42,7 @@
                                           <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_prcing_plan_{{ pricing_plan.id }}">
 
                                                {% if pricing_plan.show_customer_type %}
-                                                   <div class="pricelist-thirdnav visible-lg visible-md visible-sm">
+                                                   <div class="pricelist-thirdnav ">
                                                         <ul class="nav nav-justified " role="tablist">
                                                             {% for customer_type in customer_types %}
                                                                  <li class="{% if forloop.first %}active{% endif %}"><a  href="#tab_customer_type_{{ customer_type.id }}_{{ pricing_plan.id }}" role="tab" data-toggle="tab">{{ customer_type.description }}</a></li>
@@ -110,6 +110,21 @@
                 var tab1 = "#"+active_tabs[1]
                 $(tab1).tab('show');
             }
+
+            $('.mobile-nav-dropdown a').click(
+                    function(){
+                        var id = $(this).attr('id');
+
+                        if(active_tabs.length == 2){
+                            var tab1 = "#exercise_tab_"+id
+
+                            $(tab1).tab('show');
+
+                            $('#showLeftPush').click();
+                        }
+                    }
+            );
+
 
 
             $('.scrollbox').enscroll({

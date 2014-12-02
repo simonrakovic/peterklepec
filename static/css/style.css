@@ -407,26 +407,41 @@ body{
 .cbp-spmenu a {
     display: block;
     color: #D7C3AB;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 300;
     background: rgba(13,11,11, 0.7);
     font-family: hemi;
     text-transform: uppercase;
 }
 
+
+.cbp-spsubmenu{
+
+    display: block;
+    color: #D7C3AB;
+    font-size: 1em !important;
+
+    text-align: center;
+    border-top:1px solid rgb(163,138,112);
+    font-family: hemi;
+    text-transform: uppercase;
+}
+
+
+
 .cbp-spmenu a:hover {
-    background: rgba(163,138,112, 0.1);
+
     text-decoration: none;
 }
 
 .cbp-spmenu a:active {
-    background: rgba(163,138,112, 0.1);
+
     text-decoration: none;
 
 }
 
 .cbp-spmenu a:focus{
-    background: rgba(163,138,112, 0.1);
+
     text-decoration: none;
     outline: 0;
 }

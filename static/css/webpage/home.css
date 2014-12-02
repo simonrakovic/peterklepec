@@ -1,13 +1,11 @@
 .flexslider {
-    background: transparent;
+
     max-height: 540px;
-
-    border: 0px solid transparent;
-
+    background: none;
+    border: none;
     margin-top: 20px;
     margin-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
+
 }
 
 .flexslider .slides img {

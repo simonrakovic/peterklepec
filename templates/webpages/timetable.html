@@ -13,8 +13,8 @@
 
 {% block main_content %}
 
-    <div class="pricelist-nav ">
-            <ul class="nav nav-justified pricelist-navbar visible-lg visible-md visible-sm">
+    <div class="pricelist-nav visible-lg visible-md visible-sm">
+            <ul class="nav nav-justified pricelist-navbar">
               {% for exercise in exercises %}
                  <li class="pricelist-tab {% if active_exercise.id == exercise.id %}active{% endif %}"><a  href="/urnik/{{ exercise.id }}">{{ exercise.name }}</a></li>
               {% endfor %}
@@ -63,6 +63,17 @@
                 style: 'qtip-light'
             }).qtip('api');
 
+
+            $(window).resize(
+                    function(){
+                        if($(window).width() < 620){
+                            $('#calendar').fullCalendar( 'changeView', 'agendaDay')
+                        }else{
+                            $('#calendar').fullCalendar( 'changeView', 'agendaWeek')
+                        }
+                    }
+            );
+
             $('#calendar').fullCalendar({
 
                 height: 455,
@@ -97,7 +108,7 @@
 
                 /* translation */
                 buttonText: {
-                    today: 'danes'
+                    today: 'Danes'
                 },
 
 
