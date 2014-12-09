@@ -196,7 +196,7 @@ def pricelist(request):
     exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
 
-    exercises = Exercises.objects.filter(show_on_pricelist=True)
+    exercises = Exercises.objects.filter(show_on_pricelist=True).order_by('position_number_on_main_page')
     pricing_plans = PricingPlan.objects.filter(exercisesID__show_on_pricelist=True)
     prices = Prices.objects.all().order_by('customerTypeID')
 
