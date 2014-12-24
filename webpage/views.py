@@ -9,7 +9,7 @@ from django.http import Http404, HttpResponseRedirect
 from rest_framework import serializers,generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
-    WeekDay, SubExercises, CustomerType
+    WeekDay, SubExercises, CustomerType, InfoBar
 from webpage.forms import QuestionForm
 
 
@@ -17,6 +17,11 @@ def home(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+
+    all_info_messages = InfoBar.objects.filter(isActive=True)
+    info_message = None
+    if all_info_messages:
+        info_message = all_info_messages[0]
 
 
     current_week_day = datetime.datetime.today().weekday()+1

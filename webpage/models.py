@@ -194,3 +194,12 @@ class PageLayout(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
+class InfoBar(models.Model):
+    info = models.TextField()
+    description = models.TextField()
+
+    isActive = models.BooleanField()
+
+    barColor = models.CharField(max_length=10)
+    barTime = models.IntegerField()
+

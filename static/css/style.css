@@ -544,6 +544,12 @@ body{
     transition: all 0.3s ease;
 }
 
+/* INFO BAR*/
+
+.alert {
+   margin-bottom: 0px;
+}
+
 /* Example media queries */
 
 @media screen and (max-width: 55.1875em){
@@ -668,3 +674,4 @@ body{
   		display:block !important;
 	}
 }
+

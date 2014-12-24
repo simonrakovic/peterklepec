@@ -110,8 +110,14 @@
 
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
-                    <div class="row">
 
+                    <div class="row">
+                        {% if  info_message %}
+                             <div style="background-color:{{ info_message.barColor }}; border:None;color:white" class="alert alert-warning">
+                                    <a id="infoBarClose" href="#" class="close" data-dismiss="alert">&times;</a>
+                                    <strong>{{ info_message.info|safe }}</strong> {{ info_message.description|safe }}
+                            </div>
+                        {% endif %}
                         <!-- Left navigation images -->
 
                         <div class="col-lg-2 col-md-2 col-xs-1 ">
@@ -267,6 +273,10 @@
                         $('.mobile-nav-dropdown-2').toggle();
                     }
                 )
+
+                $('infoBarClose').click(function(){
+
+                })
             });
 
         </script>
