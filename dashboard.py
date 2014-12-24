@@ -65,6 +65,10 @@ class CustomIndexDashboard(Dashboard):
                     title='SLIKE',
                     models=('webpage.models.Images', )
                 ),
+                modules.ModelList(
+                    title='POMEMBNA OBVESTILA',
+                    models=('webpage.models.InfoBar', )
+                ),
 
             ]
         ))

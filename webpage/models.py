@@ -195,11 +195,14 @@ class PageLayout(models.Model):
         return u'%s' % self.name
 
 class InfoBar(models.Model):
-    info = models.TextField()
-    description = models.TextField()
+    info = models.TextField(verbose_name='Vrsta obvestila')
+    description = models.TextField(verbose_name='Opis obvestila')
 
-    isActive = models.BooleanField()
+    isActive = models.BooleanField(verbose_name='Aktivno obvestilo')
 
-    barColor = models.CharField(max_length=10)
-    barTime = models.IntegerField()
+    barColor = models.CharField(max_length=10, verbose_name='Barva obvestila')
+    barTime = models.IntegerField(verbose_name='Cas prikaza obvestila')
 
+    class Meta:
+        verbose_name = 'Obvestilo'
+        verbose_name_plural = 'Obvestila'
