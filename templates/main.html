@@ -113,7 +113,7 @@
 
                     <div class="row">
                         {% if  info_message %}
-                             <div style="background-color:{{ info_message.barColor }}; border:None;color:white" class="alert alert-warning">
+                             <div style="background-color:{{ info_message.barColor }}; border-color:transparent;color:#ffffff" class="alert alert-warning">
                                     <a id="infoBarClose" href="#" class="close" data-dismiss="alert">&times;</a>
                                     <strong>{{ info_message.info|safe }}</strong> {{ info_message.description|safe }}
                             </div>
@@ -191,9 +191,11 @@
                                 <div class="box-title">Delovni čas</div>
                                 <div class="box-container">
                                     <div class="box-content">
-                                        <div class="box-subtitle" >Ponedeljek - Petek</div>
-                                        <div class="box-data">Dopoldan:<span> 8:00 - 13:00</span></div>
+                                        <div class="box-subtitle">Ponedeljek - Petek</div>
                                         <div class="box-data">Popoldan:<span> 16:00 - 22:30</span></div>
+
+                                        <div class="box-subtitle">Ponedeljek, Torek in Petek</div>
+                                        <div class="box-data">Dopoldan:<span> 8:00 - 13:00</span></div>
 
                                         <div class="box-subtitle">Nedelja</div>
                                         <div class="box-data">Popoldan:<span> 18:00 - 22:00 </span></div>
