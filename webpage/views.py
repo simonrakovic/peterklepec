@@ -169,7 +169,7 @@ def questions(request):
             email = question_form.cleaned_data['email']
             text = question_form.cleaned_data['text']
 
-            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['fitnes.peter.klepec1995@gmail.com'], fail_silently=False)
+            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['simonrakovic@gmail.com'], fail_silently=False)
             question_form = QuestionForm()
             return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
 

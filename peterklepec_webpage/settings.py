@@ -195,9 +195,7 @@ ALLOWED_HOSTS = [
 STATIC_ROOT = 'staticfiles'
 
 
-#email relay gmail-smtp
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'simonrakovic@gmail.com'
-EMAIL_HOST_PASSWORD = 'tqwffdaickuuhdqr'
+EMAIL_HOST = 'smtp.mailgun.com'
 EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@sandboxcecfa5c0d4dc4f869def7285c88342e1.mailgun.org'
+EMAIL_HOST_PASSWORD = 'dad8d758505880211d1bea7377e987e7'
