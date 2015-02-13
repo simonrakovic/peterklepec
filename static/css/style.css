@@ -17,7 +17,7 @@
 body{
     background: url("/static/img/fitness.jpg") no-repeat center top;
     background-color: rgb(0, 0, 0);
-    font-family: ubuntu-m;
+    font-family: hemi;
 
 }
 
@@ -598,43 +598,15 @@ body{
 
 
 @font-face {
-    font-family: 'boycott'; /*a name to be used later*/
-    src: url('/static/fonts/BOYCOTT_.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'ubuntu-b'; /*a name to be used later*/
-    src: url('/static/fonts/Ubuntu-B.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'ubuntu-m'; /*a name to be used later*/
-    src: url('/static/fonts/Ubuntu-M.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'ubuntu-l'; /*a name to be used later*/
-    src: url('/static/fonts/Ubuntu-L.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'oregon'; /*a name to be used later*/
-    src: url('/static/fonts/Oregon-LDO.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family:'sofa'; /*a name to be used later*/
-    src: url('/static/fonts/sofachromerg.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family:'ethno'; /*a name to be used later*/
-    src: url('/static/fonts/ethnocentricrg.ttf'); /*URL to font*/
-}
-
-@font-face {
     font-family:'hemi'; /*a name to be used later*/
-    src: url('/static/fonts/hemiheadbdit.ttf'); /*URL to font*/
+
+    src: url('/static/fonts/2D5956_0_0.eot');
+    src: url('/static/fonts/2D5956_0_0.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/2D5956_0_0.woff2') format('woff2'),
+         url('/static/fonts/2D5956_0_0.woff') format('woff'),
+         url('/static/fonts/2D5956_0_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
