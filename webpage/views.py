@@ -215,15 +215,19 @@ def timetable(request, id):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
 
-    current_week_day = datetime.datetime.today().weekday()+1
-    current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     active_exercise = Exercises.objects.get(pk=id)
     exercises = Exercises.objects.filter(show_on_timetable=True)
-    not_working_events = NotWorkingHours.objects.filter(exercisesID=id)
-    exercise_events = ExercisesWeeklyTimetable.objects.filter(exercisesID=id)
+
+    all_timetables = {}
+
+    for exercise in exercises:
+        all_timetables[exercise.id] = ExercisesWeeklyTimetable.objects.filter(exercisesID=exercise.id)
+
+
+    all_weekday = WeekDay.objects.all()
+
+
 
     return render_to_response('webpages/timetable.html', locals(), context_instance=RequestContext(request))
 

@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 {% block nav-urnik %}menu-list-active{% endblock %}
 {% block extra_head_content %}
-    <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' />
+    <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' xmlns="http://www.w3.org/1999/html"/>
     <link href="/static/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet">
 
 
@@ -12,305 +12,70 @@
 {% endblock %}
 
 {% block main_content %}
+    <div class="row panels-container">
+        <div class="col-lg-12 grad">
+                <div id="accordion" class="panel-group">
+                    {% for exercise in exercises %}
+                    <div class="panel panel-default align">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ exercise.id }}">{{ exercise.name }}</a>
+                            </h4>
+                        </div>
+                        <div id="collapse{{ exercise.id }}" class="panel-collapse collapse {% if active_exercise.id == exercise.id %}in{% endif %}">
+                            <div class="panel-body">
+                                <table class="table ">
+                                    {% for weekDay in all_weekday %}
+                                        {% if weekDay.id == 1 %}
+                                                <thead>
+                                                <tr>
+                                                    <th>{{ weekDay.name }}</th>
+                                        {% elif weekDay.id == 7 %}
+                                                    <th>{{ weekDay.name }}</th>
+                                                </tr>
+                                                </thead>
+                                        {% else %}
+                                            <th>{{ weekDay.name }}</th>
+                                        {% endif %}
+                                    {%  endfor %}
+                                    <tbody>
+                                        <tr>
+                                            {% for exercise_id, timetables in all_timetables.items %}
+                                                {% if exercise_id == exercise.id %}
+                                                    {% for weekDay in all_weekday %}
+                                                        {% if timetables|length == 1 and weekDay == timetable.weekDay %}
+                                                            <td>
+                                                                {{ timetables.timeFrom|time:"G:i" }} - {{ timetables.timeTo|time:"G:i" }}
+                                                            </td>
+                                                        {% else %}
+                                                            <td>
+                                                                {% for timetable in timetables %}
+                                                                      {% if weekDay == timetable.weekDay %}
+                                                                         {{ timetable.timeFrom|time:"G:i" }} - {{ timetable.timeTo|time:"G:i" }}
+                                                                         </br>
+                                                                      {% else %}
 
-    <div class="pricelist-nav visible-lg visible-md visible-sm">
-            <ul class="nav nav-justified pricelist-navbar">
-              {% for exercise in exercises %}
-                 <li class="pricelist-tab {% if active_exercise.id == exercise.id %}active{% endif %}"><a  href="/urnik/{{ exercise.id }}">{{ exercise.name }}</a></li>
-              {% endfor %}
-            </ul>
+                                                                      {% endif %}
+                                                                {% endfor %}
+                                                            </td>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                            {% endfor %}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
     </div>
-
-    <div class="pricelist-content">
-        <div id='calendar'></div>
-    </div>
-
 {% endblock %}
 
 {% block extra_script_content %}
-    <script src='/static/fullcalendar/lib/moment.min.js'></script>
-    <script src='/static/fullcalendar/fullcalendar.js'></script>
-    <script src='/static/javascript/date.js'></script>
-    <script src='/static/javascript/jquery.qtip.min.js'></script>
     <script>
-        $(document).ready(function() {
-            var exerciseID = {{ active_exercise.id }} ;
-            var minTime = "{{ active_exercise.length.start_of_exercise|time:'H:i:s' }}";
-            var maxTime = "{{ active_exercise.length.end_of_exercise|time:'H:i:s'}}";
-            var slotInterval = "{{ active_exercise.length.slotInterval|time:'H:i:s'}}";
 
-            var tooltip = $('<div/>').qtip({
-                id: 'fullcalendar',
-                prerender: true,
-                content: {
-                    text: ' ',
-                    title: {
-                        button: true
-                    }
-                },
-                position: {
-                    my: 'bottom center',
-                    at: 'top center',
-                    target: 'mouse',
-                    viewport: $('#fullcalendar'),
-                    adjust: {
-                        mouse: false,
-                        scroll: false
-                    }
-                },
-                show: false,
-                hide: false,
-                style: 'qtip-light'
-            }).qtip('api');
-
-
-            $(window).resize(
-                    function(){
-                        if($(window).width() < 620){
-                            $('#calendar').fullCalendar( 'changeView', 'agendaDay')
-                        }else{
-                            $('#calendar').fullCalendar( 'changeView', 'agendaWeek')
-                        }
-                    }
-            );
-
-            $('#calendar').fullCalendar({
-
-                height: 455,
-				header: {
-                    left: ' title',
-                    center: '',
-                    right: 'today prev,next '
-			    },
-                titleFormat: '[Za več informacij o vadbi z miško označite željeni termin.]',
-                /* sets the current view */
-                defaultView: 'agendaWeek',
-
-
-                /* sets the specific date */
-                //year: date.getFullYear(),
-                //month: date.getMonth(),
-                //date: ,
-
-                minTime: minTime,
-                maxTime: maxTime,
-
-                firstDay: 1,
-                editable: false,
-                allDayDefault: false,
-                allDaySlot: false,
-                slotDuration: slotInterval,
-
-                /* callbacks */
-                //viewDisplay: viewDisplay,
-                //dayClick: dayClick,
-
-
-                /* translation */
-                buttonText: {
-                    today: 'Danes'
-                },
-
-
-                slotEventOverlap:false,
-                axisFormat: '',
-                timeFormat: 'H:mm',
-
-                columnFormat: {
-                    week: 'ddd D.M '
-                },
-
-                monthNames: ['januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij','avgust', 'september', 'oktober', 'november', 'december'],
-                monthNamesShort:['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul','avg', 'sep', 'okt', 'nov', 'dec'],
-
-                dayNames: ['nedelja', 'ponedeljek', 'torek', 'sreda','četrtek', 'petek', 'sobota'],
-                dayNamesShort: ['NED', 'PON', 'TOR', 'SRE','ČET', 'PET', 'SOB'],
-                /* events data */
-
-                /*eventClick: function(data, event, view) {
-                    var content = '<h3>'+data.title+'</h3>' +
-                        '<p><b>Start:</b> '+data.start+'<br />' +
-                        (data.end && '<p><b>End:</b> '+data.end+'</p>' || '');
-
-                    tooltip.set({
-                        'content.text': content
-                    })
-                    .reposition(event).show(event);
-                },
-                dayClick: function() { tooltip.hide() },
-                eventResizeStart: function() { tooltip.hide() },
-                eventDragStart: function() { tooltip.hide() },
-                viewDisplay: function() { tooltip.hide() },*/
-
-                eventRender:function(event,element,data){
-                      var startDate = new Date(event.start)
-                      var endDate = new Date(event.end)
-
-                      element.qtip({
-                            content:{
-                            text:'<div class="callendar-popup-title">'+'{{ active_exercise.name }}'+'<span class="pull-right">'+startDate.toString('d.M.yyyy')+'</span>'+'</div>'+
-                                  '<div class="callendar-popup-time">'+'<span class="pull-right">'+startDate.toString('H:mm')+'-'+endDate.toString('H:mm')+'</span>'+'</div>'+
-                                  '<div class="callendar-popup-description">'+event.title+'</div>'
-                          },
-                          position:{
-                            my:'bottom left',
-                            at:'center center'
-                          },
-                          show:'mouseover',
-                          style: {
-                              classes:'qtip-youtube callendar-popup',
-                              def: false
-                          }
-
-                      });
-                },
-
-                events: function(start, end, timezone, callback) {
-                     $.ajax({
-                        type: 'GET',
-                        url: 'http://www.fitnes-peter-klepec.si/odsotnosti/'+exerciseID,
-                        //url: 'http://localhost:8000/odsotnosti/'+exerciseID,
-                        data: { get_param: 'value' },
-                        dataType:'json',
-                        success: function (notWorkingHours) {
-                            $.ajax({
-                                type: 'GET',
-                                url: 'http://www.fitnes-peter-klepec.si/casizvajanjavadb/'+exerciseID,
-                                //url: 'http://localhost:8000/casizvajanjavadb/'+exerciseID,
-                                data: { get_param: 'value' },
-                                dataType:'json',
-                                success: function (data) {
-                                    var JSONevents = [];
-                                    var num_of_shown_weeks = 4; //st. prikazanih tednov
-                                    //iteracija za prikaza večih tednov
-                                    for(var j = 0;j < num_of_shown_weeks;j++){
-                                        //iteracija med eventi odsotnosti
-                                        for(var i = 0;i < data.length;i++ ){
-                                            var dateTemp = Date.today().moveToDayOfWeek(1,-1); //doloci prvi dan v prejsnem tednu
-                                            dateTemp = dateTemp.addWeeks(j) //teden prikaza
-                                            dateTemp = dateTemp.addDays(data[i].weekDay.day_in_week); //dnevi prikaza eventa
-
-                                            var isOnSameDay = false; // če je event na isti dan se sam event že zapiše v sledeči for zanki in ga ni potrebno pushati seenkrat
-                                            var event = {
-                                                        title: data[i].description,
-                                                        start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeFrom).getHours(), Date.parse(data[i].timeFrom).getMinutes()),
-                                                        end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(data[i].timeTo).getHours(), Date.parse(data[i].timeTo).getMinutes())
-                                                        };
-
-                                            //iritacija med eventi odsotnosti, preverja se za vsak event vadbe, če se prekriva z eventom odsotnosti
-                                            for(var k = 0;k < notWorkingHours.length;k++){
-                                                //ko se event porabi se njegova vrednost postavi na null, tako da se ne pojavlajo dvojni eventi
-                                                if(notWorkingHours[k] != null){
-                                                    //ce je datum enak se zamenja delavni cas vadbe z casom odsotnosti
-                                                    if(Date.parse(notWorkingHours[k].date).equals(dateTemp)){
-                                                        var start_of_exercise_event1 = event.start.getTime();
-                                                        var end_of_exercise_event1 =  event.end.getTime();
-                                                        var start_of_not_working_event2 = Date.parse(notWorkingHours[k].date+" "+notWorkingHours[k].timeFrom).getTime();
-                                                        var end_of_not_working_event2 =Date.parse(notWorkingHours[k].date+" "+notWorkingHours[k].timeTo).getTime();
-
-                                                        //sledeči exercise event in event odsotnosti se ne nanašata na isti event zato zanka preskoči na naslednji event odsotnosti
-                                                        if(end_of_exercise_event1 <= start_of_not_working_event2 || start_of_exercise_event1 >=  end_of_not_working_event2)continue;
-
-                                                        if(start_of_exercise_event1 <= start_of_not_working_event2 && end_of_exercise_event1 <= end_of_not_working_event2){ //
-                                                           //dodamo exercise event
-                                                           JSONevents.push(
-                                                                   {
-                                                                       title: data[i].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.start.getHours(), event.start.getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes())
-
-                                                                   }
-                                                           )
-                                                           //dodamo notWorking event
-                                                           JSONevents.push(
-                                                                   {
-
-                                                                       title: notWorkingHours[k].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       backgroundColor: '#CF7242'
-                                                                   }
-                                                           )
-                                                        }else if(start_of_exercise_event1 >= start_of_not_working_event2  &&  end_of_exercise_event1 >= end_of_not_working_event2 ){
-                                                            //dodamo exercise event
-                                                           JSONevents.push(
-                                                                   {
-                                                                       title: data[i].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.end.getHours(),event.end.getMinutes())
-
-                                                                   }
-                                                           )
-                                                           //dodamo notWorking event
-                                                           JSONevents.push(
-                                                                   {
-
-                                                                       title: notWorkingHours[k].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       backgroundColor: '#CF7242'
-                                                                   }
-                                                           )
-                                                        }else if(start_of_exercise_event1 < start_of_not_working_event2 && end_of_exercise_event1 > end_of_not_working_event2){
-                                                            JSONevents.push(
-                                                                   {
-                                                                       title: data[i].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.start.getHours(), event.start.getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes())
-
-                                                                   }
-                                                           )
-
-                                                           JSONevents.push(
-                                                                   {
-                                                                       title: data[i].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),event.end.getHours(),event.end.getMinutes())
-
-                                                                   }
-                                                           )
-
-                                                           //dodamo notWorking event
-                                                           JSONevents.push(
-                                                                   {
-
-                                                                       title: notWorkingHours[k].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       backgroundColor: '#CF7242'
-                                                                   }
-                                                           )
-                                                        }else{
-                                                            JSONevents.push(
-                                                                   {
-
-                                                                       title: notWorkingHours[k].description,
-                                                                       start: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(), Date.parse(notWorkingHours[k].timeFrom).getHours(), Date.parse(notWorkingHours[k].timeFrom).getMinutes()),
-                                                                       end: new Date(dateTemp.getFullYear(), dateTemp.getMonth(), dateTemp.getDate(),Date.parse(notWorkingHours[k].timeTo).getHours(), Date.parse(notWorkingHours[k].timeTo).getMinutes()),
-                                                                       backgroundColor: '#CF7242'
-                                                                   }
-                                                           )
-                                                        }
-                                                        isOnSameDay = true;
-                                                        notWorkingHours[k] = null;
-                                                        break;// prekine zanko, če najde event, ki se prekriva. Tako pohitrimo samo izvajanje, vendar hrati obogočamo samo toliko eventov odsotnosti kolikor je na dan prikazanih eventov vadb
-                                                    }
-                                                }
-                                            }
-
-                                            if(!isOnSameDay){
-                                                JSONevents.push(event);
-                                            }
-                                        }
-                                    }
-
-                                    callback(JSONevents);
-                                }
-                            });
-                        }
-                     });
-                }
-            })
-        });
     </script>
 {% endblock %}

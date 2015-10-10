@@ -1,62 +1,117 @@
-.pricelist-nav{
-    height: 60px;
+.panels-container{
     margin-top:20px;
-    background: rgba(13,11,11,0.9);
 }
-.pricelist-navbar{
-   height: 60px;
+
+ /** panels */
+
+.panel{
+   border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+
+   background: rgba(13,11,11,0.8);
+
+   border:none;
+
 }
-.pricelist-navbar > li > a{
-    height: 60px;
+
+.panel-group .panel{
+   border-radius: 0px;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body{
+    border: none;
+}
+
+.panel-default > .panel-heading{
+    background: rgba(13,11,11,0.8);
+
+    border-bottom:3px solid #A38A70;
+
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+
+
+    font-weight: bold;
+    font-size: 15px;
+
     text-transform: uppercase;
-    font-size: 1.2em;
-    font-family: hemi;
-
-    border-right: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.pricelist-navbar > li > a:hover{
-    background-color: rgba(5,4,4,0.8);
-    color:#ffffff;
+.panel-heading{
+    padding: 0;
+    height: 40px;
+}
+.panel-title {
+
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    color: #D7C3AB;
+    text-transform: uppercase;
 }
 
-.pricelist-content{
-    margin-top:25px;
+.panel-title > a{
 
-    height: 460px
-}
-
-.tab-pane-title{
-
-    margin-left: 10px;
-    margin-right: 10px;
-
-    padding-top:5px;
-
-
-}
-.nav-tabs > li > a{
-    background: none ;
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    padding: 0;
+    line-height: 40px;
+    padding-left: 10px;
 
 }
 
-.nav-tabs > li > a:hover{
-    background: #171313 ;
+a {
+   outline: 0;
 }
 
-.pricelist-nav > ul > li > a:focus{
-    background: rgba(5,4,4,0.8);
-    outline: none;
+a:hover, a:active, a:focus {
+  outline: 0;
 }
 
-.active > a{
-    background: rgba(5,4,4,0.8);
-    color:#ffffff;
-    outline: none;
 
-    border-bottom: 2px solid #D7C3AB;
+ /** Title */
+
+.page-header{
+    padding:0;
+    margin:0;
 }
 
+/** Table */
+.table > thead > tr > th {
+    border-bottom: none;
+}
+
+.table > tbody > tr > td{
+    border-top: none;
+}
+
+tr th {
+  width: 14%;
+  border-color: #D7C3AB;
+  border-left: 1px solid #D7C3AB;
+  border-right: 1px solid #D7C3AB;
+
+  text-align: center;
+  text-decoration: underline;
+}
+
+tr td {
+  width: 14%;
+  border-top: none;
+  border-left: 1px solid #D7C3AB;
+  border-right: 1px solid #D7C3AB;
+
+  color:#D7C3AB;
+  text-align: center;
+}
+
+.table > thead{
+
+}
 
 @media (max-width: 768px) {
   .nav-justified > li {
