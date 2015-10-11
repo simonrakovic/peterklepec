@@ -17,7 +17,7 @@ urlpatterns = patterns('',
         url(r'^galerija_slik/$', 'webpage.views.gallery', name='home'),
         url(r'^novice/(?P<id>\d+)/$', 'webpage.views.custompage', name='home'),
         url(r'^cenik/$', 'webpage.views.pricelist', name='home'),
-        url(r'^urnik/(?P<id>\d+)/$', 'webpage.views.timetable', name='home'),
+        url(r'^urnik/$', 'webpage.views.timetable', name='home'),
         url(r'^informacije/$', 'webpage.views.info', name='home'),
 
         url(r'^$', 'webpage.views.home', name='home'),

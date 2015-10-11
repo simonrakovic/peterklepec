@@ -64,14 +64,7 @@
                     {% endif %}
                 {% endfor %}
             </div>
-            <a class ="mobile-nav-dropdown-button-2 {% block nav-urnik-mobile %}{% endblock %}" href="#">URNIK</a>
-            <div style="display: none" class="mobile-nav-dropdown-2">
-                {% for exercise in all_exercises %}
-                    {% if exercise.show_on_timetable %}
-                        <a id="{{ exercise.id }}" class="cbp-spsubmenu" href="/urnik/{{ exercise.id }}">{{ exercise.name }}</a>
-                    {% endif %}
-                {% endfor %}
-            </div>
+            <a class ="mobile-nav-dropdown-button-2 {% block nav-urnik-mobile %}{% endblock %}" href="/urnik/">URNIK</a>
             <a class ="{% block nav-informacije-mobile %}{% endblock %}" href="/informacije/">O NAS</a>
             <h3>Ponudba</h3>
             {% for image in leftMenuImages %}
@@ -111,7 +104,7 @@
                             <a class ="{% block nav-cenik %}{% endblock %}" href="/cenik/">Cenik</a>
                         </li>
                         <li>
-                            <a class ="{% block nav-urnik %}{% endblock %}" href="/urnik/1">Urniki</a>
+                            <a class ="{% block nav-urnik %}{% endblock %}" href="/urnik/">Urniki</a>
                         </li>
                         <li>
                             <a class ="{% block nav-informacije %}{% endblock %}" href="/informacije/">O nas</a>
@@ -239,7 +232,7 @@
                                         <div class="box-data"><span>041 972 169</span></div>
 
                                         <div class="box-subtitle" style="font-size: 1.1em">E-pošta:</div>
-                                        <div class="box-data"><span>fitnes.peter.klepec1995@gmail.com</span></div>
+                                        <div class="box-data"><span>fitnes.peter.klepec@gmail.com</span></div>
                                     </div>
                                 </div>
 

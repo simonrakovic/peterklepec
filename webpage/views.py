@@ -169,7 +169,7 @@ def questions(request):
             email = question_form.cleaned_data['email']
             text = question_form.cleaned_data['text']
 
-            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['fitnes.peter.klepec1995@gmail.com'], fail_silently=False)
+            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['fitnes.peter.klepec@gmail.com'], fail_silently=False)
             question_form = QuestionForm()
             return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
 
@@ -210,19 +210,16 @@ def pricelist(request):
     return render_to_response('webpages/pricelist.html', locals(), context_instance=RequestContext(request))
 
 
-def timetable(request, id):
+def timetable(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
 
 
-    active_exercise = Exercises.objects.get(pk=id)
+
     exercises = Exercises.objects.filter(show_on_timetable=True)
 
-    all_timetables = {}
-
-    for exercise in exercises:
-        all_timetables[exercise.id] = ExercisesWeeklyTimetable.objects.filter(exercisesID=exercise.id)
+    all_timetables = ExercisesWeeklyTimetable.objects.all().exclude(exercisesID=1).order_by('timeFrom')
 
 
     all_weekday = WeekDay.objects.all()

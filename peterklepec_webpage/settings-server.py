@@ -200,6 +200,6 @@ STATIC_ROOT = 'staticfiles'
 #email relay gmail-smtp
 EMAIL_HOST = 'smtp.mailgun.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'postmaster@sandboxcecfa5c0d4dc4f869def7285c88342e1.mailgun.org'
-EMAIL_HOST_PASSWORD = 'dad8d758505880211d1bea7377e987e7'
+EMAIL_HOST_USER = 'postmaster@sandbox42e7c74dd2de4b6aa5610678863a8334.mailgun.org'
+EMAIL_HOST_PASSWORD = 'dc6765ec92358eb59c05a8e62ade0101'
 
