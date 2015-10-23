@@ -201,5 +201,5 @@ STATIC_ROOT = 'staticfiles'
 EMAIL_HOST = 'smtp.mailgun.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'postmaster@sandbox42e7c74dd2de4b6aa5610678863a8334.mailgun.org'
-EMAIL_HOST_PASSWORD = 'dc6765ec92358eb59c05a8e62ade0101'
+EMAIL_HOST_PASSWORD = 'abbe1e6d41fccca9682678f4a5297c98'
 
