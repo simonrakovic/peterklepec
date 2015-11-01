@@ -20,7 +20,7 @@
 
 
         <div class="pricelist-content col-lg-12">
-            <div class="tab-content ">
+            <div class="tab-content">
                     {% for exercise in exercises %}
                         <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_{{ exercise.id }}">
 
@@ -39,7 +39,7 @@
                             <div class="tab-content">
                                   {% for pricing_plan in pricing_plans|in_pricing_plans:exercise %}
 
-                                          <div class="tab-pane {% if forloop.first %}active{% endif %}" id="tab_prcing_plan_{{ pricing_plan.id }}">
+                                          <div class="tab-content2 tab-pane {% if forloop.first %}active{% endif %}" id="tab_prcing_plan_{{ pricing_plan.id }}">
 
                                                {% if pricing_plan.show_customer_type %}
                                                    <div class="pricelist-thirdnav ">
@@ -87,7 +87,7 @@
                                                         </table>
                                                    </div>
                                                {% endif %}
-                                          <div class="pricelist-info">{% if pricing_plan.info %}{{ pricing_plan.info }}{% endif %}</div>
+                                            <div class="pricelist-info">{% if pricing_plan.info %}{{ pricing_plan.info }}{% endif %}</div>
                                           </div>
                                   {% endfor %}
                             </div>
