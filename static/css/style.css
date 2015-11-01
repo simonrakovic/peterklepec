@@ -21,6 +21,11 @@ body{
 
 }
 
+.numbers{
+    font-weight: bold;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
 .navbar {
 
     background: rgba(13, 11, 11, 0.9);

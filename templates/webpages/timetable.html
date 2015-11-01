@@ -44,7 +44,7 @@
                                                     {% if weekDay == timetables.weekDay %}
                                                             <div class="panel-table-data-container">
                                                                 <div class="panel-table-data-title">{{ timetables.exercisesID.name }}</div>
-                                                                <div class="panel-table-data">{{ timetables.timeFrom|time:"G:i" }} - {{ timetables.timeTo|time:"G:i" }}</div>
+                                                                <div class="panel-table-data numbers">{{ timetables.timeFrom|time:"G:i" }} - {{ timetables.timeTo|time:"G:i" }}</div>
                                                                 <div class="panel-table-data-separator"></div>
                                                             </div>
                                                     {% endif %}

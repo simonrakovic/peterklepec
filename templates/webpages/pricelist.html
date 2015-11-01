@@ -60,7 +60,7 @@
                                                                                         <tr>
                                                                                             <td class="table-data-description">{{ price.description }}</td>
 
-                                                                                            <td class="table-data-value">{{ price.price }} {{ price.priceUnit }}</td>
+                                                                                            <td class="table-data-value numbers">{{ price.price }} {{ price.priceUnit }}</td>
                                                                                         </tr>
                                                                                     {% endif %}
                                                                                 {% endfor %}
@@ -79,7 +79,7 @@
                                                                     {% if price.pricingPlanID.id == pricing_plan.id %}
                                                                         <tr>
                                                                             <td class="table-data-description">{{ price.description }}</td>
-                                                                            <td class="table-data-value">{{ price.price }} {{ price.priceUnit }}</td>
+                                                                            <td class="table-data-value numbers">{{ price.price }} {{ price.priceUnit }}</td>
                                                                         </tr>
                                                                     {% endif %}
                                                                 {% endfor %}
