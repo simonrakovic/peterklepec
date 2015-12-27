@@ -3,6 +3,13 @@
 }
 
 .load-screen{
+    width: 100%;
+    hight: 100%;
+
+    background: rgba(13,11,11, 0.9);
+}
+
+.load-screen > i{
     position: absolute;
     top: 40%;
     left: 48%;
