@@ -1,5 +1,5 @@
 .main-container{
-    display: none;
+    visibility: hidden;
 }
 
 .load-screen{
