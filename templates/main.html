@@ -139,7 +139,8 @@
 
                         <div class="col-lg-2 col-md-2 col-xs-1 ">
                             {% for image in leftMenuImages %}
-                                <div class="row  img-nav-left jm-item first visible-lg">
+
+                                <div class="row  img-nav-left jm-item first visible-lg {% cycle "left-item-1" "left-item-2" "left-item-3" "left-item-4"%}">
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
@@ -161,7 +162,7 @@
                         <!-- Right navigation images -->
                         <div class="col-lg-2 col-md-2  col-xs-1">
                             {% for image in rightMenuImages %}
-                                <div class="row img-nav-right jm-item first visible-lg">
+                                <div class="row img-nav-right jm-item first visible-lg {% cycle "right-item-1" "right-item-2" "right-item-3" "right-item-4"%}">
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a href="/ponudba/{{ image.exercisesID.id }}">
@@ -176,7 +177,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row bottom-container">
                         <div class="col-lg-4 col-md-4">
                             <div class="box">
                                 <div class="box-title">Trenutno na urniku</div>

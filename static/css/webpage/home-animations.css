@@ -1,0 +1,43 @@
+
+.flexslider{
+    animation-delay:0.2s;
+}
+
+.left-item-1{
+    animation-delay:0.5s;
+}
+
+.left-item-2{
+    animation-delay:1s;
+}
+
+.left-item-3{
+    animation-delay:1.5s;
+}
+
+.left-item-4{
+    animation-delay:2s;
+}
+
+
+.right-item-1{
+    animation-delay:0.5s;
+}
+
+.right-item-2{
+    animation-delay:1s;
+}
+
+.right-item-3{
+    animation-delay:1.5s;
+}
+
+.right-item-4{
+    animation-delay:2s;
+}
+
+.bottom-container{
+    animation-delay:2.5s;
+}
+
+

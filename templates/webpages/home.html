@@ -5,11 +5,16 @@
 {% block extra_head_content %}
 
     <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/webpage/home-animations.css" rel="stylesheet">
+
     <!-- FlexSlide CSS -->
 
     <link href="/static/css/flexslider.css" rel="stylesheet">
 
     <link href="/static/css/webpage/home.css" rel="stylesheet">
+
+
 
 {% endblock %}
 {% block load_screen %}
@@ -42,6 +47,11 @@
         $(window).load(function(){
             $(".load-screen").hide()
             $(".main-container").css("visibility","visible")
+
+            $(".flexslider").addClass("animated fadeIn")
+            $(".img-nav-right").addClass("animated fadeInRight")
+            $(".img-nav-left").addClass("animated fadeInLeft")
+            $(".bottom-container").addClass("animated fadeIn")
         });
     </script>
 
