@@ -49,8 +49,9 @@
         <script src="/static/javascript/jquery.cookie.js"></script>
 
     </head>
-	<body class="cbp-spmenu-push">
+	<body class="cbp-spmenu-pu<sh">
         <!-- Navigation -->
+        {% block load_screen %}{% endblock %}
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left visible-md visible-sm visible-xs" id="cbp-spmenu-s1">
             <div class="side-menu-logo">
                 <img class="side-menu-img" src="/static/img/logo_peterklepec.png" alt="logo"/>
@@ -122,7 +123,7 @@
 
         <!-- Page Content -->
 
-        <div class="container-fluid">
+        <div class="container-fluid main-container">
 
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">

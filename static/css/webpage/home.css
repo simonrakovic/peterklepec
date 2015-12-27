@@ -1,3 +1,15 @@
+.main-container{
+    display: none;
+}
+
+.load-screen{
+    position: absolute;
+    top: 40%;
+    left: 48%;
+
+    color:#D7C3AB;
+}
+
 .flexslider {
 
     max-height: 540px;

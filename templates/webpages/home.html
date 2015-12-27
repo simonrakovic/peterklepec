@@ -3,12 +3,20 @@
 {% block nav-domov %}menu-list-active{% endblock %}
 
 {% block extra_head_content %}
+
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
     <!-- FlexSlide CSS -->
+
     <link href="/static/css/flexslider.css" rel="stylesheet">
 
     <link href="/static/css/webpage/home.css" rel="stylesheet">
-{% endblock %}
 
+{% endblock %}
+{% block load_screen %}
+    <div class="load-screen">
+            <i class="fa fa-5x fa-spinner fa-pulse"></i>
+    </div>
+{% endblock %}
 {% block main_content %}
     <div class="flexslider-fix-height ">
         <div class="flexslider ">
@@ -30,6 +38,13 @@
 {% endblock %}
 
 {% block extra_script_content %}
+    <script>
+        $(window).load(function(){
+            $(".load-screen").hide()
+            $(".main-container").show()
+        });
+    </script>
+
     <!-- flexSlider --->
     <script src="/static/javascript/jquery.flexslider-min.js"></script>
 
