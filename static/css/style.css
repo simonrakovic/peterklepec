@@ -1,3 +1,86 @@
+.fancy-box-popout{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.9);
+
+    z-index: 5;
+
+
+}
+
+.fancy-box-popout-container{
+    position: absolute;
+    top: 122px;
+    left: 28.5%;
+
+    width: 800px;
+    min-height: 80%;
+
+    background: rgba(13, 11, 11, 0.98);
+
+    z-index: 6;
+
+}
+
+.fancy-box-popout-container-close{
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    color: white;
+}
+
+.fancy-box-popout-container-title h1{
+    margin-left: 40px;
+}
+
+.fancy-box-popout-container-text{
+
+   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+   padding-left: 20px;
+
+   width: 770px;
+
+}
+
+.fancy-box-popout-container-text > ul {
+    margin-top: 20px;
+}
+
+.fancy-box-popout-container-text > ul >li{
+    margin-top: 5px;
+}
+
+.fancy-box-popout-container-text > h2 {
+    margin-left: 20px;
+    font-size: 1.4em;
+
+    color: white;
+
+    border-bottom: 1px solid white;
+}
+
+.scrollbox2 {
+    overflow: auto; /* This is changed by enscroll, but must be defined */
+
+    width: 800px;
+}
+.vertical-track {
+    width: 16px; /* How wide is the scrollbar going to be? */
+    background-color: #aaa; /* What color should the vertical track be? */
+}
+.vertical-handle {
+    width: 16px; /* How wide is the scrollbar handle? */
+    background-color: #aaf; /* What color should the handle be? */
+}
+
 .img-nav-right{
     margin-top: 20px;
 

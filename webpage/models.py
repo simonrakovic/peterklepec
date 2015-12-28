@@ -206,3 +206,7 @@ class InfoBar(models.Model):
     class Meta:
         verbose_name = 'Obvestilo'
         verbose_name_plural = 'Obvestila'
+
+
+class ListOfRules(models.Model):
+    text = models.TextField(verbose_name='Pravila')

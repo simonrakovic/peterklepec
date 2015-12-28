@@ -3,7 +3,7 @@ from django.contrib import admin
 
 
 from models import Exercises, ExercisesWeeklyTimetable, ImagePlacement, Images, CustomerType, News, NotWorkingHours, Prices, PricingPlan, \
-    ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength, SubExercises, InfoBar
+    ExercisesPageLayout, CustomPage, PageLayout, ExerciseLength, SubExercises, InfoBar, ListOfRules
 from peterklepec_webpage.settings import PROJECT_PATH
 
 
@@ -68,7 +68,8 @@ class SubExercisesAdmin(admin.ModelAdmin):
 class InfobarAdmin(admin.ModelAdmin):
     list_display = ('info', 'isActive', 'description', 'barColor', 'barTime')
 
-
+class ListOfRulesAdmin(admin.ModelAdmin):
+    list_display = ('text',)
 
 
 
@@ -87,5 +88,5 @@ admin.site.register(PageLayout, PageLayoutAdmin)
 admin.site.register(ExerciseLength, ExerciseLengthAdmin)
 admin.site.register(SubExercises, SubExercisesAdmin)
 admin.site.register(InfoBar, InfobarAdmin)
-
+admin.site.register(ListOfRules, ListOfRulesAdmin)
 
