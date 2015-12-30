@@ -9,7 +9,7 @@ from django.http import Http404, HttpResponseRedirect
 from rest_framework import serializers,generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
-    WeekDay, SubExercises, CustomerType, InfoBar
+    WeekDay, SubExercises, CustomerType, InfoBar, ListOfRules
 from webpage.forms import QuestionForm
 
 
@@ -17,6 +17,8 @@ def home(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
+
 
     all_info_messages = InfoBar.objects.filter(isActive=True)
     info_message = None
@@ -39,6 +41,7 @@ def offers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -124,6 +127,7 @@ def suboffers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -140,6 +144,7 @@ def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -154,6 +159,7 @@ def questions(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -180,6 +186,7 @@ def achievements(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -194,6 +201,7 @@ def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -214,6 +222,7 @@ def timetable(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
 
 
@@ -232,6 +241,7 @@ def info(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()
@@ -244,6 +254,7 @@ def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
+    rules = ListOfRules.objects.all()[0]
 
     current_week_day = datetime.datetime.today().weekday()+1
     current_time = datetime.datetime.now().time()

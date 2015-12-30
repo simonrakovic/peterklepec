@@ -70,7 +70,7 @@ class InfobarAdmin(admin.ModelAdmin):
 
 class ListOfRulesAdmin(admin.ModelAdmin):
     list_display = ('text',)
-
+    Media = CommonMedia
 
 
 admin.site.register(Exercises, ExerciseAdmin)
