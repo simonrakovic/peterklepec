@@ -77,3 +77,10 @@ a:hover{
     margin-left: 20px;
     position: relative;
 }
+
+@media(max-width:1700px){
+	.gallery-conteiner-img-title{
+		font-size:1.35em;
+	}
+}
+
