@@ -146,9 +146,8 @@ INSTALLED_APPS = (
     'webpage',
     'gunicorn',
     'docutils',
-    'rest_framework'
-
-
+    'rest_framework',
+    'sorl.thumbnail',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -203,3 +202,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'postmaster@sandbox42e7c74dd2de4b6aa5610678863a8334.mailgun.org'
 EMAIL_HOST_PASSWORD = 'abbe1e6d41fccca9682678f4a5297c98'
 
+
+THUMBNAIL_DEBUG = True

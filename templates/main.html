@@ -1,4 +1,4 @@
-
+{% load thumbnail %}
 <!DOCTYPE html>
 	<head>
         <!--
@@ -90,8 +90,9 @@
             <a class ="mobile-nav-dropdown-button-2 fancybox-link" href="#pravilnik">PRAVILNIK</a>
             <a class ="{% block nav-informacije-mobile %}{% endblock %}" href="/informacije/">O NAS</a>
             <h3>Ponudba</h3>
+
             {% for image in leftMenuImages %}
-                <a href="/ponudba/{{ image.exercisesID.id }}">{{ image.exercisesID.name }}</a>
+                <a href="/ponudba/{{ image.exercisesID.id}}">{{ image.exercisesID.name}}</a>
             {% endfor %}
             {% for image in rightMenuImages %}
                 <a href="/ponudba/{{ image.exercisesID.id }}">{{ image.exercisesID.name }}</a>
@@ -169,7 +170,9 @@
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a class="menuItem" href="/ponudba/{{ image.exercisesID.id }}">
-                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="img-nav-images"/>
+                                                    {% thumbnail image.imageDestination "250x120" as im %}
+                                                        <img src="{{ im.url }}" class="img-nav-images"/>
+                                                    {% endthumbnail %}
                                                 <span class="jm-item-overlay "> </span>
                                             </a>
                                         </div>
@@ -191,7 +194,9 @@
                                     <div class="jm-item-wrapper">
                                         <div class="jm-item-image">
                                             <a href="/ponudba/{{ image.exercisesID.id }}">
-                                                <img src="{{ MEDIA_URL }}{{ image.imageDestination }}"  class="img-nav-images"/>
+                                                {% thumbnail image.imageDestination "250x120" as im %}
+                                                    <img src="{{ im.url }}"  class="img-nav-images"/>
+                                                {% endthumbnail %}
                                                 <span class="jm-item-overlay "> </span>
                                             </a>
                                         </div>

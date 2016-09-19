@@ -1,6 +1,7 @@
 {% extends "main.html" %}
-
+{% load thumbnail %}
 {% block extra_head_content %}
+
     <!-- FlexSlide CSS -->
 
     <link href="/static/css/flexslider.css" rel="stylesheet">
@@ -17,8 +18,11 @@
                 <div class="gallery-wrapper-row col-lg-12">
                     {% for image in images %}
                        <div class="col-lg-4 col-sm-6 col-xs-12 image-container">
+
                             <a href="{{ MEDIA_URL }}{{ image.imageDestination }}" data-source="{{ MEDIA_URL }}{{ image.imageDestination }}" title="{{ image.description}}" >
-                                 <img src="{{ MEDIA_URL }}{{ image.imageDestination }}" class="gallery-conteiner-img img-responsive">
+                                {% thumbnail image.imageDestination "500" as im %}
+                                    <img src="{{ im.url }}" class="gallery-conteiner-img img-responsive">
+                                {% endthumbnail %}
                             </a>
                         </div>
                     {% endfor %}

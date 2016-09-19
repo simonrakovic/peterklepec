@@ -135,7 +135,6 @@ def suboffers(request, id):
     exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     subexercise = Exercises.objects.filter(subexerciseID__exercisesID=id)
-
     images = Images.objects.filter(exercisesID=subexercise).filter(imagePlacementID=5)
 
     return render_to_response('webpages/suboffer.html', locals(), context_instance=RequestContext(request))
