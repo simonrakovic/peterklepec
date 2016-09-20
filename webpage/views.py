@@ -1,12 +1,13 @@
 # Create your views here.
 import pdb
 import datetime
+
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404, HttpResponseRedirect
-from rest_framework import serializers,generics
+from rest_framework import serializers, generics
 
 from models import Images, Exercises, PricingPlan, Prices, CustomPage, News, ExercisesWeeklyTimetable, NotWorkingHours, \
     WeekDay, SubExercises, CustomerType, InfoBar, ListOfRules
@@ -19,19 +20,17 @@ def home(request):
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
 
-
     all_info_messages = InfoBar.objects.filter(isActive=True)
     info_message = None
     if all_info_messages:
         info_message = all_info_messages[0]
 
-
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-
-
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     news = News.objects.all()
     return render_to_response('webpages/home.html', locals(), context_instance=RequestContext(request))
@@ -43,18 +42,19 @@ def offers(request, id):
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     exercise = Exercises.objects.get(pk=id)
     gallery_images = Images.objects.filter(exercisesID=exercise).filter(imagePlacementID=3)
     prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise)
     num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise).count()
 
-
-
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
     if exercise.subexerciseID and exercise.subexercise_prices:
         prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise.subexerciseID.exercisesID)
@@ -78,7 +78,7 @@ def offers(request, id):
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
 
 
-    #ker so v izgledu cene izpisane v skolpih po dva glede na pricingPlan, se lahko prikaze maxsimalno 2 pricingPlana
+    # ker so v izgledu cene izpisane v skolpih po dva glede na pricingPlan, se lahko prikaze maxsimalno 2 pricingPlana
     if num_of_pricingPlans >= 2 and prices.count() > 8:
         #ce ima vec kot 2 plana, se za pirkaz na ponudbeni strani izbere samo prvega
         #ce je vec kot 8 cen se izbere prvi plan in se stem zmanjsa stevilo prikazanih cen( pod pogojem da ima ponudba vec pricingPlanov)
@@ -101,69 +101,81 @@ def offers(request, id):
     #zaradi izgleda spletne strani je omejen prikaz cen na strani, prikazano je lahko 8,4,2 ali 0 razlicnih cen (toliko je prostora)
     #ker je stevilo cen glede na ponudbo razlicno, so potrebni tudi razlicni prikazi, ki omogocajo prikaz razlicno ptevilo cen
 
-    if prices.count() == 2: #omogoca prikaz 2 razlicnih cen
+    if prices.count() == 2:  #omogoca prikaz 2 razlicnih cen
         first_part = prices.order_by('customerTypeID')[0]
         second_part = prices.order_by('customerTypeID')[1]
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
 
-    elif prices.count() == 4: #omogoca prikaz 4 razlicnih cen
+    elif prices.count() == 4:  #omogoca prikaz 4 razlicnih cen
         first_part = prices.order_by('customerTypeID')[:2]
         second_part = prices.order_by('customerTypeID')[2:4]
 
         loop = zip(first_part, second_part)
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
 
-    elif prices.count() == 8: #omogoca prikaz 8 razlicnih cen
+    elif prices.count() == 8:  #omogoca prikaz 8 razlicnih cen
         first_part = prices.order_by('customerTypeID')[:4]
         second_part = prices.order_by('customerTypeID')[4:8]
 
         loop = zip(first_part, second_part)
         return render_to_response('webpages/offers.html', locals(), context_instance=RequestContext(request))
 
-    else: #omogoca prikaz, ki ne izpolnjuje zgornje pogoje
+    else:  #omogoca prikaz, ki ne izpolnjuje zgornje pogoje
         return render_to_response('webpages/offers2.html', locals(), context_instance=RequestContext(request))
+
 
 def suboffers(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     subexercise = Exercises.objects.filter(subexerciseID__exercisesID=id)
     images = Images.objects.filter(exercisesID=subexercise).filter(imagePlacementID=5)
 
     return render_to_response('webpages/suboffer.html', locals(), context_instance=RequestContext(request))
 
+
 def gallery(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     images = Images.objects.filter(imagePlacementID=7)
 
     return render_to_response('webpages/gallery.html', locals(), context_instance=RequestContext(request))
+
 
 def questions(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     question_form = QuestionForm()
 
@@ -174,39 +186,46 @@ def questions(request):
             email = question_form.cleaned_data['email']
             text = question_form.cleaned_data['text']
 
-            send_mail('Vprasanje - spletna stran', 'Ime: '+name+'\nE-postni naslov: '+email+'\n'+text, email, ['fitnes.peter.klepec@gmail.com'], fail_silently=False)
+            send_mail('Vprasanje - spletna stran', 'Ime: ' + name + '\nE-postni naslov: ' + email + '\n' + text, email,
+                      ['fitnes.peter.klepec@gmail.com'], fail_silently=False)
             question_form = QuestionForm()
             return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
 
-
     return render_to_response('webpages/questions.html', locals(), context_instance=RequestContext(request))
+
 
 def achievements(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     images = Images.objects.filter(imagePlacementID=6)
 
     return render_to_response('webpages/achievements.html', locals(), context_instance=RequestContext(request))
+
 
 def pricelist(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     exercises = Exercises.objects.filter(show_on_pricelist=True).order_by('position_number_on_main_page')
     pricing_plans = PricingPlan.objects.filter(exercisesID__show_on_pricelist=True)
@@ -222,58 +241,63 @@ def timetable(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-
-
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
     exercises = Exercises.objects.filter(show_on_timetable=True)
 
     all_timetables = ExercisesWeeklyTimetable.objects.all().exclude(exercisesID=1).order_by('timeFrom')
 
-
     all_weekday = WeekDay.objects.all()
 
-
-
     return render_to_response('webpages/timetable.html', locals(), context_instance=RequestContext(request))
+
 
 def info(request):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     return render_to_response('webpages/info.html', locals(), context_instance=RequestContext(request))
+
 
 def custompage(request, id):
     leftMenuImages = Images.objects.filter(imagePlacementID=1).order_by('exercisesID__position_number_on_main_page')
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
+    all_info_messages = InfoBar.objects.filter(isActive=True)
 
-    current_week_day = datetime.datetime.today().weekday()+1
+    current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
-    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
-    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    fitness_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__name__contains="fitnes").filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
+    exercises_working_hours = ExercisesWeeklyTimetable.objects.filter(exercisesID__subexerciseID=1).filter(
+        weekDay=current_week_day).filter(timeFrom__lte=current_time).filter(timeTo__gte=current_time)
 
     custompage = CustomPage.objects.get(pk=id)
 
-
     if not custompage.active:
         raise Http404
-    return render_to_response('webpages/'+custompage.pageLayoutID.template_path, locals(), context_instance=RequestContext(request))
+    return render_to_response('webpages/' + custompage.pageLayoutID.template_path, locals(),
+                              context_instance=RequestContext(request))
 
 
 # restfullAPI za posiljanje JSON za avtomatsko refreshanje urnika (AJAX princip)
-#serializer za serializacijo modela v JSON format
+# serializer za serializacijo modela v JSON format
 class WeekDaysSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeekDay
         fields = ('day_in_week',)
+
 
 class ExercisesWeeklyTimetableSerializer(serializers.ModelSerializer):
     """Serializes a User object"""
@@ -285,15 +309,18 @@ class ExercisesWeeklyTimetableSerializer(serializers.ModelSerializer):
 
 class NotWorkingHoursSerializer(serializers.ModelSerializer):
     """Serializes a User object"""
+
     class Meta:
         model = NotWorkingHours
+
 
 #imprtanje classa generic iz django-rest-framework, ki poskrbi za GET request in posreduje zeljeni model v JSON oblik
 class ExercisesWeeklyTimetableList(generics.ListAPIView):
     serializer_class = ExercisesWeeklyTimetableSerializer
 
     def get_queryset(self):
-        return ExercisesWeeklyTimetable.objects.filter(exercisesID__pk=self.kwargs.get('id')).order_by('weekDay__day_in_week')
+        return ExercisesWeeklyTimetable.objects.filter(exercisesID__pk=self.kwargs.get('id')).order_by(
+            'weekDay__day_in_week')
 
 
 class NotWorkingHoursList(generics.ListAPIView):
@@ -301,6 +328,7 @@ class NotWorkingHoursList(generics.ListAPIView):
 
     def get_queryset(self):
         current_date = datetime.date.today()
-        return NotWorkingHours.objects.filter(date__gte=current_date).filter(exercisesID__pk=self.kwargs.get('id')).order_by('date')
+        return NotWorkingHours.objects.filter(date__gte=current_date).filter(
+            exercisesID__pk=self.kwargs.get('id')).order_by('date')
 
 

@@ -210,14 +210,14 @@
                     <div class="row bottom-container">
                         <div class="col-lg-4 col-md-4">
                             <div class="box">
-                                <div class="box-title">Pomembna obvestila</div>
+                                <div class="box-title" >Pomembna obvestila</div>
 
                                 <div class="box-container">
                                     <div class="box-content">
                                         {% for info_message in all_info_messages %}
-                                            <div class="box-subtitle">{{ info_message.info }}</div>
+                                            <div class="box-subtitle" style="background-color:{{ info_message.barColor }}">{{ info_message.info }}</div>
 
-                                            <div class="box-data">{{ info_message.description }}</div>
+                                            <div class="box-data-text">{{ info_message.description }}</div>
                                         {% endfor %}
                                     </div>
                                 </div>

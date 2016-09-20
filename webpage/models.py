@@ -1,4 +1,3 @@
-
 from django.db import models
 # Create your models here.
 
@@ -8,18 +7,22 @@ class Exercises(models.Model):
     description = models.TextField(verbose_name='OPIS PONUDBE', default=None, null=True, blank=True)
 
     has_subexercise = models.BooleanField(verbose_name='PONUDBA IMA PODPONUDBE')
-    subexerciseID = models.ForeignKey('SubExercises', default=None, null=True, blank=True, verbose_name='JE DEL PONUDBE')
+    subexerciseID = models.ForeignKey('SubExercises', default=None, null=True, blank=True,
+                                      verbose_name='JE DEL PONUDBE')
     subexercise_prices = models.BooleanField(verbose_name='UPORABI CENO PONUDBE, KATERE DEL JE PODPONUDBA')
 
     show_on_timetable = models.BooleanField(verbose_name='PRIKAZI NA URNIKU')
     show_on_pricelist = models.BooleanField(verbose_name='PRIKAZI NA CENIKU')
 
-    exercises_page_layout = models.ForeignKey('ExercisesPageLayout', default=None, null=True, blank=True, verbose_name='IZGLED OPISNE STRANI')
+    exercises_page_layout = models.ForeignKey('ExercisesPageLayout', default=None, null=True, blank=True,
+                                              verbose_name='IZGLED OPISNE STRANI')
 
     show_on_main_page = models.BooleanField(verbose_name='PRIKAZI NA PRVI STRANI')
-    position_number_on_main_page = models.IntegerField(default=None, null=True, blank=True, verbose_name='ZAPOREDNA STEVILKA PRIKAZA NA PRVI STRANI')
+    position_number_on_main_page = models.IntegerField(default=None, null=True, blank=True,
+                                                       verbose_name='ZAPOREDNA STEVILKA PRIKAZA NA PRVI STRANI')
 
-    length = models.ForeignKey('ExerciseLength', verbose_name='KDAJ SE PONUDBA IZVAJA', default=None, null=True, blank=True)
+    length = models.ForeignKey('ExerciseLength', verbose_name='KDAJ SE PONUDBA IZVAJA', default=None, null=True,
+                               blank=True)
 
     def __unicode__(self):
         return u'%s ' % self.name
@@ -28,12 +31,14 @@ class Exercises(models.Model):
         verbose_name = 'Ponudba'
         verbose_name_plural = 'Ponudbe'
 
+
 class SubExercises(models.Model):
     name = models.CharField(max_length=50, verbose_name='IME PONUDBE')
     exercisesID = models.ForeignKey('Exercises')
 
     def __unicode__(self):
         return u'%s ' % self.name
+
 
 class ExerciseLength(models.Model):
     name = models.CharField(max_length=50)
@@ -44,6 +49,7 @@ class ExerciseLength(models.Model):
 
     def __unicode__(self):
         return u'%s ' % self.name
+
 
 class ExercisesPageLayout(models.Model):
     description = models.CharField(max_length=60)
@@ -66,6 +72,7 @@ class ExercisesWeeklyTimetable(models.Model):
         verbose_name = 'Urnik ponudbe'
         verbose_name_plural = 'Urnik ponudb'
 
+
 class WeekDay(models.Model):
     name = models.CharField(max_length=60)
     day_in_week = models.IntegerField()
@@ -73,11 +80,12 @@ class WeekDay(models.Model):
     def __unicode__(self):
         return u'%s ' % self.name
 
+
 class NotWorkingHours(models.Model):
     exercisesID = models.ForeignKey('Exercises', default=None, null=True, blank=True, verbose_name='IME PONUDBE')
 
     date = models.DateField(verbose_name='DATUM')
-    timeFrom =models.TimeField(verbose_name='OD')
+    timeFrom = models.TimeField(verbose_name='OD')
     timeTo = models.TimeField(verbose_name='DO')
 
     description = models.TextField(verbose_name='OPIS')
@@ -125,7 +133,6 @@ class CustomerType(models.Model):
 
 
 class Images(models.Model):
-
     imagePlacementID = models.ForeignKey('ImagePlacement', verbose_name='LOKACIJA SLIKE')
     exercisesID = models.ForeignKey('Exercises', verbose_name='IME PONUDBE')
 
@@ -142,7 +149,7 @@ class Images(models.Model):
         return u'%s' % self.name
 
     def image_tag(self):
-        return '<img width=100px height=auto src="'+self.imageDestination.url+'"/>'
+        return '<img width=100px height=auto src="' + self.imageDestination.url + '"/>'
 
     image_tag.short_description = 'SLIKA'
     image_tag.allow_tags = True
@@ -168,7 +175,6 @@ class News(models.Model):
 
 
 class CustomPage(models.Model):
-
     name = models.CharField(max_length=50, verbose_name='IME')
 
     title = models.CharField(max_length=100, verbose_name='NASLOV')
@@ -187,12 +193,14 @@ class CustomPage(models.Model):
         verbose_name = 'Nova stran'
         verbose_name_plural = 'Nove strani'
 
+
 class PageLayout(models.Model):
     name = models.TextField()
     template_path = models.CharField(max_length=100)
 
     def __unicode__(self):
         return u'%s' % self.name
+
 
 class InfoBar(models.Model):
     info = models.TextField(verbose_name='Vrsta obvestila')

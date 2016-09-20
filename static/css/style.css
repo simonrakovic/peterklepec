@@ -386,6 +386,20 @@ body{
 
 }
 
+.box-data-text{
+   width: 100%;
+   text-align: justify;
+
+   padding:10px 10px 0 5px;
+
+   font-size: 1.1em;
+   font-family: hemi;
+
+   color: #f5f5f5;
+
+   text-overflow: ellipsis;
+}
+
 .box-data > span{
     margin-left: 20px;
     color: #D7C3AB;
