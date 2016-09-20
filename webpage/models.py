@@ -208,6 +208,8 @@ class InfoBar(models.Model):
 
     isActive = models.BooleanField(verbose_name='Aktivno obvestilo')
 
+
+
     barColor = models.CharField(max_length=10, verbose_name='Barva obvestila')
     barTime = models.IntegerField(verbose_name='Cas prikaza obvestila')
 
