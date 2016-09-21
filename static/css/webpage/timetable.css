@@ -1,45 +1,44 @@
 
-.panel-mobile{
-   display: none;
+.panel-mobile {
+    display: none;
 }
 
-.panels-container{
-    margin-top:20px;
+.panels-container {
+    margin-top: 20px;
 }
 
- /** panels */
+/** panels */
 
-.panel{
-   border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-
-   background: rgba(13,11,11,0.9);
-
-   border:none;
-
-   height: 540px;
-
-   margin-bottom: 0px;
-}
-
-.panel-group .panel{
-   border-radius: 0px;
-}
-
-.panel-group .panel-heading + .panel-collapse > .panel-body{
-    border: none;
-}
-
-.panel-default > .panel-heading{
-    background: rgba(13,11,11,0.8);
-
-    border-bottom:3px solid #A38A70;
-
+.panel {
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
 
+    background: rgba(13, 11, 11, 0.9);
+
+    border: none;
+
+    height: 540px;
+
+    margin-bottom: 0px;
+}
+
+.panel-group .panel {
+    border-radius: 0px;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+    border: none;
+}
+
+.panel-default > .panel-heading {
+    background: rgba(13, 11, 11, 0.8);
+
+    border-bottom: 3px solid #A38A70;
+
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
 
     font-weight: bold;
     font-size: 15px;
@@ -47,26 +46,23 @@
     text-transform: uppercase;
 }
 
-
-
 a {
-   outline: 0;
+    outline: 0;
 }
 
 a:hover, a:active, a:focus {
-  outline: 0;
+    outline: 0;
 }
 
+/** Title */
 
- /** Title */
-
-.page-header{
-    padding:0;
-    margin:0;
+.page-header {
+    padding: 0;
+    margin: 0;
 
 }
 
-.panel-title{
+.panel-title {
     color: white;
     font-size: 1.3em;
 }
@@ -85,7 +81,7 @@ a:hover, a:active, a:focus {
     font-size: 1.2em;
 }
 
-.table > tbody > tr > td{
+.table > tbody > tr > td {
     border-top: none;
     width: 14%;
     border-top: none;
@@ -97,41 +93,45 @@ a:hover, a:active, a:focus {
     padding-bottom: 0;
 }
 
-.panel-table-data-title{
-    margin-top: 25px;
+.panel-table-data-title {
+    margin-top: 10px;
     font-size: 1em;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-weight: bold;
-    color:white;
+    color: white;
+
+    height: 40px;
 }
 
-.panel-table-data{
-    color:dimgray;
+.panel-table-data {
+    color: dimgray;
     font-size: 1em;
+
+    height: 20px;
 }
 
-.panel-table-data-separator{
-    margin-top:20px;
+.panel-table-data-separator {
+
+    border-bottom: 1px solid #A38A70;
+    margin: 15px 0px 0 0px
+
+}
+
+/** MOBILE TABLE */
+.table-mobile {
+    width: 100%;
+}
+
+.table-mobile > tbody > tr {
+    height: 50px;
     border-bottom: 1px solid #A38A70;
 
 }
 
-
-/** MOBILE TABLE */
-.table-mobile{
-    width:100%;
-}
-
-.table-mobile > tbody > tr  {
-    height: 50px;
-    border-bottom: 1px solid  #A38A70;
-
-}
-
-.table-mobile > tbody > tr > th  {
+.table-mobile > tbody > tr > th {
     height: 50px;
 
-    color:white;
+    color: white;
     font-size: 1.2em;
 
     border-right: 3px solid #A38A70;
@@ -139,14 +139,14 @@ a:hover, a:active, a:focus {
 
 }
 
-.panel-table-data-title-mobile{
+.panel-table-data-title-mobile {
     margin-top: 5px;
     margin-left: 30px;
     font-size: 1.2em;
 }
 
-.panel-table-data-mobile{
-    color:white;
+.panel-table-data-mobile {
+    color: white;
     font-size: 1.1em;
     margin-left: 30px;
 }
@@ -155,56 +155,62 @@ a:hover, a:active, a:focus {
     border: none;
 }
 
-.urnik-text-mobile{
-        display: none;
+.urnik-text-mobile {
+    display: none;
 }
 
-
 @media (max-width: 1600px) and (min-width: 1200px) {
-     .panel-table-data-title{
-        margin-top: 15px;
+    .panel-table-data-title {
+        margin-top: 5px;
+        font-size: 0.8em;
+        height: 50px;
+    }
+
+    .panel-table-data {
+
         font-size: 0.8em;
     }
 
-    .table > thead > tr > th{
+    .table > thead > tr > th {
         font-size: 1em;
     }
 }
 
-
 /** NO MORE TABLES  :) */
 
-@media(max-width: 1000px) {
-    .panel-main{
-       display: none;
+@media (max-width: 1000px) {
+    .panel-main {
+        display: none;
     }
-    .panel-mobile{
+
+    .panel-mobile {
         display: block;
     }
 
-    .panel{
+    .panel {
         height: auto;
     }
 
 }
 
-@media (max-width: 640px){
-    .table-mobile > tbody > tr > th{
+@media (max-width: 640px) {
+    .table-mobile > tbody > tr > th {
         font-size: 1em;
     }
-    .panel-table-data-title-mobile{
+
+    .panel-table-data-title-mobile {
         margin-top: 5px;
         margin-left: 15px;
         font-size: 1em;
     }
 
-    .panel-table-data-mobile{
-        color:white;
+    .panel-table-data-mobile {
+        color: white;
         font-size: 1em;
         margin-left: 15px;
     }
 
-    .urnik-text-mobile{
+    .urnik-text-mobile {
         display: block;
         color: red;
         font-size: 0.7em;
