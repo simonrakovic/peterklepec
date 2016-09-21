@@ -66,7 +66,7 @@ class SubExercisesAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
 class InfobarAdmin(admin.ModelAdmin):
-    list_display = ('info', 'isActive', 'description', 'barColor', 'barTime')
+    list_display = ('info', 'isActive', 'isActiveInfoBox', 'description',)
 
 class ListOfRulesAdmin(admin.ModelAdmin):
     list_display = ('text',)

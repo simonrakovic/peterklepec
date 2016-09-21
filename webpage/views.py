@@ -21,6 +21,8 @@ def home(request):
     rules = ListOfRules.objects.all()[0]
 
     all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
+
     info_message = None
     if all_info_messages:
         info_message = all_info_messages[0]
@@ -54,7 +56,7 @@ def offers(request, id):
     prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise)
     num_of_pricingPlans = PricingPlan.objects.filter(exercisesID=exercise).count()
 
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     if exercise.subexerciseID and exercise.subexercise_prices:
         prices = Prices.objects.filter(pricingPlanID__exercisesID=exercise.subexerciseID.exercisesID)
@@ -129,7 +131,7 @@ def suboffers(request, id):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -149,7 +151,7 @@ def gallery(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -168,7 +170,7 @@ def questions(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -199,7 +201,7 @@ def achievements(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -218,7 +220,7 @@ def pricelist(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -241,7 +243,7 @@ def timetable(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     exercises = Exercises.objects.filter(show_on_timetable=True)
 
@@ -257,7 +259,7 @@ def info(request):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()
@@ -274,7 +276,7 @@ def custompage(request, id):
     rightMenuImages = Images.objects.filter(imagePlacementID=2).order_by('exercisesID__position_number_on_main_page')
     all_exercises = Exercises.objects.all()
     rules = ListOfRules.objects.all()[0]
-    all_info_messages = InfoBar.objects.filter(isActive=True)
+    all_info_messages_bottom = InfoBar.objects.filter(isActiveInfoBox=True)
 
     current_week_day = datetime.datetime.today().weekday() + 1
     current_time = datetime.datetime.now().time()

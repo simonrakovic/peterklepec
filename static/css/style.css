@@ -1,30 +1,28 @@
-.fancy-box-popout{
+.fancy-box-popout {
     display: none;
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
 
     width: 100%;
     height: 1080px;
 
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
 
     z-index: 5;
 
-
 }
 
-.fancy-box-popout-container{
+.fancy-box-popout-container {
     position: absolute;
     top: 122px;
 
     left: 0;
     right: 0;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 
     width: 800px;
-
 
     background: rgba(13, 11, 11, 0.98);
 
@@ -32,7 +30,7 @@
 
 }
 
-.fancy-box-popout-container-close{
+.fancy-box-popout-container-close {
     position: absolute;
 
     right: 15px;
@@ -41,17 +39,17 @@
     color: white;
 }
 
-.fancy-box-popout-container-title h1{
+.fancy-box-popout-container-title h1 {
     margin-left: 40px;
     color: #D7C3AB;
 }
 
-.fancy-box-popout-container-text{
+.fancy-box-popout-container-text {
 
-   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-   padding-left: 20px;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    padding-left: 20px;
 
-   width: 770px;
+    width: 770px;
 
 }
 
@@ -59,7 +57,7 @@
     margin-top: 20px;
 }
 
-.fancy-box-popout-container-text > ul >li{
+.fancy-box-popout-container-text > ul > li {
     margin-top: 5px;
 }
 
@@ -79,39 +77,40 @@
 
     width: 800px;
 }
+
 .vertical-track {
     width: 16px; /* How wide is the scrollbar going to be? */
     background-color: #aaa; /* What color should the vertical track be? */
 }
+
 .vertical-handle {
     width: 16px; /* How wide is the scrollbar handle? */
     background-color: #aaf; /* What color should the handle be? */
 }
 
-.img-nav-right{
+.img-nav-right {
     margin-top: 20px;
 
 }
 
-.img-nav-left{
+.img-nav-left {
     margin-top: 20px;
-
 
 }
 
-.img-nav-images{
+.img-nav-images {
     height: 120px;
     width: 100%;
 }
 
-body{
+body {
     background: url("/static/img/fitness.jpg") no-repeat center top;
     background-color: rgb(0, 0, 0);
     font-family: hemi;
 
 }
 
-.numbers{
+.numbers {
     font-weight: bold;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
@@ -121,52 +120,45 @@ body{
     background: rgba(13, 11, 11, 0.9);
 }
 
-.navbar-brand{
-
+.navbar-brand {
 
     font-size: 4.5em;
     height: 80px;
     line-height: 65px;
-    font-family:hemi;
+    font-family: hemi;
 
     text-shadow: 0 0 2px #735842,
-
-             -1px -1px 0 hsla(0, 8%, 5%, 1),
-
-             -2px -2px 1px hsla(0, 8%, 5%, 1),
-
-             -2px -2px 2px hsla(0, 8%, 5%, 1);
+    -1px -1px 0 hsla(0, 8%, 5%, 1),
+    -2px -2px 1px hsla(0, 8%, 5%, 1),
+    -2px -2px 2px hsla(0, 8%, 5%, 1);
 }
 
 @media (max-width: 1500px) {
-  .navbar-brand{
-    font-size: 3em;
-  }
+    .navbar-brand {
+        font-size: 3em;
+    }
 }
 
-
-
 @media (max-width: 560px) {
-  .navbar-brand{
-    font-size: 2.3em;
-  }
+    .navbar-brand {
+        font-size: 2.3em;
+    }
 }
 
 @media (max-width: 470px) {
-  .navbar-brand{
-    font-size: 1.6em;
-  }
+    .navbar-brand {
+        font-size: 1.6em;
+    }
 }
-
 
 @media (max-width: 370px) {
-  .navbar-brand{
-    font-size: 1.3em;
+    .navbar-brand {
+        font-size: 1.3em;
 
-  }
+    }
 }
 
-.navbar-brand > small{
+.navbar-brand > small {
     font-size: 0.6em;
     margin-left: 10px;
 }
@@ -177,50 +169,45 @@ body{
 
 }
 
-.navbar-collapse-button{
-    margin-top:30px;
+.navbar-collapse-button {
+    margin-top: 30px;
 
 }
 
-.nav-brand-img{
+.nav-brand-img {
     height: 75px;
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
 }
 
-.nav-fix{
+.nav-fix {
     text-transform: uppercase;
     font-size: 1.5em;
 
-
-    padding-top:30px;
-    margin-right:25px;
+    padding-top: 30px;
+    margin-right: 25px;
 }
 
-.menu-list > li > a{
+.menu-list > li > a {
     font-size: 1.2em;
-    font-family:hemi;
+    font-family: hemi;
     border-left: 1px solid #171414;
     border-bottom: 2px solid transparent;
 }
 
-
-.menu-list > li >a:hover{
+.menu-list > li > a:hover {
 
     border-bottom: 2px solid #D7C3AB;
 
 }
 
-.menu-list-active{
+.menu-list-active {
     border-bottom: 2px solid #ffffff !important;
     color: #ffffff !important;
 }
 
-
-
-.container-fluid{
-
+.container-fluid {
 
 }
 
@@ -229,23 +216,21 @@ body{
     display: inline-block;
     text-align: left;
 }
+
 .jm-item-wrapper {
-	position: relative;
+    position: relative;
 
 }
+
 /*** CSS styles of the image and its container: *****/
 
-
-
 /*** CSS styles of the title container: ***/
-
-
 
 .jm-item-title {
     position: absolute;
 
     bottom: 17px;
-    background: rgba(13,11,11,0.9);
+    background: rgba(13, 11, 11, 0.9);
     line-height: 25px;
     font-weight: normal;
     padding-top: 5px;
@@ -257,41 +242,36 @@ body{
     color: #D7C3AB;
     font-size: 1.7em;
 
-    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.75);
 }
 
-
-
-.jm-item-title-left{
+.jm-item-title-left {
     left: -10px;
 
 }
 
-.jm-item-title-right{
+.jm-item-title-right {
     right: -10px;
 
 }
 
-.nav-left-mobile{
+.nav-left-mobile {
     position: relative;
 
     height: 120px;
     width: 30px;
-    margin-top:20px;
-
+    margin-top: 20px;
 
     background: rgba(13, 11, 11, 0.7);
 
 }
 
-.nav-left-mobile-text{
+.nav-left-mobile-text {
     position: absolute;
     bottom: 40px;
-    left:0;
-
-
+    left: 0;
 
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -301,72 +281,68 @@ body{
     filter: none; /*Mandatory for IE9 to show the vertical text correctly*/
 }
 
-.nav-right-mobile{
+.nav-right-mobile {
     position: relative;
 
     height: 120px;
     width: 30px;
-    margin-top:20px;
-
+    margin-top: 20px;
 
     background: rgba(13, 11, 11, 0.7);
 
 }
 
-
 /*** CSS styles of the span element: ***/
 
 .jm-item-overlay {
-	background: #000;
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	-webkit-transition: opacity 0.5s ease-in 0s;
-	-moz-transition: opacity 0.5s ease-in 0s;
-	-o-transition: opacity 0.5s ease-in 0s;
-	transition: opacity 0.5s ease-in 0s;
+    background: #000;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 0.5s ease-in 0s;
+    -moz-transition: opacity 0.5s ease-in 0s;
+    -o-transition: opacity 0.5s ease-in 0s;
+    transition: opacity 0.5s ease-in 0s;
 }
+
 .jm-item-wrapper:hover .jm-item-overlay {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
+.box {
 
-
-
-.box{
-
-    margin-top:20px;
-    height:210px;
-    background-color: rgba(13,11,11,0.7);
+    margin-top: 20px;
+    height: 210px;
+    background-color: rgba(13, 11, 11, 0.7);
 
 }
 
-.box-title{
+.box-title {
 
     border-bottom: 1px solid #D7C3AB;
     width: 90%;
-    padding-top:10px;
+    padding-top: 10px;
 
     margin-right: auto;
     margin-left: auto;
 
     font-family: hemi;
     text-transform: uppercase;
-    color:  #D7C3AB;
-    font-size:1.4em
+    color: #D7C3AB;
+    font-size: 1.4em
 }
 
-.box-content{
+.box-content {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
 }
 
-.box-subtitle{
+.box-subtitle {
     width: 100%;
     text-align: center;
     color: #D7C3AB;
@@ -374,68 +350,66 @@ body{
     font-family: hemi;
 
     text-transform: uppercase;
-    background: rgba(163,138,112,0.2);
+    background: rgba(163, 138, 112, 0.2);
 }
 
-
-.box-data{
-   width: 100%;
-   text-align: center;
-   font-size: 1.1em;
-   font-family: hemi;
+.box-data {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: hemi;
 
 }
 
-.box-data-text{
-   width: 100%;
-   text-align: justify;
+.box-data-text {
+    width: 100%;
+    text-align: justify;
 
-   padding:10px 10px 0 5px;
+    padding: 2px 5px 2px 5px;
 
-   font-size: 1.1em;
-   font-family: hemi;
+    font-size: 1.1em;
+    font-family: hemi;
 
-   color: #f5f5f5;
+    color: #f5f5f5;
 
-   text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+
 }
 
-.box-data > span{
+.box-data > span {
     margin-left: 20px;
     color: #D7C3AB;
 
 }
 
-.box > table{
+.box > table {
     margin-top: 20px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.box > table > tbody > tr > td{
+.box > table > tbody > tr > td {
     text-align: left;
     color: #D7C3AB;
     width: 70%;
 }
 
-.box > table > thead > tr > th{
+.box > table > thead > tr > th {
     width: 70%;
     text-align: left;
     text-transform: uppercase;
 }
 
-.box > table > thead > tr > td{
+.box > table > thead > tr > td {
     width: 30%;
 }
 
-.box > table > tbody > tr > th{
-
+.box > table > tbody > tr > th {
 
     width: 30%;
 }
-
-
 
 /******** custom scroll CSS *******/
 
@@ -474,7 +448,6 @@ body{
     width: 10px;
 }
 
-
 /**** MENU ZA MOBILNE NAPRAVE *****/
 
 /* General styles for all menus */
@@ -492,23 +465,22 @@ body{
 
     margin: 0;
     font-weight: 300;
-    background: rgba(13,11,11, 0.9);
+    background: rgba(13, 11, 11, 0.9);
     padding: 30px;
     height: 83px;
 
     border-bottom: 1px solid black;
 }
 
-.side-menu-logo{
-    background: rgba(13,11,11, 0.9);
+.side-menu-logo {
+    background: rgba(13, 11, 11, 0.9);
 
     height: 81px;
 
     border-bottom: 1px solid black;
 }
 
-
-.side-menu-img{
+.side-menu-img {
     padding-left: 10px;
     padding-top: 5px;
 }
@@ -518,25 +490,22 @@ body{
     color: #D7C3AB;
     font-size: 1.2em;
     font-weight: 300;
-    background: rgba(13,11,11, 0.7);
+    background: rgba(13, 11, 11, 0.7);
     font-family: hemi;
     text-transform: uppercase;
 }
 
-
-.cbp-spsubmenu{
+.cbp-spsubmenu {
 
     display: block;
     color: #D7C3AB;
     font-size: 1em !important;
 
     text-align: center;
-    border-top:1px solid rgb(163,138,112);
+    border-top: 1px solid rgb(163, 138, 112);
     font-family: hemi;
     text-transform: uppercase;
 }
-
-
 
 .cbp-spmenu a:hover {
 
@@ -549,7 +518,7 @@ body{
 
 }
 
-.cbp-spmenu a:focus{
+.cbp-spmenu a:focus {
 
     text-decoration: none;
     outline: 0;
@@ -656,12 +625,16 @@ body{
 /* INFO BAR*/
 
 .alert {
-   margin-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.info-message {
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 
 /* Example media queries */
 
-@media screen and (max-width: 55.1875em){
+@media screen and (max-width: 55.1875em) {
 
     .cbp-spmenu-horizontal {
         font-size: 75%;
@@ -678,12 +651,11 @@ body{
 
 }
 
-@media screen and (max-height: 26.375em){
+@media screen and (max-height: 26.375em) {
 
     .cbp-spmenu-vertical {
         font-size: 90%;
         width: 190px;
-
 
     }
 
@@ -703,80 +675,85 @@ body{
 
 /***** KONEC *****/
 
-
-
-
 @font-face {
-    font-family:'hemi'; /*a name to be used later*/
-
+    font-family: 'hemi'; /*a name to be used later*/
     src: url('/static/fonts/2D5956_0_0.eot');
     src: url('/static/fonts/2D5956_0_0.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/2D5956_0_0.woff2') format('woff2'),
-         url('/static/fonts/2D5956_0_0.woff') format('woff'),
-         url('/static/fonts/2D5956_0_0.ttf') format('truetype');
+    url('/static/fonts/2D5956_0_0.woff2') format('woff2'),
+    url('/static/fonts/2D5956_0_0.woff') format('woff'),
+    url('/static/fonts/2D5956_0_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 
 @media (max-width: 1200px) {
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+
+    .navbar-left, .navbar-right {
         float: none !important;
     }
+
     .navbar-toggle {
         display: block;
     }
+
     .navbar-collapse {
         border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     .navbar-fixed-top {
-		top: 0;
-		border-width: 0 0 1px;
-	}
-    .navbar-collapse.collapse {
-        display: none!important;
+        top: 0;
+        border-width: 0 0 1px;
     }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
     .navbar-nav {
-        float: none!important;
-		margin-top: 7.5px;
-	}
-	.navbar-nav>li {
+        float: none !important;
+        margin-top: 7.5px;
+    }
+
+    .navbar-nav > li {
         float: none;
     }
-    .navbar-nav>li>a {
+
+    .navbar-nav > li > a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .collapse.in{
-  		display:block !important;
-	}
 
-    .fancy-box-popout-container{
+    .collapse.in {
+        display: block !important;
+    }
+
+    .fancy-box-popout-container {
         left: 5%;
     }
 }
 
-@media (max-width: 850px){
-   .fancy-box-popout-container{
+@media (max-width: 850px) {
+    .fancy-box-popout-container {
         width: 350px;
         left: 1%;
     }
 
-    .fancy-box-popout-container-text{
-       width: 320px;
+    .fancy-box-popout-container-text {
+        width: 320px;
 
-       overflow-x: scroll;
+        overflow-x: scroll;
     }
 
-    .scrollbox2{
+    .scrollbox2 {
         width: 350px !important;
     }
 
-    .fancy-box-popout-container-title h1{
-      font-size: 1.2em;
+    .fancy-box-popout-container-title h1 {
+        font-size: 1.2em;
     }
 }
+

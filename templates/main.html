@@ -156,7 +156,7 @@
 
                     <div class="row">
                         {% if  info_message %}
-                             <div style="background-color:{{ info_message.barColor }}; border-color:transparent;color:#ffffff" class="alert alert-warning">
+                             <div style="background-color:{{ info_message.barColor }}; border-color:transparent;color:#ffffff" class="alert alert-warning info-message">
                                     <a id="infoBarClose" href="#" class="close" data-dismiss="alert">&times;</a>
                                     <strong>{{ info_message.info|safe }}</strong> {{ info_message.description|safe }}
                             </div>
@@ -214,10 +214,10 @@
 
                                 <div class="box-container">
                                     <div class="box-content">
-                                        {% for info_message in all_info_messages %}
+                                        {% for info_message in all_info_messages_bottom %}
                                             <div class="box-subtitle" style="background-color:{{ info_message.barColor }}">{{ info_message.info }}</div>
 
-                                            <div class="box-data-text">{{ info_message.description }}</div>
+                                            <div class="box-data-text">{{ info_message.description|safe }}</div>
                                         {% endfor %}
                                     </div>
                                 </div>

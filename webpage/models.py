@@ -206,11 +206,11 @@ class InfoBar(models.Model):
     info = models.TextField(verbose_name='Vrsta obvestila')
     description = models.TextField(verbose_name='Opis obvestila')
 
-    isActive = models.BooleanField(verbose_name='Aktivno obvestilo')
+    isActive = models.BooleanField(verbose_name='Aktivno obvestilo zgoraj')
 
+    isActiveInfoBox = models.BooleanField(verbose_name='Aktivno obvestilo spodaj', default=False, blank=True)
 
-
-    barColor = models.CharField(max_length=10, verbose_name='Barva obvestila')
+    barColor = models.CharField(max_length=20, verbose_name='Barva obvestila')
     barTime = models.IntegerField(verbose_name='Cas prikaza obvestila')
 
     class Meta:
