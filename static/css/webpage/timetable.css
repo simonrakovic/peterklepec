@@ -81,7 +81,7 @@ a:hover, a:active, a:focus {
 
     text-align: center;
     text-decoration: underline;
-    color: white;
+
     font-size: 1.2em;
 }
 
@@ -99,12 +99,14 @@ a:hover, a:active, a:focus {
 
 .panel-table-data-title{
     margin-top: 25px;
-    font-size: 1.2em;
+    font-size: 1em;
+
+    color:white;
 }
 
 .panel-table-data{
-    color:white;
-    font-size: 1.1em;
+    color:dimgray;
+    font-size: 1em;
 }
 
 .panel-table-data-separator{
@@ -160,11 +162,11 @@ a:hover, a:active, a:focus {
 @media (max-width: 1600px) and (min-width: 1200px) {
      .panel-table-data-title{
         margin-top: 15px;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .table > thead > tr > th{
-        font-size: 1.1em;
+        font-size: 0.8em;
     }
 }
 

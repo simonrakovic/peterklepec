@@ -24,24 +24,24 @@
                     <div class="panel-body">
                             <table class="table">
                                 {% for weekDay in all_weekday %}
-                                    {% if weekDay.id != 6 and weekDay.id != 7 %}
+
                                         {% if weekDay.id == 1 %}
                                                 <thead>
                                                 <tr>
                                                     <th>{{ weekDay.name }}</th>
-                                        {% elif weekDay.id == 5 %}
+                                        {% elif weekDay.id == 7 %}
                                                     <th>{{ weekDay.name }}</th>
                                                 </tr>
                                                 </thead>
                                         {% else %}
                                             <th>{{ weekDay.name }}</th>
                                         {% endif %}
-                                    {% endif %}
+
                                 {%  endfor %}
                                 <tbody>
                                     <tr>
                                         {% for weekDay in all_weekday %}
-                                            {% if weekDay.id != 6 and weekDay.id != 7 %}
+
                                                 <td>
                                                     {% for timetables in all_timetables %}
                                                         {% if weekDay == timetables.weekDay %}
@@ -53,7 +53,7 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                 </td>
-                                            {% endif %}
+
                                         {% endfor %}
                                     </tr>
                                 </tbody>
