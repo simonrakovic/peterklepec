@@ -159,16 +159,16 @@ a:hover, a:active, a:focus {
     display: none;
 }
 
-@media (max-width: 1600px) and (min-width: 1200px) {
+@media (max-width: 1700px) and (min-width: 1200px) {
     .panel-table-data-title {
         margin-top: 5px;
-        font-size: 0.8em;
+        font-size: 0.9em;
         height: 50px;
     }
 
     .panel-table-data {
 
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .table > thead > tr > th {
